@@ -1,0 +1,4 @@
+COPY . .
+
+RUN_WIN "Powershell.exe -ExecutionPolicy Bypass -File .\Windows\Scripts\missing_windows_patches.ps1"
+

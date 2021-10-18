@@ -1,0 +1,13 @@
+[
+	{
+		"Name":"Use Filter",
+		"Type": 2,
+		"IsOptional":true
+	},
+	{ 
+		"Name":"IP Filter",
+		"Type": 0,
+		"DefaultValue":"192.168.*.*",
+		"IsOptional":true
+	}
+]
