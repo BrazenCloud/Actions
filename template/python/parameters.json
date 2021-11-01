@@ -9,11 +9,5 @@
 		"Type": 0,
 		"DefaultValue":"192.168.*.*",
 		"IsOptional":true
-	},
-	{ 
-		"Name":"Connection String",
-		"Type": 0,
-		"DefaultValue":"",
-		"IsOptional":true
 	}
 ]
