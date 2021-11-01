@@ -1,4 +1,5 @@
 
+import os
 import subprocess
 import re
 import json
@@ -15,12 +16,14 @@ class CNetstat :
         self.connections = []
 
 settings_file = 0
+settings = { }
     
 # if the user made settings in the job editor, they will be in the following json file
 
-settings_file = open("..//settings.json", "r")
-settings = json.load(settings_file);
-
+if(os.path.exists("..\\settings.json")):
+    settings_file = open("..\\settings.json", "r")
+    settings = json.load(settings_file);
+    
 use_filter = "false"
 filter_setting = ""
 filter_regex = ".*"
