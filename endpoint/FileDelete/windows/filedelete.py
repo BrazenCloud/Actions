@@ -34,8 +34,18 @@ if(settings_file):
     if(settings.has_key("Filepath")):
         filepath = settings["Filepath"];
 
+#
+# this script takes a single string argument, filepath
+# to control what arguments the script takes, edit the parameters.json file in the root of the action.
+#
+# here check to make sure the filepath setting has been made
+#
 if len(filepath) > 0:
     try:
+       #
+       # you can edit the lines of code here to make this script do almost ANYTHING
+       # TODO: add or modify code here
+       #
        os.remove(filepath)
        response.status = 'success'
        response.message = 'File deleted Successfully'
