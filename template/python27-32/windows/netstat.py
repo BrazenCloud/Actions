@@ -23,6 +23,7 @@ settings = { }
 if(os.path.exists("..\\settings.json")):
     settings_file = open("..\\settings.json", "r")
     settings = json.load(settings_file);
+    settings_file.close()
 
 use_filter = "false"
 filter_setting = ""
