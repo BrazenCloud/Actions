@@ -1,0 +1,4 @@
+COPY . .
+
+RUN_WIN windows\run.bat
+RUN_LIN linux/run.sh

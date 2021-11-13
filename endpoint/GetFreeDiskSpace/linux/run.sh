@@ -2,12 +2,12 @@
 
 cd "${0%/*}"
 
-pythonCMD="python3"
+pythonCMD="python"
 
 if ! [ -x "$(command -v python)" ]; then
     # no python installed
-    pythonCMD="./python3"
+    pythonCMD="./python"
     chmod +x $pythonCMD
 fi
 
-$pythonCMD GetFreeDiskSpace.py
+$pythonCMD ../getFreeDiskSpace.py
