@@ -1,0 +1,12 @@
+[
+	{
+		"Name":"Kill By (PPID, Name)",
+		"Type": 0,
+		"IsOptional":false
+	},
+	{
+		"Name":"PPID or Name",
+		"Type": 0,
+		"IsOptional":false
+	}
+]
