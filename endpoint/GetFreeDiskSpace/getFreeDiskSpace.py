@@ -1,54 +1,48 @@
 import json, os, psutil
 
+from baseAction import base_action
+
 #
-# Modify this class to store data to output in the json result.
+# Create an action class inheriting from the base_action class
 #
-class CResponse:
+class get_free_disk_space(base_action, object):
+
+    #
+    # Initialize the action object and the base class of the action object
+    # The base class of the action object contains the common functions for reading 
+    # the settings file and writing the json results.
+    #
+    # Any action specific variables should be defined here.
+    #
     def __init__(self):
-        self.status = 'uninitialized'
-        self.message = 'Did not run'
+        super(get_free_disk_space, self).__init__()
+        self.filepath = self.get_setting("Filepath")
 
-#
-# initialize the variables   
-#
-success = False    
-response = CResponse()
+    #
+    # The perform_action is a specific action implementation, it should 
+    # populate the response that will be written as json.
+    #
+    def perform_action(self):
+        self.response.name = "Get Free Disk Space"
+        self.response.type = "GetFreeDiskSpace"
+        try:
+            # get the free disk space
+            free_space = psutil.disk_usage(".").free
 
-try:
-    # get the free disk space
-    free_space = psutil.disk_usage(".").free
+            # set the response fields
+            response.status = "Success"
+            response.message = "There are " + str(free_space) + " bytes of free space available"
+            d = {}
+            d["free_space"] = free_space
+            self.response.results.append(d)
+            success = True
+        except Exception as e:
+            # set response if an exception is encountered
+            response.status = "Error"
+            response.message = str(e)
+        self.output_results()
 
-    # set the response fields
-    response.status = "success"
-    response.message = "There are " + str(free_space) + " bytes of free space available"
-    success = True
-
-except Exception as e:
-    # set response if an exception is encountered
-    response.status = str(e)
-    response.message = "Error getting free space"
-
-#
-# output the results as json
-#   
-print("the results of the script, in json:")
-print("-----------------------------------")    
-json_output = json.dumps(response, default=lambda x: x.__dict__)
-print(json_output)
-print("-----------------------------------")
-
-#
-# Write the results to the output json file.
-#
-if(os.path.exists(".." + os.sep + "results")):
-    print("outputting result json file to .." + os.sep + "results" + os.sep + "output.json")
-    f = open(".." + os.sep + "results" + os.sep + "output.json", "w+")
-    f.write(json_output)
-    f.close()
-else:
-    print(".." + os.sep + "results directory not found, result json will not be saved")
-    
-if(success):    
-    print("python script has completed successfully.")
-else:
-    print("python script has completed with errors.")
+# create an instance of the specific action
+action = get_free_disk_space()
+# call the perform_action of the specific action
+action.perform_action()

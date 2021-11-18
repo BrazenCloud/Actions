@@ -1,4 +1,4 @@
-import json, os, socket, subprocess
+import json, socket
 
 from baseAction import base_action
 
@@ -14,17 +14,7 @@ class run_os_query(base_action, object):
     #
     def __init__(self):
         super(run_os_query, self).__init__()
-        self.query = self.get_query()
-
-    #
-    # Get a setting from the settings dictionary, if the setting does not
-    # exist, None is returned
-    #
-    def get_setting(self, setting):
-        s = None
-        if(self.settings.has_key(setting)):
-            s = self.settings[setting];
-        return s
+        self.query = self.get_setting("Query")
 
     #
     # The perform_action is a specific action implementation, it should 
@@ -32,6 +22,7 @@ class run_os_query(base_action, object):
     #
     def perform_action(self):
         self.response.name = "Run OSQuery"
+        self.type = "RunOSQuery"
         try:
             # execute a process on the host, pipe the process stdout
             proc = subprocess.Popen(['osqueryi', '--json', self.query], stdout=subprocess.PIPE)
@@ -46,7 +37,7 @@ class run_os_query(base_action, object):
                     d[key] = r[key]
 
             self.response.message = "Ran Query on " + socket.gethostname() + ": " + self.query
-            self.response.status = 'Successful'
+            self.response.status = "Success"
             self.success = True
         except Exception as e:
             # set response if an exception is encountered
