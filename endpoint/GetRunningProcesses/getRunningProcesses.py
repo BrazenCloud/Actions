@@ -28,10 +28,9 @@ class get_running_processes(base_action, object):
                 try:
                     d = {}
                     self.response.results.append(d)
-                    pInfoDict = proc.as_dict()
-                    # pInfoDict = proc.as_dict(attrs=['pid', 'name', 'username', 'cpu_percent', 'create_time'])
+                    # pInfoDict = proc.as_dict()
+                    pInfoDict = proc.as_dict(attrs=['pid', 'name', 'username', 'cpu_percent', 'create_time', 'exe'])
                     for proc_attr in pInfoDict:
-                        print(proc_attr)
                         d[proc_attr] = pInfoDict[proc_attr]
                 except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
                     pass

@@ -1,4 +1,4 @@
-import psutil, socket
+import hashlib, os, psutil, socket
 
 from baseAction import base_action
 
@@ -16,8 +16,24 @@ class kill_running_process(base_action, object):
     #
     def __init__(self):
         super(kill_running_process, self).__init__()
-        self.kill_by = self.get_setting("Kill By (PPID, Name)")
-        self.kill_key = self.get_setting("PPID or Name")
+        self.kill_by = self.get_setting("Kill By (PPID, Name, File Path, MD5)")
+        self.kill_key = self.get_setting("Process")
+
+    def __generate_md5_hash__(self, exe):
+        md5_hash = None
+        # Verify the file was downloaded
+        if os.path.exists(exe):
+            BUF_SIZE = 262144  # read in 256kb chunks
+
+            md5 = hashlib.md5()
+            with open(exe, 'rb') as f:
+                while True:
+                    data = f.read(BUF_SIZE)
+                    if not data:
+                        break
+                    md5.update(data)
+            md5_hash = md5.hexdigest()
+        return md5_hash
 
     #
     # The perform_action is a specific action implementation, it should 
@@ -40,11 +56,15 @@ class kill_running_process(base_action, object):
                     proc_key = str(proc.ppid())
                 elif "Name" == self.kill_by:
                     proc_key = proc.name()
+                elif "File Path" == self.kill_by:
+                    proc_key = proc.exe()
+                elif "MD5" == self.kill_by:
+                    proc_key = self.__generate_md5_hash__(proc.exe())
                 else:
                     self.response.status = "Error"
                     self.response.message = "Invalid Input, only PPID and Name are supported for Kill By"
                     break
-                if proc_key.lower() == self.kill_key.lower():
+                if proc_key == self.kill_key:
                     # create dictionary that contains key/value pairs to be added to json result
                     d = {}
                     d["pid"] = proc.pid
@@ -58,7 +78,7 @@ class kill_running_process(base_action, object):
 
             if self.success == True:
                 if len(self.response.results["killed_processes"]) > 1:
-                    self.response.message = "Killed " + len(self.response.results["killed_processes"]) + " processes on " + socket.gethostname()
+                    self.response.message = "Killed " + str(len(self.response.results["killed_processes"])) + " processes on " + socket.gethostname()
                 elif len(self.response.results["killed_processes"]) > 0:
                     self.response.message = "Killed 1 process on " + socket.gethostname()
                 else:

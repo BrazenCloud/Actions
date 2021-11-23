@@ -1,11 +1,11 @@
 [
 	{
-		"Name":"Kill By (PPID, Name)",
+		"Name":"Kill By (PPID, Name, File Path, MD5)",
 		"Type": 0,
 		"IsOptional":false
 	},
 	{
-		"Name":"PPID or Name",
+		"Name":"Process",
 		"Type": 0,
 		"IsOptional":false
 	}
