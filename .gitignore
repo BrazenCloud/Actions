@@ -7,3 +7,6 @@
 endpoint/default.apt
 
 endpoint/logs/
+wget-log
+results/
+settings.json
