@@ -10,3 +10,5 @@ endpoint/logs/
 wget-log
 results/
 settings.json
+output.json
+output.upload.json
