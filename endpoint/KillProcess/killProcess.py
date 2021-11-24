@@ -1,4 +1,13 @@
-import hashlib, os, psutil, socket
+import hashlib, os, socket, sys
+
+if os.name == 'posix':
+    sys.path.append(sys.path[0] + os.sep + "linux")
+    sys.path.append(sys.path[0] + os.sep + "linux/psutil")
+elif os.name == 'nt':
+    sys.path.append(sys.path[0] + os.sep + "windows")
+    sys.path.append(sys.path[0] + os.sep + "windows/psutil")
+
+import psutil
 
 from baseAction import base_action
 
@@ -35,6 +44,21 @@ class kill_running_process(base_action, object):
             md5_hash = md5.hexdigest()
         return md5_hash
 
+    def __get_proc_key__(self, proc):
+        proc_key = None
+        try:
+            if "PPID" == self.kill_by:
+                proc_key = str(proc.ppid())
+            elif "Name" == self.kill_by:
+                proc_key = proc.name()
+            elif "File Path" == self.kill_by:
+                proc_key = proc.exe()
+            elif "MD5" == self.kill_by:
+                proc_key = self.__generate_md5_hash__(proc.exe())
+        except (psutil.AccessDenied):
+            print("Unable to access the process information [AccessDenied], skipping process")
+
+        return proc_key
     #
     # The perform_action is a specific action implementation, it should 
     # populate the response that will be written as json.
@@ -43,27 +67,17 @@ class kill_running_process(base_action, object):
         self.response.name = "Kill Running Process"
         self.response.type = "KillRunningProcess"
         # ppid is parent process ID
-        # exe is the running application.  Is this what is meant by 'file path'?
+        # exe is the running application (file path)
         # name is the process name
-        # username is the owner of a process 
-        # what is meant by md5?
+        # md5 is the has of the file
         try:
             # create list of data that will be added to the json results
             killed_processes = list()
+
             for proc in psutil.process_iter():
-                c_key = ""
-                if "PPID" == self.kill_by:
-                    proc_key = str(proc.ppid())
-                elif "Name" == self.kill_by:
-                    proc_key = proc.name()
-                elif "File Path" == self.kill_by:
-                    proc_key = proc.exe()
-                elif "MD5" == self.kill_by:
-                    proc_key = self.__generate_md5_hash__(proc.exe())
-                else:
-                    self.response.status = "Error"
-                    self.response.message = "Invalid Input, only PPID and Name are supported for Kill By"
-                    break
+                proc_key = self.__get_proc_key__(proc)
+                if proc_key is None:
+                    continue
                 if proc_key == self.kill_key:
                     # create dictionary that contains key/value pairs to be added to json result
                     d = {}
@@ -71,20 +85,23 @@ class kill_running_process(base_action, object):
                     d["name"] = proc.name()
                     killed_processes.append(d)
                     proc.kill()
-            self.response.status = "Successful"
-            # set results to the dictionary
-            self.response.results = {"killed_processes": killed_processes}
-            self.success = True
+                    print("Process " + proc_key + " killed")
 
-            if self.success == True:
-                if len(self.response.results["killed_processes"]) > 1:
-                    self.response.message = "Killed " + str(len(self.response.results["killed_processes"])) + " processes on " + socket.gethostname()
-                elif len(self.response.results["killed_processes"]) > 0:
-                    self.response.message = "Killed 1 process on " + socket.gethostname()
-                else:
-                    self.response.message = "No process with matching criteria to kill on " + socket.gethostname()
+            if len(killed_processes) > 0:
+                self.response.status = "Successful"
+                # set results to the dictionary
+                self.response.results = {"killed_processes": killed_processes}
+                self.success = True
+                self.response.message = "Killed " + str(len(killed_processes)) + " processes on " + socket.gethostname()
+            elif len(killed_processes) == 1:
+                self.response.message = "Killed 1 process on " + socket.gethostname()
+            else:
+                self.response.status = "Error"
+                self.response.message = "No process with matching criteria to kill on " + socket.gethostname()
+
         except Exception as e:
             # set response if an exception is encountered
+            print("Exception while killing process")
             self.response.status = "Error"
             self.response.message = str(e)
         self.output_results()

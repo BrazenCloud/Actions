@@ -2,6 +2,7 @@ import json, socket
 
 from baseAction import base_action
 
+# osquery must be in the system path
 #
 # Create an action class inheriting from the base_action class
 #

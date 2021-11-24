@@ -1,4 +1,13 @@
-import psutil, socket
+import os, socket, sys
+
+if os.name == 'posix':
+    sys.path.append(sys.path[0] + os.sep + "linux")
+    sys.path.append(sys.path[0] + os.sep + "linux/psutil")
+elif os.name == 'nt':
+    sys.path.append(sys.path[0] + os.sep + "windows")
+    sys.path.append(sys.path[0] + os.sep + "windows/psutil")
+
+import psutil
 
 from baseAction import base_action
 

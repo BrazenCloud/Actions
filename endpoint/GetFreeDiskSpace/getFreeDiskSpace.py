@@ -1,4 +1,13 @@
-import json, os, psutil
+import json, os, sys
+
+if os.name == 'posix':
+    sys.path.append(sys.path[0] + os.sep + "linux")
+    sys.path.append(sys.path[0] + os.sep + "linux/psutil")
+elif os.name == 'nt':
+    sys.path.append(sys.path[0] + os.sep + "windows")
+    sys.path.append(sys.path[0] + os.sep + "windows/psutil")
+
+import psutil
 
 from baseAction import base_action
 
@@ -30,16 +39,16 @@ class get_free_disk_space(base_action, object):
             free_space = psutil.disk_usage(".").free
 
             # set the response fields
-            response.status = "Success"
-            response.message = "There are " + str(free_space) + " bytes of free space available"
+            self.response.status = "Success"
+            self.response.message = "There are " + str(free_space) + " bytes of free space available"
             d = {}
             d["free_space"] = free_space
             self.response.results.append(d)
-            success = True
+            self.success = True
         except Exception as e:
             # set response if an exception is encountered
-            response.status = "Error"
-            response.message = str(e)
+            self.response.status = "Error"
+            self.response.message = str(e)
         self.output_results()
 
 # create an instance of the specific action

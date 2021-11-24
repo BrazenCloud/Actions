@@ -1,4 +1,4 @@
-import socket, subprocess
+import json, os, socket, subprocess, sys
 
 from baseAction import base_action
 
@@ -25,20 +25,34 @@ class disable_local_user_account(base_action, object):
     def perform_action(self):
         self.response.name = "Disable Local User Account"
         self.response.type = "DisableLocalUserAccount"
+        user_disabled = False
         try:
-            # execute a process on the host, pipe the process stdout and stderr
-            proc = subprocess.Popen(['usermod', '-L', self.userid], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            # get the piped stdout
-            out, err = proc.communicate()
+            if os.name == 'posix':
+                # execute a process on the host, pipe the process stdout and stderr
+                command = "usermod -L " + self.userid
+                out, err = subprocess.Popen(command, shell=True, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
+                user_disabled = True
+            elif os.name == 'nt':
+                # execute a process on the host, pipe the process stdout and stderr
+                command = "net user " + self.userid + " /active:no"
+                out, err = subprocess.Popen(command, shell=True, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
+                out, err = subprocess.Popen(["powershell",  "-file",  os.getcwd() + os.sep + "CheckUser.ps1"], stdout=subprocess.PIPE).communicate()
+                json_out = json.loads(out)
 
+                for user in json_out:
+                    if self.userid == user["Name"]:
+                        if user["Disabled"] == True:
+                            # the user has successfully been disabled
+                            user_disabled = True
+                            
             # if there is nothing written to stderr, the command was successful
-            if err == "":
+            if user_disabled == True:
                 self.response.status = "Successful"
                 self.response.message = "Disabled local user account for user: " + self.userid
                 self.success = True
             else:
                 self.response.status = "Error"
-                self.response.message = str(err)
+                self.response.message = "Error while disabling user " + self.userid + " - " + str(err)
         except Exception as e:
             # set response if an exception is encountered
             self.response.status = "Error"
