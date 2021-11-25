@@ -36,7 +36,7 @@ class disable_local_user_account(base_action, object):
                 # execute a process on the host, pipe the process stdout and stderr
                 command = "net user " + self.userid + " /active:no"
                 out, err = subprocess.Popen(command, shell=True, stdout = subprocess.PIPE, stderr= subprocess.PIPE).communicate()
-                out, err = subprocess.Popen(["powershell",  "-file",  os.getcwd() + os.sep + "CheckUser.ps1"], stdout=subprocess.PIPE).communicate()
+                out, err = subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-file",  os.getcwd() + os.sep + "CheckUser.ps1"], stdout=subprocess.PIPE).communicate()
                 json_out = json.loads(out)
 
                 for user in json_out:

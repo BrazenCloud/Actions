@@ -30,7 +30,7 @@ class create_update_registry_key(base_action, object):
 
         try:
             # execute a process on the host, pipe the process stdout and stderr
-            out, err = subprocess.Popen(["powershell",  "-file",  os.getcwd() + os.sep + "CreateUpdateRegistryKey.ps1", 
+            out, err = subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-file",  os.getcwd() + os.sep + "CreateUpdateRegistryKey.ps1", 
                 "-RegistryPath", self.registry_path, "-Name", self.name, "-Value", self.value], stdout=subprocess.PIPE).communicate()
             
             # suggest powershell script outputs to standard out only json containing results
