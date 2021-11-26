@@ -10,7 +10,7 @@
 		"IsOptional": true
 	},
 	{
-		"Name":"Direction (inbound/Outbound)",
+		"Name":"Direction (Inbound/Outbound)",
 		"Type": 0,
 		"IsOptional": true
 	},

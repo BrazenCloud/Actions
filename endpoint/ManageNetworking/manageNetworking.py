@@ -17,7 +17,7 @@ class manage_networking(base_action, object):
     def __init__(self):
         super(manage_networking, self).__init__()
         self.action = self.get_setting("Network Action (Block or Allow)")
-        self.direction = self.get_setting("Direction (inbound/Outbound)")
+        self.direction = self.get_setting("Direction (Inbound/Outbound)")
         self.port = self.get_setting("Port")
         self.protocol = self.get_setting("Protocol (TCP or UDP)")
         self.addresses = self.get_setting("IP Address (comma seperated list)")
@@ -39,7 +39,39 @@ class manage_networking(base_action, object):
 
         try:
             if os.name == 'posix':
-                pass
+                # Block    => DENY
+                # Allow    => ALLOW
+                # Inbound  => IN
+                # Outbound => OUT
+                # Enable => true
+                # Disable => false
+                action = "ALLOW"
+                direction = "IN"
+                enable = "true"
+                if self.enable == "Disable":
+                    enable = "false"
+                if self.direction == "Outbound":
+                    direction = "OUT"
+                if self.action == "Block":
+                    action = "DENY"
+                # sudo bash ./linux/manageNetworking.sh -e false -p 3000 -d IN -a ALLOW
+                if self.addresses == "All":
+                    out, err = subprocess.Popen(["bash",  os.getcwd() + os.sep + "manageNetworking.sh",
+                        "-e", enable, "-a", action, "-d", direction, "-p", self.port], 
+                        stdout=subprocess.PIPE).communicate()
+                else:
+                    address_split = self.addresses.split(",")
+                    for address in address_split:
+                        out, err = subprocess.Popen(["bash",  os.getcwd() + os.sep + "manageNetworking.sh",
+                            "-e", enable, "-a", action, "-d", direction, "-p", self.port, "-i", address], 
+                            stdout=subprocess.PIPE).communicate()
+                if err is None or len(err) == 0:
+                    self.response.message = out
+                    self.success = True
+                    self.response.status = "Successful"
+                else:
+                    self.response.message = out
+                    self.response.status = "Error"
             elif os.name == 'nt':
                 # execute a process on the host, pipe the process stdout and stderr
                 out, err = subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-file",  os.getcwd() + os.sep + "ManageNetworking.ps1",
