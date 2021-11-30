@@ -22,7 +22,7 @@ tar -czvf $1-memory-dump.tar.gz $1 >/dev/null 2>&1
 rm -rf $1
 
 if [ -f "$1-memory-dump.tar.gz" ]; then
-    echo "{\"Message\": \"Created file $1-memory-dump.tar.gz for process $1\", \"Successful\": True }"
+    echo "{\"Message\": \"Created file $1-memory-dump.tar.gz for process $1\", \"Successful\": True , \"File\": \"$1-memory-dump.tar.gz\"}"
 else
-   echo "{\"Message\": \"Unable to create memory dump for process $1\", \"Successful\": True }"
+   echo "{\"Message\": \"Unable to create memory dump for process $1\", \"Successful\": False }"
 fi
