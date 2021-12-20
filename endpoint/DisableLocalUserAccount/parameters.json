@@ -1,0 +1,7 @@
+[
+	{
+		"Name":"User ID",
+		"Type": 0,
+		"IsOptional":false
+	}
+]

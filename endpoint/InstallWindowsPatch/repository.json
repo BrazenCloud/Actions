@@ -1,0 +1,5 @@
+{
+	"Description": "Installs a Windows patch by KB ID.",
+	"Language": "Python",
+	"Tags": []
+}

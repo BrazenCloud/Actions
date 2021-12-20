@@ -1,0 +1,27 @@
+[
+	{
+		"Name":"Remote User",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"Remote Host",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"Target Folder",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"Source File",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"SCP Type (Upload or Download)",
+		"Type": 0,
+		"IsOptional":true
+	}
+]

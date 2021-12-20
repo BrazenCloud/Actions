@@ -1,0 +1,12 @@
+[
+	{
+		"Name":"Registry Path",
+		"Type": 0,
+		"IsOptional":false
+	},
+	{
+		"Name":"Name",
+		"Type": 0,
+		"IsOptional":false
+	}
+]

@@ -1,0 +1,22 @@
+[
+	{
+		"Name":"Package",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"Package Download URL",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"SHA Type (SHA1, SHA256 or SHA512)",
+		"Type": 0,
+		"IsOptional":true
+	},
+	{
+		"Name":"SHA Value",
+		"Type": 0,
+		"IsOptional":true
+	}
+]

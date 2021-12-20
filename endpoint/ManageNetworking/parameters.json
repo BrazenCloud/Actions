@@ -1,0 +1,32 @@
+[
+	{
+		"Name":"Enable",
+		"Type": 2,
+		"IsOptional": true
+	},
+	{
+		"Name": "Network Action (Block or Allow)",
+		"Type": 0,
+		"IsOptional": true
+	},
+	{
+		"Name":"Direction (Inbound/Outbound)",
+		"Type": 0,
+		"IsOptional": true
+	},
+	{
+		"Name":"Protocol (TCP or UDP)",
+		"Type": 0,
+		"IsOptional": true
+	},
+	{
+		"Name":"Port",
+		"Type": 0,
+		"IsOptional": true
+	},
+	{
+		"Name":"IP Address (comma seperated list)",
+		"Type": 0,
+		"IsOptional": true
+	}
+]

@@ -10,5 +10,5 @@ if ! [ -x "$(command -v python)" ]; then
     chmod +x $pythonCMD 
 fi
 
-$pythonCMD filedelete.py
+$pythonCMD ../filedelete.py
 
