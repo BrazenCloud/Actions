@@ -24,7 +24,7 @@ jobs:
 
       - name: Auth to Runway
         run: |
-          ./runway.bin login -u ${{ secrets.RUNWAY_EMAIL2 }} -p ${{ secrets.RUNWAY_PASSWORD2 }}
+          ./runway.bin login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
 
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
