@@ -1,0 +1,15 @@
+[
+    {
+        "Name": "Domain",
+        "Type": 0,
+        "DefaultValue": "Domain of DC",
+        "Description": "Domain to join to. Default is the domain of the DC.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Host Name",
+        "Type": 0,
+        "Description": "Host name of the target computer",
+        "IsOptional": false
+    }
+]
