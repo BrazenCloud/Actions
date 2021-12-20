@@ -1,0 +1,6 @@
+{
+	"Description": "Initiate an offline domain join on a Windows host.",
+	"Language": "PowerShell",
+	"Tags": ["Windows","ActiveDirectory"],
+	"Glyph": "cloud-download"
+}
