@@ -1,0 +1,9 @@
+[
+    {
+        "Name":"Output Type",
+        "Description": "csv or json.",
+        "Type": 0,
+        "IsOptional":true,
+        "DefaultValue": "csv"
+    }
+]
