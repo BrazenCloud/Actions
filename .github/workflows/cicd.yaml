@@ -29,9 +29,9 @@ jobs:
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
         shell: pwsh
-        run: ./script.ps1 -Test
+        run: ./publish.ps1 -Test
       
       - name: Publish Each Action on Push
         if: ${{ github.event_name == 'push' }}
         shell: pwsh
-        run: ./script.ps1
+        run: ./publish.ps1
