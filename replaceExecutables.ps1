@@ -13,7 +13,7 @@ foreach ($py in (Get-ChildItem .\ -Filter .py* -File -Recurse)) {
             $destName = 'python'
         }
     }
-    if (-not (Test-Path .\$execName) {
+    if (-not (Test-Path .\$execName)) {
         Write-Host "Downloading '$execName'..."
         Invoke-WebRequest -Uri "$dlPrefix$execName" -OutFile .\$execName
     }
