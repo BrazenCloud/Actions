@@ -1,4 +1,6 @@
 $dlPrefix = 'https://runwaydownloads.blob.core.windows.net/appdl/'
+Write-Host $pwd.Path
+Get-Item ./
 
 # Replace all Pythons with their proper replacements
 foreach ($py in (Get-ChildItem ./ -Filter .py* -File -Recurse)) {
