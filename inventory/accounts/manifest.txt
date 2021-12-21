@@ -1,0 +1,2 @@
+COPY . .
+RUN_WIN windows/run.bat

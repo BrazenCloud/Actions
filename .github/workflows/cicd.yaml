@@ -22,6 +22,10 @@ jobs:
           wget https://runwaydownloads.blob.core.windows.net/appdl/runway.bin
           chmod +x ./runway.bin
 
+      - name: Download any executables
+        shell: pwsh
+        run: ./replaceExecutables.ps1
+
       - name: Auth to Runway
         run: |
           ./runway.bin login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}

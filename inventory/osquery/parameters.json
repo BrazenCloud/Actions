@@ -1,0 +1,8 @@
+[
+	{
+		"Name":"Query",
+		"Type": 0,
+		"IsOptional":false,
+		"DefaultValue":".all startup_items"
+	}
+]

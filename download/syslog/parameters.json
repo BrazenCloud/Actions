@@ -1,0 +1,8 @@
+[
+	{ 
+		"Name":"URL",
+		"Type": 0,
+		"DefaultValue":"",
+		"IsOptional":false
+	}
+]

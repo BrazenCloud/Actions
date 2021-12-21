@@ -1,0 +1,14 @@
+[
+	{ 
+		"Name":"IP Range",
+		"Type": 0,
+		"DefaultValue":"",
+		"IsOptional":false
+	},
+	{ 
+		"Name":"Enrollment Token",
+		"Type": 0,
+		"DefaultValue":"",
+		"IsOptional":false
+	}
+]

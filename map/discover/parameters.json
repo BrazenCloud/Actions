@@ -1,0 +1,14 @@
+[
+	{
+		"Name":"Update Assets",
+		"Type": 2,
+		"Optional":true,
+		"DefaultValue":"true"
+	},
+	{ 
+		"Name":"IP Range",
+		"Type": 0,
+		"DefaultValue":"",
+		"IsOptional":true
+	}
+]
