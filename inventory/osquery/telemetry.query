@@ -1,0 +1,25 @@
+SELECT DISTINCT p.name,
+                p.pid,
+                p.parent,
+                pos.protocol,
+                pos.local_address,
+                pos.local_port,
+                pos.remote_address,
+                pos.remote_port,
+                u.username,
+                p.cmdline,
+                u.uuid,
+				s.name,
+				s.start_type,
+				s.path,
+				s.module_path,
+				s.user_account
+FROM            processes p
+LEFT JOIN     	process_open_sockets pos
+ON              (p.pid = pos.pid)
+JOIN            users u
+ON              (u.UID = p.UID)
+LEFT JOIN       listening_ports l
+ON              (p.pid = l.pid)
+LEFT JOIN 		services s
+ON 				(p.pid = s.pid);

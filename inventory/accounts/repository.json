@@ -1,0 +1,5 @@
+{
+	"Description": "Gather user account information on the host.",
+	"Language": "via cmdline",
+	"Tags": []
+}

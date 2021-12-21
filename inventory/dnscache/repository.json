@@ -1,0 +1,5 @@
+{
+	"Description": "Collect the dns cache of the host.",
+	"Language": "via cmdline",
+	"Tags": []
+}

@@ -1,0 +1,8 @@
+[
+	{
+		"Name":"Update Assets",
+		"Type": 2,
+		"IsOptional":true,
+		"DefaultValue":"true"
+	}
+]

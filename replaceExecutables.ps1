@@ -1,0 +1,44 @@
+$dlPrefix = 'https://runwaydownloads.blob.core.windows.net/appdl/'
+
+# Replace all Pythons with their proper replacements
+foreach ($py in (Get-ChildItem .\ -Filter .py* -File -Recurse)) {
+    switch ($py.Directory.Name.ToLower()) {
+        'windows' {
+            $execName = "$($py.Name.Replace('.','')).exe"
+            $destName = 'py.exe'
+        }
+        'linux' {
+            $execName = "$($py.Name.Replace('.',''))"
+            $destName = 'python'
+        }
+    }
+    if (-not (Test-Path .\$execName) {
+        Invoke-WebRequest -Uri "$dlPrefix$execName" -OutFile .\$execName
+    }
+    Copy-Item .\$execName -Destination "$($py.Directory.FullName)\$destName"
+}
+
+# Replace all .runway with the latest Runway utility executable
+foreach ($rw in (Get-ChildItem .\ -Filter .runway -File -Recurse)) {
+    switch ($py.Directory.Name.ToLower()) {
+        'windows' {
+            $execName = 'runway.exe'
+        }
+        'linux' {
+            $execName = 'runway.bin'
+        }
+    }
+    if (-not (Test-Path .\$execName)) {
+        Invoke-WebRequest -Uri "$dlPrefix$execName" -OutFile .\$execName
+    }
+    Copy-Item .\$execName -Destination "$($rw.Directory.FullName)\$execName"
+}
+
+# Any other executables
+foreach ($exec in (Get-ChildItem .\* -Filter .* -File -Recurse | ?{$_.Name -notlike '.py*' -and $_.Name -ne '.runway' -and $_.Name -ne '.gitignore'})) {
+    $execName = $exec.Name.Substring(1)
+    if (-not (Test-Path .\$execName)) {
+        Invoke-WebRequest -Uri "$dlPrefix$execName" -OutFile .\$execName
+    }
+    Copy-Item .\$execName -Destination "$($exec.Directory.FullName)\$execName"
+}

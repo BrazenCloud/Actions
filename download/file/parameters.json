@@ -1,0 +1,13 @@
+[
+	{
+		"Name":"Use Path",
+		"Type": 2,
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Path",
+		"Type": 0,
+		"DefaultValue":"",
+		"IsOptional":true
+	}
+]
