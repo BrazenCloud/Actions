@@ -25,7 +25,7 @@ foreach ($py in (Get-ChildItem ./ -Filter .py* -File -Recurse -Force)) {
 # Replace all .runway with the latest Runway utility executable
 foreach ($rw in (Get-ChildItem ./ -Filter .runway -File -Recurse -Force)) {
     Write-Host '-----------------'
-    switch ($py.Directory.Name.ToLower()) {
+    switch ($rw.Directory.Name.ToLower()) {
         'windows' {
             $execName = 'runway.exe'
         }
