@@ -1,5 +1,5 @@
 {
 	"Description": "Install the selected modules in PowerShell or Windows PowerShell",
 	"Language": "PowerShell",
-	"Tags": ["Windows","PowerShell","Meta"]
+	"Tags": ["Windows","Linux","PowerShell","Meta"]
 }
