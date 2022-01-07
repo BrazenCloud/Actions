@@ -1,0 +1,23 @@
+[
+    {
+        "Name": "Modules",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "Comma seperated list of modules to install.",
+        "IsOptional": false
+    },
+    {
+        "Name": "PWSH",
+        "Type": 2,
+        "DefaultValue": "",
+        "Description": "Use PowerShell 7?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Repository",
+        "Type": 0,
+        "DefaultValue": "PSGallery",
+        "Description": "The repository to install the modules from.",
+        "IsOptional": true
+    }
+]
