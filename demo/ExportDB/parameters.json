@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "DB Name",
+        "Type": 0,
+        "DefaultValue": "master",
+        "Description": "Name of database",
+        "IsOptional": false
+    },
+    {
+        "Name": "Instance Name",
+        "Type": 0,
+        "DefaultValue": "Host Name",
+        "Description": "Name of SQL instance",
+        "IsOptional": false
+    }
+]
