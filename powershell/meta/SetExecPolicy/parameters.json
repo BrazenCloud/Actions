@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Execution Policy",
+        "Type": 0,
+        "DefaultValue": "RemoteSigned",
+        "Description": "Execution Policy to apply",
+        "IsOptional": false
+    },
+    {
+        "Name": "PWSH",
+        "Type": 2,
+        "DefaultValue": "",
+        "Description": "Use PowerShell 7?",
+        "IsOptional": true
+    }
+]

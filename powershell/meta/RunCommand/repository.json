@@ -1,0 +1,5 @@
+{
+	"Description": "Runs a PowerShell Command",
+	"Language": "PowerShell",
+	"Tags": ["Windows","Linux","PowerShell","Meta"]
+}

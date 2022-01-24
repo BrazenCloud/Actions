@@ -1,0 +1,4 @@
+COPY . .
+
+RUN_WIN "powershell.exe -ExecutionPolicy Bypass -File .\windows\setExecPolicy.ps1"
+RUN_LIN linux/run.sh
