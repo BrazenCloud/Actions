@@ -20,13 +20,33 @@ foreach ($manifest in $manifests) {
     $path = Split-Path $manifest.FullName
     
     if (Test-Path $path\repository.json) {
-        $repository = Get-Item $path\repository.json
-        $repositoryContents = Get-Content $repository.FullName | ConvertFrom-Json -AsHashtable
+        $repositoryContents = Get-Content $path\repository.json | ConvertFrom-Json -AsHashtable
         foreach ($value in $repositoryValues) {
             if ($repositoryContents.Keys -contains $value) {
                 $replace[$value] = $repositoryContents[$value]
             }
         }
+    }
+
+    enum RunwayParamTypes {
+        String = 0
+        Number = 1
+        Boolean = 2
+    }
+
+    if (Test-Path $path\parameters.json) {
+        $parameters = Get-Content $path\parameters.json | ConvertFrom-Json -AsHashtable
+        $replace['Parameters'] = foreach ($param in $parameters) {
+            "- $($param['Name'])"
+            "  - Type: $([RunwayParamTypes]$param['Type'])"
+            if ($param.Keys -contains 'IsOptional') {
+                "  - IsOptional: $($param['IsOptional'])"
+            }
+            if ($param.Keys -contains 'DefaultValue') {
+                "  - DefaultValue: $($param['DefaultValue'])"
+            }
+        }
+        $replace['Parameters'] = $replace['Parameters'] -join "`n"
     }
 
     $tReadmeContent = Get-Content $tReadme
@@ -46,7 +66,7 @@ foreach ($manifest in $manifests) {
         }
     }
 
-    if (-not (Test-Path $path\README.md)) {
+    #if (-not (Test-Path $path\README.md)) {
         $tReadmeContent | Out-File $path\README.md
-    }
+    #}
 }
