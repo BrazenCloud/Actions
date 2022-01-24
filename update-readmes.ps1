@@ -38,6 +38,9 @@ foreach ($manifest in $manifests) {
         $parameters = Get-Content $path\parameters.json | ConvertFrom-Json -AsHashtable
         $replace['Parameters'] = foreach ($param in $parameters) {
             "- $($param['Name'])"
+            if ($param.Keys -contains 'Description') {
+                "  - Description: $($param['Description'])"
+            }
             "  - Type: $([RunwayParamTypes]$param['Type'])"
             if ($param.Keys -contains 'IsOptional') {
                 "  - IsOptional: $($param['IsOptional'])"
