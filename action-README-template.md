@@ -7,6 +7,8 @@
 - Tags:
   - {Tags}
 - Language: {Language}
+- Supported Operating Systems:
+  - {operatingsystems}
 
 ## Parameters
 

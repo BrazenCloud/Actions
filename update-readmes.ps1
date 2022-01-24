@@ -52,12 +52,26 @@ foreach ($manifest in $manifests) {
         $replace['Parameters'] = $replace['Parameters'] -join "`n"
     }
 
+    $replace['operatingsystems'] = @()
+    $manifestContents = Get-Content $manifest.FullName
+    foreach ($line in $manifestContents) {
+        if ($line -like 'RUN_WIN*') {
+            $replace['operatingsystems'] += 'Windows'
+        } elseif ($line -like 'RUN_LIN*') {
+            $replace['operatingsystems'] += 'Linux'
+        }
+    }
+
     $tReadmeContent = Get-Content $tReadme
     $tReadmeContent = foreach ($line in $tReadmeContent) {
         if ($line -match '\{([a-zA-Z]+)\}') {
             if ($replace.Keys -contains $Matches.1) {
                 if ($replace[$($Matches.1)].GetType().BaseType.Name -eq 'Array') {
-                    $line -replace '\{([a-zA-Z]+)\}',"$($replace[$($Matches.1)] -join "`n  - ")"
+                    if (($replace[$($Matches.1)] | ?{$_}).Count -gt 0) {
+                        $line -replace '\{([a-zA-Z]+)\}',"$($replace[$($Matches.1)] -join "`n  - ")"
+                    } else {
+                        $line -replace '\{([a-zA-Z]+)\}',"None specified."
+                    }
                 } else {
                     $line -replace '\{([a-zA-Z]+)\}',"$($replace[$($Matches.1)])"
                 }
