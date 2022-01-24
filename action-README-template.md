@@ -3,5 +3,5 @@
 {Description}
 
 - Tags:
-{Tags}
+  - {Tags}
 - Language: {Language}
