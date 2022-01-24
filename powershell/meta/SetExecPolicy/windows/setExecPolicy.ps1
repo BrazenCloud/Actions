@@ -1,9 +1,18 @@
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 $settings
 
-$sb = [scripblock]::Create("Set-ExecutionPolicy $($settings.'Execution Policy')")
-if ($settings.'PWSH') {
-    pwsh -command $sb
-} else {
-    Invoke-Command -ScriptBlock $sb
+# Output PS version (debugging)
+$PSVersionTable
+
+# Switch to pwsh if requested
+if ($settings.'PWSH' -eq $true -and $PSVersionTable.PSVersion.Major -le 5) {
+    try {
+        pwsh -command {exit}
+    } catch {
+        Write-Host 'PWSH is not installed. Cannot complete.'
+        exit
+    }
+    pwsh -ExecutionPolicy Bypass -File $MyInvocation.MyCommand.Path
 }
+
+Set-ExecutionPolicy $($settings.'Execution Policy')
