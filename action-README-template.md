@@ -1,3 +1,4 @@
+<!-- region Generated -->
 # {Name}
 
 {Description}
@@ -13,3 +14,4 @@
 ## Parameters
 
 {Parameters}
+<!-- endregion -->

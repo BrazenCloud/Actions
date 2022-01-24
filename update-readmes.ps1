@@ -83,7 +83,23 @@ foreach ($manifest in $manifests) {
         }
     }
 
-    #if (-not (Test-Path $path\README.md)) {
-        $tReadmeContent | Out-File $path\README.md
-    #}
+    $extraLines = $null
+    if (Test-Path $path\README.md) {
+        $content = Get-Content $path\README.md
+        $capture = $true
+        $extraLines = foreach ($line in $content) {
+            if ($line -like '<!-- region *') {
+                $capture = $false
+            } elseif ($line -like '<!-- endregion -->*') {
+                $capture = $true
+            } elseif ($capture) {
+                $line
+            }
+        }
+    }
+
+    $tReadmeContent | Out-File $path\README.md
+    if ($null -ne $extraLines) {
+        $extraLines | Out-File $path\README.md -Append
+    }
 }
