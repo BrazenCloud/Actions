@@ -2,70 +2,70 @@
     {
         "Name": "MemoryDump",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR MemoryDump collector?",
         "IsOptional": true
     },
     {
         "Name": "MFT",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR MFT collector?",
         "IsOptional": true
     },
     {
         "Name": "Secure",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR Secure collector?",
         "IsOptional": true
     },
     {
         "Name": "UsnJrnl",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR UsnJrnl collector?",
         "IsOptional": true
     },
     {
         "Name": "EventLog",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR EventLog collector?",
         "IsOptional": true
     },
     {
         "Name": "Prefetch",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR Prefetch collector?",
         "IsOptional": true
     },
     {
         "Name": "Registry",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR Registry collector?",
         "IsOptional": true
     },
     {
         "Name": "WMI",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR WMI collector?",
         "IsOptional": true
     },
     {
         "Name": "SRUM",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR SRUM collector?",
         "IsOptional": true
     },
     {
         "Name": "Web",
         "Type": 2,
-        "DefaultValue": true,
+        "DefaultValue": "true",
         "Description": "Collect data from the CDIR Web collector?",
         "IsOptional": true
     },
