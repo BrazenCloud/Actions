@@ -70,13 +70,6 @@
         "IsOptional": true
     },
     {
-        "Name": "Target",
-        "Type": 2,
-        "DefaultValue": true,
-        "Description": "Collect data from the CDIR Target collector?",
-        "IsOptional": true
-    },
-    {
         "Name": "MemoryDumpCmdline",
         "Type": 0,
         "DefaultValue": "winpmem-2.1.post4.exe --output RAM.aff4",
