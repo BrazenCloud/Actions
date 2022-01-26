@@ -1,3 +1,8 @@
+# Move stuff out of the Windows folder
+Get-ChildItem .\Windows | ForEach-Object {
+    Move-Item $_.FullName -Destination .\
+}
+
 # Build the INI
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 $settings
@@ -20,13 +25,17 @@ $process = Start-Process $cdir.FullName -RedirectStandardError .\stderr.txt -Red
 
 $stringToFind = 'Press Enter key to continue...'
 
-$waiting = $true
-while ($waiting) {
-    Start-Sleep -Seconds 10
-    if ((Get-Content .\stderr.txt) -like "*$stringToFind") {
-        Get-Content .\stderr.txt
-        Get-Process 'cdir-collector' -ErrorAction SilentlyContinue | Stop-Process
-        $waiting = $false
+if (Test-Path .\stderr.txt) {
+    $waiting = $true
+    while ($waiting) {
+        Start-Sleep -Seconds 10
+        if ((Get-Content .\stderr.txt) -like "*$stringToFind") {
+            Get-Content .\stderr.txt
+            Get-Process 'cdir-collector' -ErrorAction SilentlyContinue | Stop-Process
+            $waiting = $false
+        }
     }
+    Write-Host 'Done!'
+} else {
+    Write-Host 'No file created. Error suspected.'
 }
-Write-Host 'Done!'
