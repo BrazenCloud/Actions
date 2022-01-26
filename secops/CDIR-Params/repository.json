@@ -1,0 +1,5 @@
+{
+	"Description": "CDIR (Cyber Defense Institute Incident Response) Collector - live collection tool based on OSS tool/library",
+	"Language": "C++",
+	"Tags": ["IR","Collection"]
+}

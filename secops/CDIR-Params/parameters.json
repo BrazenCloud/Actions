@@ -1,0 +1,93 @@
+[
+    {
+        "Name": "MemoryDump",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR MemoryDump collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "MFT",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR MFT collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Secure",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR Secure collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "UsnJrnl",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR UsnJrnl collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "EventLog",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR EventLog collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Prefetch",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR Prefetch collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Registry",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR Registry collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "WMI",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR WMI collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "SRUM",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR SRUM collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Web",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR Web collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Target",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "Collect data from the CDIR Target collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "MemoryDumpCmdline",
+        "Type": 0,
+        "DefaultValue": "winpmem-2.1.post4.exe --output RAM.aff4",
+        "Description": "Command line with which to run the memory dump.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Target",
+        "Type": 0,
+        "DefaultValue": "C:\\",
+        "Description": "The target drive.",
+        "IsOptional": true
+    }
+]
