@@ -19,5 +19,4 @@ if ($settings.'PWSH' -eq $true -and $PSVersionTable.PSVersion.Major -le 5) {
 
 # Execute command
 $sb = [scriptblock]::Create($settings.Command)
-Invoke-Command -ScriptBlock $sb | Export-Clixml .\results\results.xml
-Get-Content .\results\results.xml
+Invoke-Command -ScriptBlock $sb | ConvertTo-Xml -As String -Depth $settings.'Serialize Depth'
