@@ -16,7 +16,7 @@
     {
         "Name": "Serialize Depth",
         "Type": 1,
-        "DefaultValue": 2,
+        "DefaultValue": "2",
         "Description": "When serializing the return object, how deep should it go?",
         "IsOptional": false
     }
