@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "Secure",
+        "Type": 2,
+        "DefaultValue": "true",
+        "Description": "Upon completion all data will be compressed and password protected.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Complete",
+        "Type": 2,
+        "DefaultValue": "true",
+        "Description": "Collect data from the CDIR UsnJrnl collector?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Memory Dump",
+        "Type": 2,
+        "DefaultValue": "false",
+        "Description": "Choosing this option will gather a memory dump and volatile data. Upon completion all data will be compressed and password protected.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Triage",
+        "Type": 2,
+        "DefaultValue": "false",
+        "Description": "Choosing this option will gather volatile data. Upon completion all data will be compressed and password protected.",
+        "IsOptional": true
+    }
+]
