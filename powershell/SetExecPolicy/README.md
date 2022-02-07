@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# powershell:meta:SetExecPolicy
+# powershell:SetExecPolicy
 
 Sets the execution policy in PowerShell or Windows Powershell
 

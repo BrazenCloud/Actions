@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# powershell:meta:RunCommand
+# powershell:RunCommand
 
-Runs a PowerShell Command
+Runs a PowerShell Command, designed to work with Invoke-RwPowerShellCommand from the SDK.
 
 ## Metadata
 

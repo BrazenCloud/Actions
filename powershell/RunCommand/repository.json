@@ -1,5 +1,5 @@
 {
-	"Description": "Runs a PowerShell Command",
+	"Description": "Runs a PowerShell Command, designed to work with Invoke-RwPowerShellCommand from the SDK.",
 	"Language": "PowerShell",
 	"Tags": ["Windows","Linux","PowerShell","Meta"]
 }
