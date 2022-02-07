@@ -26,5 +26,15 @@ Runs a PowerShell Command
   - Description: Use PowerShell 7?
   - Type: Boolean
   - IsOptional: True
-  - DefaultValue: 
+  - DefaultValue: false
+- Serialize Depth
+  - Description: When serializing the return object, how deep should it go?
+  - Type: Number
+  - IsOptional: False
+  - DefaultValue: 2
+- Default Properties Only
+  - Description: Selects default properties. Only works on objects with formats.
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: false
 <!-- endregion -->
