@@ -9,7 +9,7 @@
     {
         "Name": "PWSH",
         "Type": 2,
-        "DefaultValue": "",
+        "DefaultValue": "false",
         "Description": "Use PowerShell 7?",
         "IsOptional": true
     },
@@ -19,5 +19,12 @@
         "DefaultValue": "2",
         "Description": "When serializing the return object, how deep should it go?",
         "IsOptional": false
+    },
+    {
+        "Name": "Default Properties Only",
+        "Type": 2,
+        "DefaultValue": "false",
+        "Description": "Selects default properties. Only works on objects with formats.",
+        "IsOptional": true       
     }
 ]

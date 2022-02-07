@@ -19,4 +19,14 @@ if ($settings.'PWSH' -eq $true -and $PSVersionTable.PSVersion.Major -le 5) {
 
 # Execute command
 $sb = [scriptblock]::Create($settings.Command)
-Invoke-Command -ScriptBlock $sb | ConvertTo-Xml -As String -Depth $settings.'Serialize Depth'
+$output = Invoke-Command -ScriptBlock $sb
+$select = '*'
+if ($settings.'Default Properties Only' -eq $true) {
+    if ($output.GetType().BaseType.Name -eq 'Array') {
+        if ($output[0].PSStandardMembers.DefaultDisplayPropertySet.ReferencedPropertyNames) {
+            $select = $output[0].PSStandardMembers.DefaultDisplayPropertySet.ReferencedPropertyNames
+        }
+    }
+}
+$output | Select-Object $select | Export-Clixml -Depth $settings.'Serialize Depth' .\results\output.clixml
+Get-Content .\results\output.clixml
