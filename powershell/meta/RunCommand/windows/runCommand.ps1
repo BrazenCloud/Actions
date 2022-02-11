@@ -1,10 +1,15 @@
 # Load Settings
 $json = Get-Content .\settings.json
-$json.Split("`n") | Foreach-Object {"# $_"}
 $settings = $json | ConvertFrom-Json
 
+if ($settings.Debug.ToString() -eq 'Debug') {
+    $json.Split("`n") | Foreach-Object {"# $_"}
+}
+
 # Output PS version (debugging)
-"# $($PSVersionTable.PSVersion.ToString())"
+if ($settings.Debug.ToString() -eq 'Debug') {
+    "# $($PSVersionTable.PSVersion.ToString())"
+}
 
 # Switch to pwsh if requested
 if ($settings.'PWSH' -eq $true -and $PSVersionTable.PSVersion.Major -le 5) {
@@ -19,4 +24,8 @@ if ($settings.'PWSH' -eq $true -and $PSVersionTable.PSVersion.Major -le 5) {
 
 # Execute command
 $sb = [scriptblock]::Create($settings.Command)
-Invoke-Command -ScriptBlock $sb | ConvertTo-Xml -As String -Depth $settings.'Serialize Depth'
+if ($settings.'Raw Output'.ToString() -eq 'true') {
+    Invoke-Command -ScriptBlock $sb
+} else {
+    Invoke-Command -ScriptBlock $sb | ConvertTo-Xml -As String -Depth $settings.'Serialize Depth'
+}
