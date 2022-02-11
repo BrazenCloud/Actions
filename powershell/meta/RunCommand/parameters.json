@@ -7,10 +7,24 @@
         "IsOptional": false
     },
     {
+        "Name": "Raw Output",
+        "Type": 2,
+        "DefaultValue": "",
+        "Description": "Returns the output as a raw string.",
+        "IsOptional": true
+    },
+    {
         "Name": "PWSH",
         "Type": 2,
         "DefaultValue": "",
         "Description": "Use PowerShell 7?",
+        "IsOptional": true
+    },
+    {
+        "Name": "Debug",
+        "Type": 2,
+        "DefaultValue": "",
+        "Description": "Enable debug output?",
         "IsOptional": true
     },
     {
