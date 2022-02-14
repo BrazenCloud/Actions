@@ -1,0 +1,14 @@
+[
+	{ 
+		"Name":"MSI URL",
+		"Type": 0,
+		"DefaultValue": "",
+		"IsOptional": false
+	},
+    { 
+		"Name":"MSI Parameters (/i installer.msi already included)",
+		"Type": 0,
+		"DefaultValue": "/qn /norestart",
+		"IsOptional": true
+	}
+]
