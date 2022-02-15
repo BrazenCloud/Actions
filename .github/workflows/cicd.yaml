@@ -24,7 +24,7 @@ jobs:
 
       - name: Download any executables
         shell: pwsh
-        run: ./replaceExecutables.ps1
+        run: ./reposcripts/replaceExecutables.ps1
 
       - name: Auth to Runway
         run: |
@@ -33,9 +33,9 @@ jobs:
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
         shell: pwsh
-        run: ./publish.ps1 -Test
+        run: ./reposcripts/publish.ps1 -Test
       
       - name: Publish Each Action on Push
         if: ${{ github.event_name == 'push' }}
         shell: pwsh
-        run: ./publish.ps1
+        run: ./reposcripts/publish.ps1
