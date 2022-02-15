@@ -1,5 +1,8 @@
 {
-	"Description": "Installs a Windows patch by KB ID.",
-	"Language": "Python",
-	"Tags": ["Windows","Updates"]
+  "Description": "Installs a Windows patch by KB ID.",
+  "Language": "Python",
+  "Tags": [
+    "Windows",
+    "Updates"
+  ]
 }

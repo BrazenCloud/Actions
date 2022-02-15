@@ -1,5 +1,9 @@
 {
-	"Description": "Updates information about user accounts on an asset.",
-	"Language": "Python",
-	"Tags": ["Runway","Users"]
+  "Description": "Updates information about user accounts on an asset.",
+  "Language": "Python",
+  "Tags": [
+    "Runway",
+    "Users",
+    "Windows"
+  ]
 }

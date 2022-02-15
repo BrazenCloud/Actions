@@ -1,5 +1,8 @@
 {
-	"Description": "Initiate an offline domain join on a DC",
-	"Language": "PowerShell",
-	"Tags": ["Windows","ActiveDirectory"]
+  "Description": "Initiate an offline domain join on a DC",
+  "Language": "PowerShell",
+  "Tags": [
+    "Windows",
+    "ActiveDirectory"
+  ]
 }

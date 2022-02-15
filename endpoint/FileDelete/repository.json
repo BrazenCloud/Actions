@@ -1,5 +1,9 @@
 {
-	"Description": "Deletes the file by full file name.",
-	"Language": "Python",
-	"Tags": ["File","Windows","Linux"]
+  "Description": "Deletes the file by full file name.",
+  "Language": "Python",
+  "Tags": [
+    "File",
+    "Windows",
+    "Linux"
+  ]
 }

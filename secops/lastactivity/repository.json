@@ -1,5 +1,8 @@
 {
-	"Description": "Runs the LastActivityView Windows tool.",
-	"Language": "Executable",
-	"Tags": ["LastActivityView","Windows"]
+  "Description": "Runs the LastActivityView Windows tool.",
+  "Language": "Executable",
+  "Tags": [
+    "LastActivityView",
+    "Windows"
+  ]
 }

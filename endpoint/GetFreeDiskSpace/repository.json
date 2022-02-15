@@ -1,5 +1,9 @@
 {
-	"Description": "Gets free disk space available on the system in bytes.",
-	"Language": "Python",
-	"Tags": ["Disk"]
+  "Description": "Gets free disk space available on the system in bytes.",
+  "Language": "Python",
+  "Tags": [
+    "Disk",
+    "Windows",
+    "Linux"
+  ]
 }

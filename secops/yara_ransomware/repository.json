@@ -1,5 +1,10 @@
 {
-	"Description": "Yara scan for ransomware.",
-	"Language": "via Yara",
-	"Tags": ["Malware", "Ransomware", "Yara"]
+  "Description": "Yara scan for ransomware.",
+  "Language": "via Yara",
+  "Tags": [
+    "Malware",
+    "Ransomware",
+    "Yara",
+    "Windows"
+  ]
 }

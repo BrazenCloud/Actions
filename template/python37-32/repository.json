@@ -1,5 +1,9 @@
 {
-	"Description": "This is a template Python action",
-	"Language": "Python",
-	"Tags": ["Template","Python"]
+  "Description": "This is a template Python action",
+  "Language": "Python",
+  "Tags": [
+    "Template",
+    "Python",
+    "Windows"
+  ]
 }

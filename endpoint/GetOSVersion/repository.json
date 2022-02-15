@@ -1,5 +1,9 @@
 {
-	"Description": "Gets the OS version.",
-	"Language": "Python",
-	"Tags": ["OS"]
+  "Description": "Gets the OS version.",
+  "Language": "Python",
+  "Tags": [
+    "OS",
+    "Windows",
+    "Linux"
+  ]
 }

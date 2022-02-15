@@ -1,5 +1,9 @@
 {
-	"Description": "This is a template binary action.",
-	"Language": "Executable",
-	"Tags": ["Template","Executable"]
+  "Description": "This is a template binary action.",
+  "Language": "Executable",
+  "Tags": [
+    "Template",
+    "Executable",
+    "Windows"
+  ]
 }

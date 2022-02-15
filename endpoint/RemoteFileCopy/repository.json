@@ -1,5 +1,9 @@
 {
-	"Description": "Uploads or Downloads a file to/from a remote host.",
-	"Language": "Python",
-	"Tags": ["File"]
+  "Description": "Uploads or Downloads a file to/from a remote host.",
+  "Language": "Python",
+  "Tags": [
+    "File",
+    "Windows",
+    "Linux"
+  ]
 }

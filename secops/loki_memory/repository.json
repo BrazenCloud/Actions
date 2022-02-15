@@ -1,5 +1,8 @@
 {
-	"Description": "Comprehensive malware scan in memory.",
-	"Language": "via Loki",
-	"Tags": ["Malware"]
+  "Description": "Comprehensive malware scan in memory.",
+  "Language": "via Loki",
+  "Tags": [
+    "Malware",
+    "Windows"
+  ]
 }

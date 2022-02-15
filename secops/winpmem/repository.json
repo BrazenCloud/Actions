@@ -1,5 +1,8 @@
 {
-	"Description": "Dumps a memory image.",
-	"Language": "Executable",
-	"Tags": ["Memory","Windows"]
+  "Description": "Dumps a memory image.",
+  "Language": "Executable",
+  "Tags": [
+    "Memory",
+    "Windows"
+  ]
 }

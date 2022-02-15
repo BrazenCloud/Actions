@@ -1,5 +1,10 @@
 {
-	"Description": "Gather netstat data for all connections and processes on the host.",
-	"Language": "Python",
-	"Tags": ["Netstat","Network"]
+  "Description": "Gather netstat data for all connections and processes on the host.",
+  "Language": "Python",
+  "Tags": [
+    "Netstat",
+    "Network",
+    "Windows",
+    "Linux"
+  ]
 }

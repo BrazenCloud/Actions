@@ -1,5 +1,8 @@
 {
-	"Description": "Returns the software installed on a Windows computer.",
-	"Language": "PowerShell",
-	"Tags": ["Windows","Software"]
+  "Description": "Returns the software installed on a Windows computer.",
+  "Language": "PowerShell",
+  "Tags": [
+    "Windows",
+    "Software"
+  ]
 }

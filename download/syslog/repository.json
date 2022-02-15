@@ -1,6 +1,10 @@
 {
-	"Description":"Download results into syslog.",
-	"Language": "Python",
-	"Tags": ["Connector","Syslog"],
-	"Glyph": "cloud-download"
+  "Description": "Download results into syslog.",
+  "Language": "Python",
+  "Tags": [
+    "Connector",
+    "Syslog",
+    "Windows"
+  ],
+  "Glyph": "cloud-download"
 }

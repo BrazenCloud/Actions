@@ -1,5 +1,8 @@
 {
-	"Description": "This is a template batch action.",
-	"Language": "Batch",
-	"Tags": ["Windows","Template"]
+  "Description": "This is a template batch action.",
+  "Language": "Batch",
+  "Tags": [
+    "Windows",
+    "Template"
+  ]
 }

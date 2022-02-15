@@ -1,5 +1,8 @@
 {
-	"Description": "Creates or updates a Windows registry key.",
-	"Language": "Python",
-	"Tags": ["Windows","Registry"]
+  "Description": "Creates or updates a Windows registry key.",
+  "Language": "Python",
+  "Tags": [
+    "Windows",
+    "Registry"
+  ]
 }

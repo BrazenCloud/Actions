@@ -1,5 +1,9 @@
 {
-	"Description": "Gets running processes on the system.",
-	"Language": "Python",
-	"Tags": ["Process"]
+  "Description": "Gets running processes on the system.",
+  "Language": "Python",
+  "Tags": [
+    "Process",
+    "Windows",
+    "Linux"
+  ]
 }

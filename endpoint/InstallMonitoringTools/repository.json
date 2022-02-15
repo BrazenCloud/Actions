@@ -1,5 +1,9 @@
 {
-	"Description": "Installs Monitoring Tools Elastisearch and Grafana.",
-	"Language": "Python",
-	"Tags": ["Elastic","Grafana"]
+  "Description": "Installs Monitoring Tools Elastisearch and Grafana.",
+  "Language": "Python",
+  "Tags": [
+    "Elastic",
+    "Grafana",
+    "Linux"
+  ]
 }

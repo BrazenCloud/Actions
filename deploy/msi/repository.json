@@ -1,5 +1,8 @@
 {
-	"Description":"Deploy an MSI from a URL.",
-	"Language": "PowerShell",
-	"Tags": [ "Software", "Windows" ]
+  "Description": "Deploy an MSI from a URL.",
+  "Language": "PowerShell",
+  "Tags": [
+    "Software",
+    "Windows"
+  ]
 }
