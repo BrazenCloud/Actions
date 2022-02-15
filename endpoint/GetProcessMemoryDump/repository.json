@@ -1,5 +1,5 @@
 {
 	"Description": "Dumps the memory for a process.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Memory","Forensics"]
 }

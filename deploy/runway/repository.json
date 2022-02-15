@@ -1,5 +1,5 @@
 {
 	"Description":"Deploy runway agent to neighboring hosts.",
 	"Language": "Python",
-	"Tags": [ ]
+	"Tags": ["Runway","Deploy"]
 }

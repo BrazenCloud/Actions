@@ -1,0 +1,5 @@
+{
+	"Description": "This is a template PowerShell action",
+	"Language": "PowerShell",
+	"Tags": ["Template","PowerShell"]
+}

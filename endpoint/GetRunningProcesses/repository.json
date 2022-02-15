@@ -1,5 +1,5 @@
 {
 	"Description": "Gets running processes on the system.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Process"]
 }

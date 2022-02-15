@@ -1,5 +1,6 @@
 {
 	"Description":"Download results into elasticsearch.",
 	"Language": "Python",
+	"Tags": ["Connector","Elastic"],
 	"Glyph": "cloud-download"
 }

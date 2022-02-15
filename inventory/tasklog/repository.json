@@ -1,5 +1,5 @@
 {
 	"Description": "Log all processes on the host.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Process"]
 }

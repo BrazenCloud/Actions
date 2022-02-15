@@ -1,5 +1,5 @@
 {
 	"Description": "Enumerate all entries in the arp cache to discover new hosts.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["ARP","Network"]
 }

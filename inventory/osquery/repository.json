@@ -1,5 +1,5 @@
 {
 	"Description": "Run osquery on the host.",
 	"Language": "via osquery binary",
-	"Tags": []
+	"Tags": ["Osquery"]
 }

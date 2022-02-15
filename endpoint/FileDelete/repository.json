@@ -1,5 +1,5 @@
 {
 	"Description": "Deletes the file by full file name.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["File","Windows","Linux"]
 }

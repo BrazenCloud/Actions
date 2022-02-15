@@ -1,5 +1,5 @@
 {
-	"Description": "Gather netstat data for all connections and processes on the host.",
+	"Description": "This is a template Python action",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Template","Python"]
 }

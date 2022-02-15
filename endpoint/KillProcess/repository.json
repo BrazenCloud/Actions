@@ -1,5 +1,5 @@
 {
 	"Description": "Kills a running process on the system either by name, parent process, user account, file path or md5 (Linux).",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Process"]
 }

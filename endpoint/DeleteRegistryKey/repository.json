@@ -1,5 +1,5 @@
 {
 	"Description": "Deletes a Windows registry key.",
 	"Language": "Python",
-	"Tags": []
+	"Tags": ["Windows","Registry"]
 }

@@ -1,0 +1,5 @@
+{
+	"Description": "Updates information about an Asset in Runway.",
+	"Language": "Python",
+	"Tags": ["Runway","SystemInfo"]
+}

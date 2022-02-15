@@ -1,5 +1,6 @@
 {
 	"Description":"Download result information to a central location.",
 	"Language": "Python",
+	"Tags": ["Connector","File"],
 	"Glyph": "cloud-download"
 }
