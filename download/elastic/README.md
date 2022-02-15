@@ -6,7 +6,9 @@ Download results into elasticsearch.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Connector
+  - Elastic
+  - Windows
 - Language: Python
 - Supported Operating Systems:
   - Windows

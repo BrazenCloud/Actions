@@ -1,13 +1,14 @@
 <!-- region Generated -->
 # secops:lastactivity
 
-None specified.
+Runs the LastActivityView Windows tool.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - LastActivityView
+  - Windows
+- Language: Executable
 - Supported Operating Systems:
   - Windows
 

@@ -6,7 +6,8 @@ Deletes a Windows registry key.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Windows
+  - Registry
 - Language: Python
 - Supported Operating Systems:
   - Windows

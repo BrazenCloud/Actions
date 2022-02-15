@@ -6,7 +6,10 @@ Dumps the memory for a process.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Memory
+  - Forensics
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

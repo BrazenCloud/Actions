@@ -6,7 +6,9 @@ Collect the dns cache of the host.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - DNS
+  - Network
+  - Windows
 - Language: via cmdline
 - Supported Operating Systems:
   - Windows

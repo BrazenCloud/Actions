@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # map:users
 
-None specified.
+Updates information about user accounts on an asset.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Runway
+  - Users
+  - Windows
+- Language: Python
 - Supported Operating Systems:
   - Windows
 

@@ -6,7 +6,10 @@ Gather netstat data for all connections and processes on the host.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Netstat
+  - Network
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

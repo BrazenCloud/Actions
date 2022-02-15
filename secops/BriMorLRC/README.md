@@ -8,6 +8,7 @@ BriMor Live Collection
 - Tags:
   - IR
   - Collection
+  - Windows
 - Language: Batch
 - Supported Operating Systems:
   - Windows

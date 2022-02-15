@@ -6,7 +6,9 @@ Download results into syslog.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Connector
+  - Syslog
+  - Windows
 - Language: Python
 - Supported Operating Systems:
   - Windows

@@ -1,5 +1,5 @@
 # Template location
-$tReadme = '.\action-README-template.md'
+$tReadme = '.\reposcripts\action-README-template.md'
 
 # Value locations
 $repositoryValues = @(

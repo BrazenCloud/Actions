@@ -6,7 +6,10 @@ Download result information to a central location.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Connector
+  - File
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

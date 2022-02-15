@@ -6,7 +6,8 @@ Installs a Windows patch by KB ID.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Windows
+  - Updates
 - Language: Python
 - Supported Operating Systems:
   - Windows

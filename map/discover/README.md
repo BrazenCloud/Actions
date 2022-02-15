@@ -6,7 +6,11 @@ Use a scan to discover neighboring hosts.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - AssetDiscovery
+  - Network
+  - Runway
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

@@ -6,7 +6,9 @@ Gets the OS version.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - OS
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

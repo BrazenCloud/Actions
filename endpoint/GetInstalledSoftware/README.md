@@ -1,13 +1,14 @@
 <!-- region Generated -->
 # endpoint:GetInstalledSoftware
 
-None specified.
+Returns the software installed on a Windows computer.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Windows
+  - Software
+- Language: PowerShell
 - Supported Operating Systems:
   - Windows
 

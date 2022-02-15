@@ -6,7 +6,9 @@ Gets free disk space available on the system in bytes.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Disk
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

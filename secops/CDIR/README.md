@@ -8,6 +8,7 @@ CDIR (Cyber Defense Institute Incident Response) Collector - live collection too
 - Tags:
   - IR
   - Collection
+  - Windows
 - Language: C++
 - Supported Operating Systems:
   - Windows

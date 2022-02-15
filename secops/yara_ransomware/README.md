@@ -9,6 +9,7 @@ Yara scan for ransomware.
   - Malware
   - Ransomware
   - Yara
+  - Windows
 - Language: via Yara
 - Supported Operating Systems:
   - Windows

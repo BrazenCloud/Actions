@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # template:powershell
 
-None specified.
+This is a template PowerShell action
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Template
+  - PowerShell
+  - Windows
+- Language: PowerShell
 - Supported Operating Systems:
   - Windows
 

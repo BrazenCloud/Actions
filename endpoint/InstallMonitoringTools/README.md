@@ -6,7 +6,9 @@ Installs Monitoring Tools Elastisearch and Grafana.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Elastic
+  - Grafana
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Linux

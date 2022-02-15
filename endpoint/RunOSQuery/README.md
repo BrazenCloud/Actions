@@ -6,7 +6,9 @@ Runs an OSQuery
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Osquery
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

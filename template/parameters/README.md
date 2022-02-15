@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # template:parameters
 
-None specified.
+This is a template action with parameters.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Template
+  - Parameters
+  - Windows
+- Language: Python
 - Supported Operating Systems:
   - Windows
 
