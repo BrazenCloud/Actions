@@ -1,5 +1,10 @@
 {
-	"Description": "Dumps a memory image memory.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Dumps a memory image memory.",
+  "Language": "Python",
+  "Tags": [
+    "Memory",
+    "Forensics",
+    "Windows",
+    "Linux"
+  ]
 }

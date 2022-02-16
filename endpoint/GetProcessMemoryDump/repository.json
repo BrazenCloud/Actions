@@ -1,5 +1,10 @@
 {
-	"Description": "Dumps the memory for a process.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Dumps the memory for a process.",
+  "Language": "Python",
+  "Tags": [
+    "Memory",
+    "Forensics",
+    "Windows",
+    "Linux"
+  ]
 }

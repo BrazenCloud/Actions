@@ -1,5 +1,10 @@
 {
-	"Description": "Gather netstat data for all connections and processes on the host.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "This is a template Python action.",
+  "Language": "Python",
+  "Tags": [
+    "Template",
+    "Python",
+    "Windows",
+    "Linux"
+  ]
 }

@@ -6,7 +6,9 @@ Deploy runway agent to neighboring hosts.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Runway
+  - Deploy
+  - Windows
 - Language: Python
 - Supported Operating Systems:
   - Windows

@@ -6,7 +6,9 @@ Kills a running process on the system either by name, parent process, user accou
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Process
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

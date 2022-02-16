@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # map:systeminfo
 
-None specified.
+Updates information about an Asset in Runway.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Runway
+  - SystemInfo
+  - Windows
+- Language: Python
 - Supported Operating Systems:
   - Windows
 

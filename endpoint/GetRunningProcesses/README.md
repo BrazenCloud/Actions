@@ -6,7 +6,9 @@ Gets running processes on the system.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Process
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

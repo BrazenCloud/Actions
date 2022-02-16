@@ -1,5 +1,9 @@
 {
-	"Description": "DEMO: Exports a database",
-	"Language": "PowerShell",
-	"Tags": ["Windows","PowerShell","SQL"]
+  "Description": "DEMO: Exports a database",
+  "Language": "PowerShell",
+  "Tags": [
+    "Windows",
+    "PowerShell",
+    "SQL"
+  ]
 }

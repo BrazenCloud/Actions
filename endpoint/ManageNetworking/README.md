@@ -6,7 +6,9 @@ Manages networking via Firewall settings.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Firewall
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

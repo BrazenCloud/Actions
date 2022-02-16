@@ -7,6 +7,7 @@ Comprehensive malware scan in memory.
 
 - Tags:
   - Malware
+  - Windows
 - Language: via Loki
 - Supported Operating Systems:
   - Windows

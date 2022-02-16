@@ -1,5 +1,9 @@
 {
-	"Description": "Manages networking via Firewall settings.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Manages networking via Firewall settings.",
+  "Language": "Python",
+  "Tags": [
+    "Firewall",
+    "Windows",
+    "Linux"
+  ]
 }

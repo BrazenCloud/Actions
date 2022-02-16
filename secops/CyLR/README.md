@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # secops:CyLR
 
-None specified.
+Runs the CyLR live response collection tool.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - CyLR
+  - IR
+  - Windows
+- Language: Executable
 - Supported Operating Systems:
   - Windows
 

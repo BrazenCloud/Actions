@@ -1,5 +1,9 @@
 {
-	"Description": "Disables a local users account.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Disables a local users account.",
+  "Language": "Python",
+  "Tags": [
+    "Windows",
+    "Linux",
+    "Users"
+  ]
 }

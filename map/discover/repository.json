@@ -1,5 +1,11 @@
 {
-	"Description": "Use a scan to discover neighboring hosts.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Use a scan to discover neighboring hosts.",
+  "Language": "Python",
+  "Tags": [
+    "AssetDiscovery",
+    "Network",
+    "Runway",
+    "Windows",
+    "Linux"
+  ]
 }

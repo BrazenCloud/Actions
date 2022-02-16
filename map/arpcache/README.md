@@ -6,7 +6,9 @@ Enumerate all entries in the arp cache to discover new hosts.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - ARP
+  - Network
+  - Windows
 - Language: Python
 - Supported Operating Systems:
   - Windows

@@ -1,5 +1,10 @@
 {
-	"Description": "Sets the execution policy in PowerShell or Windows Powershell",
-	"Language": "PowerShell",
-	"Tags": ["Windows","Linux","PowerShell","Meta"]
+  "Description": "Sets the execution policy in PowerShell or Windows Powershell",
+  "Language": "PowerShell",
+  "Tags": [
+    "Windows",
+    "Linux",
+    "PowerShell",
+    "Meta"
+  ]
 }

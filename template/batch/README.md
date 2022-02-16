@@ -1,13 +1,14 @@
 <!-- region Generated -->
 # template:batch
 
-None specified.
+This is a template batch action.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Windows
+  - Template
+- Language: Batch
 - Supported Operating Systems:
   - Windows
 

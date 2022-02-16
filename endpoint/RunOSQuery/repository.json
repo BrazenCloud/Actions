@@ -1,5 +1,9 @@
 {
-	"Description": "Runs an OSQuery",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Runs an OSQuery",
+  "Language": "Python",
+  "Tags": [
+    "Osquery",
+    "Windows",
+    "Linux"
+  ]
 }

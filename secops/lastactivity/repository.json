@@ -1,0 +1,8 @@
+{
+  "Description": "Runs the LastActivityView Windows tool.",
+  "Language": "Executable",
+  "Tags": [
+    "LastActivityView",
+    "Windows"
+  ]
+}

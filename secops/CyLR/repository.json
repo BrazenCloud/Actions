@@ -1,0 +1,9 @@
+{
+  "Description": "Runs the CyLR live response collection tool.",
+  "Language": "Executable",
+  "Tags": [
+    "CyLR",
+    "IR",
+    "Windows"
+  ]
+}

@@ -6,7 +6,8 @@ Run osquery on the host.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Osquery
+  - Windows
 - Language: via osquery binary
 - Supported Operating Systems:
   - Windows

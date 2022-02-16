@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # template:binary
 
-None specified.
+This is a template binary action.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Template
+  - Executable
+  - Windows
+- Language: Executable
 - Supported Operating Systems:
   - Windows
 

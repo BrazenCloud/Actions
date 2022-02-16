@@ -1,5 +1,9 @@
 {
-	"Description": "BriMor Live Collection",
-	"Language": "Batch",
-	"Tags": ["IR","Collection"]
+  "Description": "BriMor Live Collection",
+  "Language": "Batch",
+  "Tags": [
+    "IR",
+    "Collection",
+    "Windows"
+  ]
 }

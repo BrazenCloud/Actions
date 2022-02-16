@@ -1,62 +1,81 @@
 # Runway Actions
 
-Actions for the Runway Automation Platform
+This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your Runway tenant for your use.
 
-This is a repository of actions that are public and can be used with the Runway platform.
+You can sign up for a free Runway account here: [Runway Portal](https://portal.runway.host/)
 
-## Action Structure
+## Action Development
 
-Runway actions are the executable components that are orchestrated by the Runway Platform.  
+To understand how an Action in Runway works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
 
-Each action is organized under a single folder.  Subdirectories are possible, but completely arbitrary.
+## Deploying an Action to Runway
 
-The folder structure of the action is:
+To understand how to deploy Actions from a Git repository into Runway, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
 
-```
-Folder:                  ./action-name				
-Manifest:                ./action-name/manifest.txt    <-- supplied by author
-                         ./action-name/runway.app      <-- *reserved temp file*
-Parameters:              ./action-name/parameters.json <-- supplied by author
-Settings:                ./action-name/settings.json   <-- created at runtime
-Additional files:        ./action-name/*
-Result files:            ./action-name/results/*       <-- created by script or exe
-```
-
-Example:
-
-```
-Folder:                  ./myaction				
-Manifest:                ./myaction/manifest.txt
-Windows support files:   ./myaction/windows/run.bat
-                         ./myaction/windows/sometool.exe
-```
-
-The manifest is as follows:
-
-```
-COPY . .                 <-- copies files from the action dir to the compiled action
-RUN_WIN windows\run.bat  <-- run the following command when running the action on Windows
-```
-You can use `RUN_LIN` to specify what to execute when running on Linux.
-
-## Building and Publishing an Action
-
-You can build your action and publish it in one step.  This requires the `runway.exe` command line tool.  You can obtain the `runway` command line tool from your account on [portal.runway.host](https://portal.runway.host). There are versions of `runway` for Windows and Linux, both 32 and 64 bit.
-
-First, ensure you are logged in:
-
-> runway who
-
-If you are not logged in, then login:
-
-> runway login
-
-Then, to build and publish:
-
-> runway build -i ./action-name/manifest.txt -p namespace:name 
-
-To make the action public:
-
-> runway build -i ./action-name/manifest.txt -p namespace:name --PUBLIC
-
-TO REQUEST AN ACCOUNT ON RUNWAY CONTACT `info@runway.host`.
+## Action Table of Contents
+<!-- region Generated -->
+- ad
+  - [ad:odj:dc](ad/odj/dc)
+  - [ad:odj:member](ad/odj/member)
+- demo
+  - [demo:ExportDB](demo/ExportDB)
+  - [demo:ImportDB](demo/ImportDB)
+- deploy
+  - [deploy:msi](deploy/msi)
+  - [deploy:runway](deploy/runway)
+- download
+  - [download:elastic](download/elastic)
+  - [download:file](download/file)
+  - [download:syslog](download/syslog)
+- endpoint
+  - [endpoint:CreateUpdateRegistryKey](endpoint/CreateUpdateRegistryKey)
+  - [endpoint:DeleteRegistryKey](endpoint/DeleteRegistryKey)
+  - [endpoint:DisableLocalUserAccount](endpoint/DisableLocalUserAccount)
+  - [endpoint:FileDelete](endpoint/FileDelete)
+  - [endpoint:GetFreeDiskSpace](endpoint/GetFreeDiskSpace)
+  - [endpoint:GetInstalledSoftware](endpoint/GetInstalledSoftware)
+  - [endpoint:GetMemoryDump](endpoint/GetMemoryDump)
+  - [endpoint:GetOSVersion](endpoint/GetOSVersion)
+  - [endpoint:GetProcessMemoryDump](endpoint/GetProcessMemoryDump)
+  - [endpoint:GetRunningProcesses](endpoint/GetRunningProcesses)
+  - [endpoint:InstallMonitoringTools](endpoint/InstallMonitoringTools)
+  - [endpoint:InstallPackage](endpoint/InstallPackage)
+  - [endpoint:InstallWindowsPatch](endpoint/InstallWindowsPatch)
+  - [endpoint:KillProcess](endpoint/KillProcess)
+  - [endpoint:ManageNetworking](endpoint/ManageNetworking)
+  - [endpoint:RemoteFileCopy](endpoint/RemoteFileCopy)
+  - [endpoint:RunOSQuery](endpoint/RunOSQuery)
+- inventory
+  - [inventory:accounts](inventory/accounts)
+  - [inventory:dnscache](inventory/dnscache)
+  - [inventory:netstat](inventory/netstat)
+  - [inventory:osquery](inventory/osquery)
+  - [inventory:tasklog](inventory/tasklog)
+- map
+  - [map:arpcache](map/arpcache)
+  - [map:discover](map/discover)
+  - [map:systeminfo](map/systeminfo)
+  - [map:users](map/users)
+- powershell
+  - [powershell:InstallModules](powershell/InstallModules)
+  - [powershell:RunCommand](powershell/RunCommand)
+  - [powershell:SetExecPolicy](powershell/SetExecPolicy)
+- secops
+  - [secops:BriMorLRC](secops/BriMorLRC)
+  - [secops:CDIR](secops/CDIR)
+  - [secops:CDIRwParams](secops/CDIRwParams)
+  - [secops:CyLR](secops/CyLR)
+  - [secops:lastactivity](secops/lastactivity)
+  - [secops:loki_memory](secops/loki_memory)
+  - [secops:winpmem](secops/winpmem)
+  - [secops:yara_ransomware](secops/yara_ransomware)
+- template
+  - [template:batch](template/batch)
+  - [template:binary](template/binary)
+  - [template:parameters](template/parameters)
+  - [template:powershell](template/powershell)
+  - [template:python](template/python)
+  - [template:python27-32](template/python27-32)
+  - [template:python37-32](template/python37-32)
+  - [template:yara](template/yara)
+<!-- endregion -->

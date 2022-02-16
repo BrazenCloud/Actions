@@ -6,7 +6,9 @@ Uploads or Downloads a file to/from a remote host.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - File
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

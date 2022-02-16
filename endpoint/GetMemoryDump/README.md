@@ -6,7 +6,10 @@ Dumps a memory image memory.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Memory
+  - Forensics
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

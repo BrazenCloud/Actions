@@ -1,5 +1,11 @@
 {
-	"Description":"Download result information to a central location.",
-	"Language": "Python",
-	"Glyph": "cloud-download"
+  "Description": "Download result information to a central location.",
+  "Language": "Python",
+  "Tags": [
+    "Connector",
+    "File",
+    "Windows",
+    "Linux"
+  ],
+  "Glyph": "cloud-download"
 }

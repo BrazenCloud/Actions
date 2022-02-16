@@ -1,13 +1,14 @@
 <!-- region Generated -->
 # secops:winpmem
 
-None specified.
+Dumps a memory image.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Memory
+  - Windows
+- Language: Executable
 - Supported Operating Systems:
   - Windows
 

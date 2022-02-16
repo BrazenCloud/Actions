@@ -1,0 +1,9 @@
+{
+  "Description": "This is a template action for Yara",
+  "Language": "Para",
+  "Tags": [
+    "Template",
+    "Yara",
+    "Windows"
+  ]
+}

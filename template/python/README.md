@@ -1,12 +1,15 @@
 <!-- region Generated -->
 # template:python
 
-Gather netstat data for all connections and processes on the host.
+This is a template Python action.
 
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Template
+  - Python
+  - Windows
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Windows

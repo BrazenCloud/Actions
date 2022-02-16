@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # template:yara
 
-None specified.
+This is a template action for Yara
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Template
+  - Yara
+  - Windows
+- Language: Para
 - Supported Operating Systems:
   - Windows
 

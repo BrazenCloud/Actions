@@ -6,7 +6,8 @@ Log all processes on the host.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Process
+  - Windows
 - Language: Python
 - Supported Operating Systems:
   - Windows

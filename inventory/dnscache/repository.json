@@ -1,5 +1,9 @@
 {
-	"Description": "Collect the dns cache of the host.",
-	"Language": "via cmdline",
-	"Tags": []
+  "Description": "Collect the dns cache of the host.",
+  "Language": "via cmdline",
+  "Tags": [
+    "DNS",
+    "Network",
+    "Windows"
+  ]
 }

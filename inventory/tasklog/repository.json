@@ -1,5 +1,8 @@
 {
-	"Description": "Log all processes on the host.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Log all processes on the host.",
+  "Language": "Python",
+  "Tags": [
+    "Process",
+    "Windows"
+  ]
 }

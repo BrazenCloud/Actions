@@ -1,5 +1,9 @@
 {
-	"Description": "Enumerate all entries in the arp cache to discover new hosts.",
-	"Language": "Python",
-	"Tags": []
+  "Description": "Enumerate all entries in the arp cache to discover new hosts.",
+  "Language": "Python",
+  "Tags": [
+    "ARP",
+    "Network",
+    "Windows"
+  ]
 }

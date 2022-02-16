@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# powershell:meta:InstallModules
+# powershell:InstallModules
 
 Install the selected modules in PowerShell or Windows PowerShell
 

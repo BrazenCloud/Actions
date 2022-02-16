@@ -1,5 +1,9 @@
 {
-	"Description":"Deploy runway agent to neighboring hosts.",
-	"Language": "Python",
-	"Tags": [ ]
+  "Description": "Deploy runway agent to neighboring hosts.",
+  "Language": "Python",
+  "Tags": [
+    "Runway",
+    "Deploy",
+    "Windows"
+  ]
 }

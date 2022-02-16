@@ -8,6 +8,7 @@ Gather user account information on the host.
 - Tags:
   - Inventory
   - Accounts
+  - Windows
 - Language: via cmdline
 - Supported Operating Systems:
   - Windows

@@ -6,7 +6,8 @@ Downloads, verifies and installs a package.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Package
+  - Linux
 - Language: Python
 - Supported Operating Systems:
   - Linux

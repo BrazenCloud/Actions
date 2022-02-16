@@ -6,7 +6,9 @@ Disables a local users account.
 ## Metadata
 
 - Tags:
-  - None specified.
+  - Windows
+  - Linux
+  - Users
 - Language: Python
 - Supported Operating Systems:
   - Windows
