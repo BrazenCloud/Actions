@@ -13,7 +13,7 @@ Describe 'Runway Actions' {
             }
             # if RUN_LIN, should have a linux folder
             if ((Get-Content $manifest -Raw) -match '\nRUN_LIN') {
-                It 'Should have a windows directory' {
+                It 'Should have a linux directory' {
                     Test-Path "$($manifest.Directory.FullName)\linux" -PathType Container | Should -be $true
                 }
             }
