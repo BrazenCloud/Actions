@@ -47,7 +47,7 @@ if ($null -ne $preLines) {
 }
 '<!-- region Generated -->' | Out-File .\README.md -Append
 $newContent | Out-File .\README.md -Append
-'<!-- endregion -->*' | Out-File .\README.md -Append
+'<!-- endregion -->' | Out-File .\README.md -Append
 if ($null -ne $postLines) {
     $postLines | Out-File .\README.md -Append
 }

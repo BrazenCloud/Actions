@@ -78,4 +78,4 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [template:python27-32](template/python27-32)
   - [template:python37-32](template/python37-32)
   - [template:yara](template/yara)
-<!-- endregion -->*
+<!-- endregion -->
