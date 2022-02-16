@@ -12,7 +12,7 @@ $actions = foreach ($manifest in $manifests) {
 $newContent = foreach ($parent in $actions.Parent | Select -Unique) {
     "- $parent"
     foreach ($action in $actions | ?{$_.Parent -eq $parent}) {
-        "  - [$($action.Name)]($($action.RelativePath))"
+        "  - [$($action.Name)]($($action.RelativePath.Replace('\','/')))"
     }
 }
 
