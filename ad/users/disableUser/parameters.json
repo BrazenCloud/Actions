@@ -1,0 +1,8 @@
+[
+    {
+        "Name": "User",
+        "Type": 0,
+        "Description": "The user to disable. Can be any valid identity property.",
+        "IsOptional": false
+    }
+]
