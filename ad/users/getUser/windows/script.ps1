@@ -1,3 +1,6 @@
+$defaultUserProperties = @('DistingiushedName','Enabled','Givenname','Name',
+'ObjectClass','ObjectGUID','SamAccountName','SID','Surname','UserPrincipalName')
+
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 $settings
 
@@ -6,12 +9,13 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
         Identity = $settings.User
     }
     if ($settings.'Additional Properties') {
+        $defaultUserProperties = $defaultUserProperties + $settings.'Additional Properties'
         $splat['Properties'] = $settings.'Additional Properties'
     }
     $out = Get-AdUser @splat
     $out
-    $out | ConvertTo-Json
-    $out | ConvertTo-Json | Out-File .\results\users.json
+    $out | Select-Object $defaultUserProperties | ConvertTo-Json
+    $out | Select-Object $defaultUserProperties | ConvertTo-Json | Out-File .\results\users.json
 } else {
     Write-Host 'ActiveDirectory module is not installed.'
 }
