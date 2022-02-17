@@ -14,8 +14,8 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
     }
     $out = Get-AdUser @splat
     $out
-    $out | Select-Object $defaultUserProperties | ConvertTo-Json
-    $out | Select-Object $defaultUserProperties | ConvertTo-Json | Out-File .\results\users.json
+    $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1
+    $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1 | Out-File .\results\users.json
 } else {
     Write-Host 'ActiveDirectory module is not installed.'
 }
