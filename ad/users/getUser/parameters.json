@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "User",
+        "Type": 0,
+        "Description": "The user to return. Can be any valid identity property.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Additional properties",
+        "Type": 0,
+        "Description": "Any additional properties, seperated by commas.",
+        "IsOptional": true
+    }
+]
