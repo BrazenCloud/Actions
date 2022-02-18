@@ -1,4 +1,4 @@
-$defaultUserProperties = @('DistingiushedName','Enabled','Givenname','Name',
+$defaultUserProperties = @('DistinguishedName','Enabled','Givenname','Name',
 'ObjectClass','ObjectGUID','SamAccountName','SID','Surname','UserPrincipalName')
 
 $settings = Get-Content .\settings.json | ConvertFrom-Json
