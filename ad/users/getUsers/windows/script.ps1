@@ -8,7 +8,7 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
         Filter = $settings.Filter
     }
     if ($settings.'Additional Properties') {
-        $defaultUserProperties = $defaultUserProperties + $settings.'Additional Properties'.Split(',')
+        $defaultUserProperties = $defaultUserProperties + $settings.'Additional Properties'.Split(',') | Select-Object -Unique
         $splat['Properties'] = $settings.'Additional Properties'.Split(',')
     }
     $out = Get-AdUser @splat
