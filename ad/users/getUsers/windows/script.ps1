@@ -12,7 +12,9 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
         $splat['Properties'] = $settings.'Additional Properties'.Split(',')
     }
     $out = Get-AdUser @splat
-    $out
+    if ($settings.'Only JSON'.ToString() -ne 'true') {
+        $out
+    }
     $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1
     $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1 | Out-File .\results\users.json
 } else {
