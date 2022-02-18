@@ -1,0 +1,10 @@
+{
+    "Description": "Enables a user in Active Directory",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "User"
+    ]
+  }
