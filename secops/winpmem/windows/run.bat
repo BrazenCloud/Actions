@@ -1,3 +1,3 @@
 @CD /d "%~dp0"
 
-winpmem.exe -o ..\results\snapshot.bin
+winpmem_mini_x64_rc2.exe ..\results\snapshot.bin
