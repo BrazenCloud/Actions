@@ -1,7 +1,7 @@
+$baseDir = Get-Item .\
 $manifests = Get-ChildItem .\ -Filter manifest.txt -Recurse
 $actions = foreach ($manifest in $manifests) {
     $rPath = $manifest.FullName.Replace($baseDir.FullName,'').Trim('\/')
-    $actionName = ($rPath -split '\\|\/' | Select-Object -SkipLast 1) -join ':'
     [pscustomobject]@{
         Name = ($rPath -split '\\|\/' | Select-Object -SkipLast 1) -join ':'
         RelativePath = $rPath.Replace('\manifest.txt','')

@@ -17,6 +17,11 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
 - ad
   - [ad:odj:dc](ad/odj/dc)
   - [ad:odj:member](ad/odj/member)
+  - [ad:users:disableUser](ad/users/disableUser)
+  - [ad:users:enableUser](ad/users/enableUser)
+  - [ad:users:getUser](ad/users/getUser)
+  - [ad:users:getUsers](ad/users/getUsers)
+  - [ad:users:removeUser](ad/users/removeUser)
 - demo
   - [demo:ExportDB](demo/ExportDB)
   - [demo:ImportDB](demo/ImportDB)
