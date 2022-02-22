@@ -33,5 +33,5 @@ $path = '.\results\FullReport.xlsx'
 
 Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -ActionRootPath (Get-Location).Path
 Get-ChildItem .\ -Filter *.csv | %{
-    Export-Excel $path -WorksheetName $_.Name -TableName $_.Name -AutoSize
+    Import-Csv $_.FullName | Export-Excel $path -WorksheetName $_.Name -TableName $_.Name -AutoSize
 }
