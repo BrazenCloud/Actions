@@ -3,7 +3,7 @@
         "Name": "Filter",
         "Type": 0,
         "DefaultValue": "*",
-        "Description": "The filter used to return DCs from AD.",
+        "Description": "The filter used to return Fine Grained password policies from AD.",
         "IsOptional": false
     },
     {

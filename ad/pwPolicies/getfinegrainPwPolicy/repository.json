@@ -1,10 +1,10 @@
 {
-    "Description": "Returns domain controllers from Active Directory",
+    "Description": "Returns fine grained password policies from Active Directory",
     "Language": "PowerShell",
     "Tags": [
       "Windows",
       "PowerShell",
       "ActiveDirectory",
-      "DomainController"
+      "PwPolicy"
     ]
   }

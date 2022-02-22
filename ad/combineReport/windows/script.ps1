@@ -1,3 +1,5 @@
+Write-Host 'Running CombineReport'
+
 Function Get-ActionResults {
     param (
         [Parameter(Mandatory)]
