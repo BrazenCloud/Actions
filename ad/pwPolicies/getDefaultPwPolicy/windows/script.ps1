@@ -1,10 +1,7 @@
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 
 if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
-    $splat = @{
-        Filter = $settings.Filter
-    }
-    $out = Get-AdDefaultDomainPasswordPolicy @splat
+    $out = Get-AdDefaultDomainPasswordPolicy
     if ($settings.'Only JSON'.ToString() -ne 'true') {
         $out
     }
