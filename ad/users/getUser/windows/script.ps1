@@ -17,7 +17,7 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
     }
     $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1
     if ($settings.'CSV Out'.ToString() -eq 'true') {
-        $out | Select-Object $defaultUserProperties | Export-Csv .\results\users.csv -NoTypeInformation
+        $out | Select-Object $defaultUserProperties | Export-Csv .\results\user.csv -NoTypeInformation
     } else {
         $out | Select-Object $defaultUserProperties | ConvertTo-Json -Depth 1 | Out-File .\results\user.json
     }

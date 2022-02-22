@@ -1,0 +1,10 @@
+{
+    "Description": "Returns a computer from Active Directory",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Computer"
+    ]
+  }
