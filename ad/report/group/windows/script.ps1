@@ -41,9 +41,9 @@ Get-ChildItem -Filter "$($settings.'Report to Group').*" | ?{$_.Extension -match
             $result = Get-Content $_.FullName | ConvertFrom-Json | Group $prop | Select Name,Count
         }
         if ($settings.'CSV Out'.ToString() -eq 'true') {
-            $result | Export-Csv ".\results\$prop.csv"
+            $result | Export-Csv ".\results\$_-$prop.csv"
         } else {
-            $result | ConvertTo-Json | Out-File ".\results\$prop.json"
+            $result | ConvertTo-Json | Out-File ".\results\$_-$prop.json"
         }
     }
 }
