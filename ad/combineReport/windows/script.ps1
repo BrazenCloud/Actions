@@ -26,14 +26,23 @@ Function Get-ActionResults {
 }
 
 $settings = Get-Content .\settings.json | ConvertFrom-Json
+$settings
 
 if (-not (Get-Module ImportExcel -ListAvailable)) {
-    Install-Module ImportExcel -Repository PSGallery -Confirm:$false -Force
+    $v = (Get-PackageProvider -Name NuGet -ListAvailable -ErrorAction SilentlyContinue).Version
+    if ($null -eq $v -or $v -lt 2.8.5.201) {
+        Write-Host 'Updating NuGet...'
+        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Confirm:$false -Force -Verbose
+    }
+    Write-Host 'Installing ImportExcel...'
+    Install-Module ImportExcel -Repository PSGallery -Confirm:$false -Force -Verbose -Scope CurrentUser
 }
 
 $path = '.\results\FullReport.xlsx'
 
+Write-Host 'Finding previous results...'
 Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -ActionRootPath (Get-Location).Path
 Get-ChildItem .\ -Filter *.csv | %{
-    Import-Csv $_.FullName | Export-Excel $path -WorksheetName $_.Name -TableName $_.Name -AutoSize
+    Write-Host "Compiling $($_.Name)"
+    Import-Csv $_.FullName | Export-Excel $path -WorksheetName $_.BaseName -TableName $_.BaseName -AutoSize
 }
