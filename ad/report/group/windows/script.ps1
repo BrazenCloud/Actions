@@ -14,7 +14,7 @@ Function Get-ActionResults {
     if (Test-Path $resultCache) {
         Get-ChildItem $resultCache -Recurse -Filter *.zip | Foreach-Object {
             if ($Extract.IsPresent) {
-                Expand-Archive $_.FullName -DestinationPath $DestinationPath -Force:$($Force.IsPresent)
+                Expand-Archive $_.FullName -DestinationPath $DestinationPath -Force:$($Force.IsPresent) -ErrorAction SilentlyContinue
             } else {
                 Copy-Item $_.FullName -Destination $DestinationPath -Force:$($Force.IsPresent)
             }
