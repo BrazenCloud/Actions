@@ -34,7 +34,7 @@ Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -
 # regex to remove illegal file name chars from the filter.
 $regex = "$(([System.IO.Path]::GetInvalidFileNameChars() | %{[regex]::Escape($_)}) -join '|')"
 
-Get-ChildItem -Filter "$($settings.'Report to Filter').*" | ?{$_.Extension -match '\.json|\.csv'} %{
+Get-ChildItem -Filter "$($settings.'Report to Filter').*" | ?{$_.Extension -match '\.json|\.csv'} | %{
     Write-Host "Filtering: '$_'"
     foreach ($filter in $settings.'Filters'.Split(',')) {
         Write-Host "Applying filter: '$filter'"
