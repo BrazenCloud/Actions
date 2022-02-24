@@ -1,4 +1,4 @@
-Write-Host 'Running Filter Report'
+Write-Host 'Running Group Report'
 
 Function Get-ActionResults {
     param (
@@ -31,18 +31,14 @@ $settings
 Write-Host 'Finding previous results...'
 Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -ActionRootPath (Get-Location).Path
 
-# regex to remove illegal file name chars from the filter.
-$regex = "$(([System.IO.Path]::GetInvalidFileNameChars() | %{[regex]::Escape($_)}) -join '|')"
-
-Get-ChildItem -Filter "$($settings.'Report to Filter').*" | ?{$_.Extension -match '\.json|\.csv'} %{
-    Write-Host "Filtering: '$_'"
-    foreach ($filter in $settings.'Filters'.Split(',')) {
-        Write-Host "Applying filter: '$filter'"
-        $name = $filter -replace $regex,''
+Get-ChildItem -Filter "$($settings.'Report to Group').*" | ?{$_.Extension -match '\.json|\.csv'} %{
+    Write-Host "Grouping: '$_'"
+    foreach ($prop in $settings.'Properties to Group'.Split(',')) {
+        Write-Host "Applying Group: '$prop'"
         if ($_.Extension -eq '.csv') {
-            $result = Import-Csv $_.FullName | ? ([scriptblock]::Create($filter))
+            $result = Import-Csv $_.FullName | Group $prop | Select Name,Count
         } elseif ($_.Extension -eq '.json') {
-            $result = Get-Content $_.FullName | ConvertFrom-Json | ? ([scriptblock]::Create($filter))
+            $result = Get-Content $_.FullName | ConvertFrom-Json | Group $prop | Select Name,Count
         }
         if ($settings.'CSV Out'.ToString() -eq 'true') {
             $result | Export-Csv ".\results\$name.csv"
