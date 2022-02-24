@@ -10,9 +10,9 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
     }
     $out | ConvertTo-Json -Depth 1
     if ($settings.'CSV Out'.ToString() -eq 'true') {
-        $out | Export-Csv .\results\domainControllers.csv -NoTypeInformation
+        $out | Export-Csv .\results\DCs.csv -NoTypeInformation
     } else {
-        $out | ConvertTo-Json -Depth 1 | Out-File .\results\domainControllers.json
+        $out | ConvertTo-Json -Depth 1 | Out-File .\results\DCs.json
     }
 } else {
     Write-Host 'ActiveDirectory module is not installed.'
