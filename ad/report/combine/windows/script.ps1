@@ -44,6 +44,6 @@ Write-Host 'Finding previous results...'
 Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -ActionRootPath (Get-Location).Path
 Get-ChildItem .\ -Filter *.csv | %{
     Write-Host "Compiling $($_.BaseName)"
-    $eName = ($_.BaseName -replace '[^a-zA-Z\-_]','').TrimStart('_')
+    $eName = ($_.BaseName -replace '[^a-zA-Z_]','').TrimStart('_')
     Import-Csv $_.FullName | Export-Excel $path -WorksheetName $eName -TableName $eName -AutoSize
 }
