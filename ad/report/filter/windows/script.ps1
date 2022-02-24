@@ -45,9 +45,9 @@ Get-ChildItem -Filter "$($settings.'Report to Filter').*" | ?{$_.Extension -matc
             $result = Get-Content $_.FullName | ConvertFrom-Json | ? ([scriptblock]::Create($filter))
         }
         if ($settings.'CSV Out'.ToString() -eq 'true') {
-            $result | Export-Csv ".\results\$name.csv"
+            $result | Export-Csv ".\results\$($settings.'Repart to Filter')-$name.csv"
         } else {
-            $result | ConvertTo-Json | Out-File ".\results\$name.json"
+            $result | ConvertTo-Json | Out-File ".\results\$($settings.'Repart to Filter')-$name.json"
         }
     }
 }
