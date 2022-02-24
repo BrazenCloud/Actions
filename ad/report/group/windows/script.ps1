@@ -31,7 +31,7 @@ $settings
 Write-Host 'Finding previous results...'
 Get-ActionResults -ThreadId $settings.'thread_id' -DestinationPath .\ -Extract -ActionRootPath (Get-Location).Path
 
-Get-ChildItem -Filter "$($settings.'Report to Group').*" | ?{$_.Extension -match '\.json|\.csv'} %{
+Get-ChildItem -Filter "$($settings.'Report to Group').*" | ?{$_.Extension -match '\.json|\.csv'} | %{
     Write-Host "Grouping: '$_'"
     foreach ($prop in $settings.'Properties to Group'.Split(',')) {
         Write-Host "Applying Group: '$prop'"
