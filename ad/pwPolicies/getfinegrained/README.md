@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:dcs:getDCs
+# ad:pwPolicies:getfinegrained
 
-Returns domain controllers from Active Directory
+Returns fine grained password policies from Active Directory
 
 ## Metadata
 
@@ -9,7 +9,7 @@ Returns domain controllers from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - DomainController
+  - PwPolicy
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
@@ -17,7 +17,7 @@ Returns domain controllers from Active Directory
 ## Parameters
 
 - Filter
-  - Description: The filter used to return DCs from AD.
+  - Description: The filter used to return Fine Grained password policies from AD.
   - Type: String
   - IsOptional: False
   - DefaultValue: *

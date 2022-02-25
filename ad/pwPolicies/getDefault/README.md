@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:pwPolicies:getfinegrainPwPolicy
+# ad:pwPolicies:getDefault
 
-Returns fine grained password policies from Active Directory
+Returns the default password policy from Active Directory
 
 ## Metadata
 
@@ -16,11 +16,6 @@ Returns fine grained password policies from Active Directory
 
 ## Parameters
 
-- Filter
-  - Description: The filter used to return Fine Grained password policies from AD.
-  - Type: String
-  - IsOptional: False
-  - DefaultValue: *
 - Only JSON
   - Description: Will only write JSON to stdout
   - Type: Boolean

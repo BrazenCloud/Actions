@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:pwPolicies:getDefaultPwPolicy
+# ad:dcs:get
 
-Returns the default password policy from Active Directory
+Returns domain controllers from Active Directory
 
 ## Metadata
 
@@ -9,13 +9,18 @@ Returns the default password policy from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - PwPolicy
+  - DomainController
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
+- Filter
+  - Description: The filter used to return DCs from AD.
+  - Type: String
+  - IsOptional: False
+  - DefaultValue: *
 - Only JSON
   - Description: Will only write JSON to stdout
   - Type: Boolean
