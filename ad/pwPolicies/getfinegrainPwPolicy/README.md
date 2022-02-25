@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:pwPolicies:getfinegrainPwPolicy
 
-Returns a user from Active Directory
+Returns fine grained password policies from Active Directory
 
 ## Metadata
 
@@ -9,21 +9,18 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - PwPolicy
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to return. Can be any valid identity property.
+- Filter
+  - Description: The filter used to return Fine Grained password policies from AD.
   - Type: String
   - IsOptional: False
-- Additional properties
-  - Description: Any additional properties, seperated by commas.
-  - Type: String
-  - IsOptional: True
+  - DefaultValue: *
 - Only JSON
   - Description: Will only write JSON to stdout
   - Type: Boolean

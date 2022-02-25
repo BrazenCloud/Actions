@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:dcs:getDCs
 
-Returns a user from Active Directory
+Returns domain controllers from Active Directory
 
 ## Metadata
 
@@ -9,21 +9,18 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - DomainController
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to return. Can be any valid identity property.
+- Filter
+  - Description: The filter used to return DCs from AD.
   - Type: String
   - IsOptional: False
-- Additional properties
-  - Description: Any additional properties, seperated by commas.
-  - Type: String
-  - IsOptional: True
+  - DefaultValue: *
 - Only JSON
   - Description: Will only write JSON to stdout
   - Type: Boolean

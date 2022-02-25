@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# ad:users:enableUser
+# ad:users:enable
 
 Enables a user in Active Directory
 

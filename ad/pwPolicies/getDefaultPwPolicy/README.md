@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:pwPolicies:getDefaultPwPolicy
 
-Returns a user from Active Directory
+Returns the default password policy from Active Directory
 
 ## Metadata
 
@@ -9,21 +9,13 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - PwPolicy
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to return. Can be any valid identity property.
-  - Type: String
-  - IsOptional: False
-- Additional properties
-  - Description: Any additional properties, seperated by commas.
-  - Type: String
-  - IsOptional: True
 - Only JSON
   - Description: Will only write JSON to stdout
   - Type: Boolean

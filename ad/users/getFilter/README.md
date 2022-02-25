@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:getUsers
+# ad:users:getFilter
 
-Returns a user from Active Directory
+Returns users from Active Directory
 
 ## Metadata
 

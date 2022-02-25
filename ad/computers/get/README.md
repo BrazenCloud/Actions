@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:computers:get
 
-Returns a user from Active Directory
+Returns a computer from Active Directory
 
 ## Metadata
 
@@ -9,14 +9,14 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - Computer
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
+- Computer
   - Description: The user to return. Can be any valid identity property.
   - Type: String
   - IsOptional: False

@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:remove
+# ad:report:combine
 
-Deletes a user from Active Directory
+Combines CSV reports into a single XLSX file.
 
 ## Metadata
 
@@ -9,15 +9,12 @@ Deletes a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - Reporting
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to delete. Can be any valid identity property.
-  - Type: String
-  - IsOptional: False
+
 <!-- endregion -->

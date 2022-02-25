@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# ad:users:disableUser
+# ad:users:disable
 
 Disables a user in Active Directory
 

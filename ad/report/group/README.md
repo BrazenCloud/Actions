@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:report:group
 
-Returns a user from Active Directory
+Group AD Reports to create additional reports.
 
 ## Metadata
 
@@ -9,25 +9,22 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - Reporting
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to return. Can be any valid identity property.
+- Report to group
+  - Description: The report name to find in the previous action results
   - Type: String
   - IsOptional: False
-- Additional properties
-  - Description: Any additional properties, seperated by commas.
+  - DefaultValue: users
+- Properties to Group
+  - Description: Properties filters seperated by commas.
   - Type: String
-  - IsOptional: True
-- Only JSON
-  - Description: Will only write JSON to stdout
-  - Type: Boolean
-  - IsOptional: True
+  - IsOptional: False
 - CSV Out
   - Description: Will write the results as a CSV
   - Type: Boolean

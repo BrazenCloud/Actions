@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# ad:users:get
+# ad:computers:getFilter
 
-Returns a user from Active Directory
+Returns computers from Active Directory
 
 ## Metadata
 
@@ -9,17 +9,18 @@ Returns a user from Active Directory
   - Windows
   - PowerShell
   - ActiveDirectory
-  - User
+  - Computer
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- User
-  - Description: The user to return. Can be any valid identity property.
+- Filter
+  - Description: The filter used to return computers from AD.
   - Type: String
   - IsOptional: False
+  - DefaultValue: *
 - Additional properties
   - Description: Any additional properties, seperated by commas.
   - Type: String
