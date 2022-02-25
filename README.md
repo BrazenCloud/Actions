@@ -15,13 +15,22 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
 ## Action Table of Contents
 <!-- region Generated -->
 - ad
+  - [ad:computers:get](ad/computers/get)
+  - [ad:computers:getFilter](ad/computers/getFilter)
+  - [ad:dcs:getDCs](ad/dcs/getDCs)
   - [ad:odj:dc](ad/odj/dc)
   - [ad:odj:member](ad/odj/member)
-  - [ad:users:disableUser](ad/users/disableUser)
-  - [ad:users:enableUser](ad/users/enableUser)
-  - [ad:users:getUser](ad/users/getUser)
-  - [ad:users:getUsers](ad/users/getUsers)
-  - [ad:users:removeUser](ad/users/removeUser)
+  - [ad:pwPolicies:getDefaultPwPolicy](ad/pwPolicies/getDefaultPwPolicy)
+  - [ad:pwPolicies:getfinegrainPwPolicy](ad/pwPolicies/getfinegrainPwPolicy)
+  - [ad:report:combine](ad/report/combine)
+  - [ad:report:filter](ad/report/filter)
+  - [ad:report:group](ad/report/group)
+  - [ad:users:disable](ad/users/disable)
+  - [ad:users:enable](ad/users/enable)
+  - [ad:users:get](ad/users/get)
+  - [ad:users:getFilter](ad/users/getFilter)
+  - [ad:users:new](ad/users/new)
+  - [ad:users:remove](ad/users/remove)
 - demo
   - [demo:ExportDB](demo/ExportDB)
   - [demo:ImportDB](demo/ImportDB)
