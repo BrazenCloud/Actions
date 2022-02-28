@@ -11,7 +11,7 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
         $defaultGroupProperties = $defaultGroupProperties + $settings.'Additional Properties'.Split(',') | Select-Object -Unique
         $splat['Properties'] = $settings.'Additional Properties'.Split(',')
     }
-    $out = Get-AdComputer @splat
+    $out = Get-AdGroup @splat
     if ($settings.'Only JSON'.ToString() -ne 'true') {
         $out
     }
