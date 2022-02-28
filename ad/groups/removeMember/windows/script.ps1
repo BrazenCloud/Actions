@@ -5,7 +5,7 @@ if ((Get-Module 'ActiveDirectory' -ListAvailable).Count -ge 1) {
         Identity = $settings.Group
         Members = $settings.Members.Split(',')
     }
-    Remove-AdGroupMember @splat -Confirm:$false -Force
+    Remove-AdGroupMember @splat -Confirm:$false
 } else {
     Write-Host 'ActiveDirectory module is not installed.'
 }
