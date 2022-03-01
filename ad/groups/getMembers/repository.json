@@ -1,0 +1,10 @@
+{
+    "Description": "Returns a group's members from Active Directory.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Group"
+    ]
+  }

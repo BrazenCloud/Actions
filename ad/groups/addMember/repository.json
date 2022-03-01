@@ -1,0 +1,10 @@
+{
+    "Description": "Adds a member to an Active Directory group.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Group"
+    ]
+  }

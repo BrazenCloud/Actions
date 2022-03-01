@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Group",
+        "Type": 0,
+        "Description": "The group to return. Can be any valid identity property.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Additional properties",
+        "Type": 0,
+        "Description": "Any additional properties, seperated by commas.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Only JSON",
+        "Type": 2,
+        "Description": "Will only write JSON to stdout",
+        "IsOptional": true
+    },
+    {
+        "Name": "CSV Out",
+        "Type": 2,
+        "Description": "Will write the results as a CSV",
+        "IsOptional": true
+    }
+]

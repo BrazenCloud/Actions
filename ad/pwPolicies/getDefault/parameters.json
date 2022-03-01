@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Only JSON",
+        "Type": 2,
+        "Description": "Will only write JSON to stdout",
+        "IsOptional": true
+    },
+    {
+        "Name": "CSV Out",
+        "Type": 2,
+        "Description": "Will write the results as a CSV",
+        "IsOptional": true
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "Description": "Returns groups from Active Directory based on a filter.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Group"
+    ]
+  }

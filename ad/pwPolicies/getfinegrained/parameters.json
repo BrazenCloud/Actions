@@ -1,0 +1,21 @@
+[
+    {
+        "Name": "Filter",
+        "Type": 0,
+        "DefaultValue": "*",
+        "Description": "The filter used to return Fine Grained password policies from AD.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Only JSON",
+        "Type": 2,
+        "Description": "Will only write JSON to stdout",
+        "IsOptional": true
+    },
+    {
+        "Name": "CSV Out",
+        "Type": 2,
+        "Description": "Will write the results as a CSV",
+        "IsOptional": true
+    }
+]

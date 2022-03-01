@@ -1,0 +1,10 @@
+{
+    "Description": "Removes a user from Active Directory",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "User"
+    ]
+  }

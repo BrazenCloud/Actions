@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Group",
+        "Type": 0,
+        "Description": "The group to add to. Can be any valid identity property.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Members",
+        "Type": 0,
+        "Description": "Separated by commas",
+        "IsOptional": true
+    }
+]

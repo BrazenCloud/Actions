@@ -1,0 +1,10 @@
+{
+    "Description": "Combines CSV reports into a single XLSX file.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Reporting"
+    ]
+  }

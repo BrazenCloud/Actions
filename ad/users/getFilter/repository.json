@@ -1,0 +1,10 @@
+{
+    "Description": "Returns users from Active Directory based on a filter.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "User"
+    ]
+  }

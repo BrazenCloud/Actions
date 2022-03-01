@@ -1,0 +1,21 @@
+[
+    {
+        "Name": "Report to group",
+        "Type": 0,
+        "DefaultValue": "users",
+        "Description": "The report name to find in the previous action results",
+        "IsOptional": false
+    },
+    {
+        "Name": "Properties to Group",
+        "Type": 0,
+        "Description": "Properties filters seperated by commas.",
+        "IsOptional": false
+    },
+    {
+        "Name": "CSV Out",
+        "Type": 2,
+        "Description": "Will write the results as a CSV",
+        "IsOptional": true
+    }
+]

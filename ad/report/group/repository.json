@@ -1,0 +1,10 @@
+{
+    "Description": "Group AD Reports to create additional reports.",
+    "Language": "PowerShell",
+    "Tags": [
+      "Windows",
+      "PowerShell",
+      "ActiveDirectory",
+      "Reporting"
+    ]
+  }

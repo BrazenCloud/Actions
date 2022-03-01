@@ -1,0 +1,21 @@
+[
+    {
+        "Name": "Report to filter",
+        "Type": 0,
+        "DefaultValue": "users",
+        "Description": "The report name to find in the previous action results",
+        "IsOptional": false
+    },
+    {
+        "Name": "Filters",
+        "Type": 0,
+        "Description": "PowerShell Where-Object filters seperated by commas.",
+        "IsOptional": false
+    },
+    {
+        "Name": "CSV Out",
+        "Type": 2,
+        "Description": "Will write the results as a CSV",
+        "IsOptional": true
+    }
+]

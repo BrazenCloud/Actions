@@ -1,0 +1,46 @@
+[
+    {
+        "Name": "Password Length",
+        "Type": 1,
+        "Description": "How long the random password should be.",
+        "DefaultValue": "12",
+        "IsOptional": true
+    },
+    {
+        "Name": "Change Password At Logon",
+        "Type": 2,
+        "Description": "If checked, password is set to force a password change at first logon.",
+        "DefaultValue": "true",
+        "IsOptional": true
+    },
+    {
+        "Name": "GivenName",
+        "Type": 0,
+        "Description": "The value for the GivenName property for the new user.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Surname",
+        "Type": 0,
+        "Description": "The value for the Surname property for the new user.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Name",
+        "Type": 0,
+        "Description": "The value for the Name property for the new user.",
+        "IsOptional": true
+    },
+    {
+        "Name": "SamAccountName",
+        "Type": 0,
+        "Description": "The value for the SamAccountName property for the new user.",
+        "IsOptional": true
+    },
+    {
+        "Name": "UserPrincipalName",
+        "Type": 0,
+        "Description": "The value for the UserPrincipalName property for the new user.",
+        "IsOptional": true
+    }
+]
