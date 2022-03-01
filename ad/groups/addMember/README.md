@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:groups:addMember
 
-Returns a group from Active Directory
+Adds a member to an Active Directory group.
 
 ## Metadata
 

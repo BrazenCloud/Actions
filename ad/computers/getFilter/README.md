@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:computers:getFilter
 
-Returns computers from Active Directory
+Returns computers from Active Directory using a filter.
 
 ## Metadata
 

@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:groups:getFilter
 
-Returns groups from Active Directory
+Returns groups from Active Directory based on a filter.
 
 ## Metadata
 

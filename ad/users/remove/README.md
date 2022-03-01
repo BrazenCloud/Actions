@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:users:remove
 
-Deletes a user from Active Directory
+Removes a user from Active Directory
 
 ## Metadata
 

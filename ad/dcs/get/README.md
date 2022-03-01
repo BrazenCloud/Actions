@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:dcs:get
 
-Returns domain controllers from Active Directory
+Returns domain controllers from Active Directory.
 
 ## Metadata
 

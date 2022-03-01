@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:groups:getMembers
 
-Returns a group's members from Active Directory
+Returns a group's members from Active Directory.
 
 ## Metadata
 

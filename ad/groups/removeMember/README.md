@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:groups:removeMember
 
-Returns a group from Active Directory
+Removes a member from a group in Active Directory
 
 ## Metadata
 

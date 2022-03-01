@@ -1,7 +1,7 @@
 <!-- region Generated -->
 # ad:computers:get
 
-Returns a computer from Active Directory
+Returns a computer from Active Directory.
 
 ## Metadata
 
