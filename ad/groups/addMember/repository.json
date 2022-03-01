@@ -1,5 +1,5 @@
 {
-    "Description": "Returns a group from Active Directory",
+    "Description": "Adds a member to an Active Directory group.",
     "Language": "PowerShell",
     "Tags": [
       "Windows",

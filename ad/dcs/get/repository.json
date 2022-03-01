@@ -1,5 +1,5 @@
 {
-    "Description": "Returns domain controllers from Active Directory",
+    "Description": "Returns domain controllers from Active Directory.",
     "Language": "PowerShell",
     "Tags": [
       "Windows",

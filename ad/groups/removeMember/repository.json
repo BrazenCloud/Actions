@@ -1,5 +1,5 @@
 {
-    "Description": "Returns a group from Active Directory",
+    "Description": "Removes a member from a group in Active Directory",
     "Language": "PowerShell",
     "Tags": [
       "Windows",

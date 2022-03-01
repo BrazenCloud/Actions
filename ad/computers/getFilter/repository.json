@@ -1,5 +1,5 @@
 {
-    "Description": "Returns computers from Active Directory",
+    "Description": "Returns computers from Active Directory using a filter.",
     "Language": "PowerShell",
     "Tags": [
       "Windows",

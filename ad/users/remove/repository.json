@@ -1,5 +1,5 @@
 {
-    "Description": "Deletes a user from Active Directory",
+    "Description": "Removes a user from Active Directory",
     "Language": "PowerShell",
     "Tags": [
       "Windows",

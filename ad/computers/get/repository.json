@@ -1,5 +1,5 @@
 {
-    "Description": "Returns a computer from Active Directory",
+    "Description": "Returns a computer from Active Directory.",
     "Language": "PowerShell",
     "Tags": [
       "Windows",
