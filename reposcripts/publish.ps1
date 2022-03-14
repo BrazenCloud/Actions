@@ -13,8 +13,8 @@ foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
     
     # Publish the Action
     if ($Test.IsPresent) {
-        ./runway.bin -q -N build -it $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
+        ./runway.bin -q -N build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
     } else {
-        & ./runway.bin -q -N build -it $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower())
+        & ./runway.bin -q -N build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
     }
 }
