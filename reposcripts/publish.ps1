@@ -15,6 +15,6 @@ foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
     if ($Test.IsPresent) {
         ./runway.bin -q -N build -it $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
     } else {
-        & $rw -q -N build -it $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower())
+        & ./runway.bin -q -N build -it $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower())
     }
 }
