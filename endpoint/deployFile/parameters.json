@@ -1,0 +1,8 @@
+[
+	{ 
+		"Name":"File Path",
+		"Type": 0,
+		"DefaultValue": "",
+		"IsOptional": false
+	}
+]
