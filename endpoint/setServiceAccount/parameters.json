@@ -1,0 +1,21 @@
+[
+    {
+        "Name": "Service Name",
+        "Type": 0,
+        "DefaultValue": "RunwayRunnerService",
+        "Description": "The service to set the service account on.",
+        "IsOptional": false
+    },
+    {
+        "Name": "User name",
+        "Type": 0,
+        "Description": "The name of the user to use.",
+        "IsOptional": false
+    },
+    {
+        "Name": "User Password",
+        "Type": 3,
+        "Description": "The password for the user account",
+        "IsOptional": false
+    }
+]
