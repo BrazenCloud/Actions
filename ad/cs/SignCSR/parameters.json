@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Certificate Template",
+        "Type": 0,
+        "DefaultValue": "WebServer",
+        "Description": "Name of the Certificate Template to use",
+        "IsOptional": true
+    }
+]

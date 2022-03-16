@@ -1,0 +1,5 @@
+{
+	"Description": "Sign a CSR on an AD CS CA.",
+	"Language": "PowerShell",
+	"Tags": ["Windows","ADCS"]
+}
