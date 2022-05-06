@@ -32,6 +32,7 @@ foreach ($manifest in $manifests) {
         String = 0
         Number = 1
         Boolean = 2
+        Password = 3
     }
 
     if (Test-Path $path\parameters.json) {
