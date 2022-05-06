@@ -5,6 +5,7 @@
     "IR",
     "Collection",
     "Linux",
+    "Rootkit",
     "chkrootkit"
   ]
 }
