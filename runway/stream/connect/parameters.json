@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "Stream Name",
+        "Type": 0,
+        "Description": "The name of the stream to connect to.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Output Type",
+        "Type": 0,
+        "DefaultValue": "tcp, pipe, or file",
+        "Description": "The type of connection to make.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Address",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "The address of the connection to make. Depends on the 'Output Type'",
+        "IsOptional": false
+    },
+    {
+        "Name": "Timeout",
+        "Type": 0,
+        "DefaultValue": "15m",
+        "Description": "The timeout for the stream.",
+        "IsOptional": true
+    }   
+]

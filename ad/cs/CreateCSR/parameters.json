@@ -1,0 +1,23 @@
+[
+    {
+        "Name": "Website Name",
+        "Type": 0,
+        "DefaultValue": "Default Web Site",
+        "Description": "Name of the IIS site to generate a cert for",
+        "IsOptional": true
+    },
+    {
+        "Name": "Subject",
+        "Type": 0,
+        "DefaultValue": "Generated",
+        "Description": "Subject to use on the certificate",
+        "IsOptional": true
+    },
+    {
+        "Name": "Machine Key Set",
+        "Type": 2,
+        "DefaultValue": "true",
+        "Description": "If check, creates key set in the local machine's context.",
+        "IsOptional": true
+    }
+]

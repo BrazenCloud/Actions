@@ -17,6 +17,9 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
 - ad
   - [ad:computers:get](ad/computers/get)
   - [ad:computers:getFilter](ad/computers/getFilter)
+  - [ad:cs:CompleteCSR](ad/cs/CompleteCSR)
+  - [ad:cs:CreateCSR](ad/cs/CreateCSR)
+  - [ad:cs:SignCSR](ad/cs/SignCSR)
   - [ad:dcs:get](ad/dcs/get)
   - [ad:groups:addMember](ad/groups/addMember)
   - [ad:groups:get](ad/groups/get)
@@ -37,8 +40,8 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [ad:users:new](ad/users/new)
   - [ad:users:remove](ad/users/remove)
 - demo
-  - [demo:ExportDB](demo/ExportDB)
-  - [demo:ImportDB](demo/ImportDB)
+  - [demo:sql:ExportDB](demo/sql/ExportDB)
+  - [demo:sql:ImportDB](demo/sql/ImportDB)
 - deploy
   - [deploy:msi](deploy/msi)
   - [deploy:runway](deploy/runway)
@@ -47,8 +50,10 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [download:file](download/file)
   - [download:syslog](download/syslog)
 - endpoint
+  - [endpoint:collectFile](endpoint/collectFile)
   - [endpoint:CreateUpdateRegistryKey](endpoint/CreateUpdateRegistryKey)
   - [endpoint:DeleteRegistryKey](endpoint/DeleteRegistryKey)
+  - [endpoint:deployFile](endpoint/deployFile)
   - [endpoint:DisableLocalUserAccount](endpoint/DisableLocalUserAccount)
   - [endpoint:FileDelete](endpoint/FileDelete)
   - [endpoint:GetFreeDiskSpace](endpoint/GetFreeDiskSpace)
@@ -64,6 +69,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [endpoint:ManageNetworking](endpoint/ManageNetworking)
   - [endpoint:RemoteFileCopy](endpoint/RemoteFileCopy)
   - [endpoint:RunOSQuery](endpoint/RunOSQuery)
+  - [endpoint:setServiceLogonAccount](endpoint/setServiceLogonAccount)
 - inventory
   - [inventory:accounts](inventory/accounts)
   - [inventory:dnscache](inventory/dnscache)
@@ -79,6 +85,9 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [powershell:InstallModules](powershell/InstallModules)
   - [powershell:RunCommand](powershell/RunCommand)
   - [powershell:SetExecPolicy](powershell/SetExecPolicy)
+- runway
+  - [runway:stream:connect](runway/stream/connect)
+  - [runway:stream:listen](runway/stream/listen)
 - secops
   - [secops:BriMorLRC](secops/BriMorLRC)
   - [secops:CDIR](secops/CDIR)

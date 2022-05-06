@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# demo:ImportDB
+# demo:sql:ExportDB
 
-DEMO: Imports a database
+DEMO: Exports a database
 
 ## Metadata
 
