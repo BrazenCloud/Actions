@@ -2,12 +2,12 @@
 $json = Get-Content .\settings.json
 $settings = $json | ConvertFrom-Json
 
-if ($settings.Debug.ToString() -eq 'Debug') {
+if ($settings.Debug.ToString() -eq 'true') {
     $json.Split("`n") | Foreach-Object {"# $_"}
 }
 
 # Output PS version (debugging)
-if ($settings.Debug.ToString() -eq 'Debug') {
+if ($settings.Debug.ToString() -eq 'true') {
     "# $($PSVersionTable.PSVersion.ToString())"
 }
 
