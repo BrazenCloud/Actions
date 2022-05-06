@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# demo:ExportDB
+# demo:sql:ExportDB
 
 DEMO: Exports a database
 

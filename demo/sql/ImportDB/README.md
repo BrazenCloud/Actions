@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# demo:ImportDB
+# demo:sql:ImportDB
 
 DEMO: Imports a database
 

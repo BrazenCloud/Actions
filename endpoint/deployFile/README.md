@@ -1,26 +1,21 @@
 <!-- region Generated -->
-# deploy:msi
+# endpoint:deployFile
 
-Deploy an MSI from a URL.
+Deploys a file from a previous action.
 
 ## Metadata
 
 - Tags:
-  - Software
+  - File
   - Windows
-  - Deploy
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- MSI URL
+- File Path
   - Type: String
   - IsOptional: False
   - DefaultValue: 
-- MSI Parameters (/i installer.msi already included)
-  - Type: String
-  - IsOptional: True
-  - DefaultValue: /qn /norestart
 <!-- endregion -->
