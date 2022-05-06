@@ -2,6 +2,6 @@
 
 cd "${0%/*}"
 
-chmod +x ./lynis/lynis
+chmod +x ./lynis
 
-./lynis/lynis audit system
+./lynis audit system
