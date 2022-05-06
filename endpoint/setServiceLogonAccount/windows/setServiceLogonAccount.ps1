@@ -66,4 +66,6 @@ Add-LogonAsAServiceUser -UserName $settings.'User Name'
 sc.exe config `"$($settings.'Service Name')`" obj=`"$($settings.'User Name')`" password=`"$($settings.'User Password')`"
 
 # Restart the service
-Restart-Service $settings.'Service Name'
+# Needs to be run by a separate process
+$date = (Get-Date).AddMinutes(1)
+schtasks /create /TN RestartService /RU SYSTEM /TR "cmd /c sc stop runwayrunnerservice && sc start runwayrunnerservice" /SC ONCE /ST "$($date.Hour):$($date.Minute)" /F
