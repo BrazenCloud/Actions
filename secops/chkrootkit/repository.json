@@ -1,0 +1,10 @@
+{
+  "Description": "The chkrootkit tool checks for rootkits. http://www.chkrootkit.org/",
+  "Language": "C++",
+  "Tags": [
+    "IR",
+    "Collection",
+    "Linux",
+    "chkrootkit"
+  ]
+}
