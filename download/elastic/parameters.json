@@ -1,8 +1,38 @@
 [
-	{ 
-		"Name":"URL",
+	{
+		"Name": "https",
+		"Type": 2,
+		"DefaultValue": "true",
+		"IsOptional": false
+	},
+	{
+		"Name": "Server and port",
 		"Type": 0,
-		"DefaultValue":"",
-		"IsOptional":false
+		"DefaultValue": "",
+		"IsOptional": false
+	},
+	{
+		"Name": "Index Name",
+		"Type": 0,
+		"DefaultValue": "runwayjobs",
+		"IsOptional": false
+	},
+	{
+		"Name": "Skip Cert Check",
+		"Type": 2,
+		"DefaultValue": "false",
+		"IsOptional": true
+	},
+	{
+		"Name": "Authorization",
+		"Type": 0,
+		"DefaultValue": "false",
+		"IsOptional": true
+	},
+	{
+		"Name": "Is User Authentication",
+		"Type": 2,
+		"DefaultValue": "false",
+		"IsOptional": true
 	}
 ]
