@@ -6,6 +6,4 @@ chmod +x ./installer.sh
 
 ./installer.sh --install
 
-rkhunter --check --sk --logfile ./results/rkhunter.log
-
-./installer.sh --uninstall
+rkhunter --check --sk --logfile ../results/rkhunter.log --nocolors
