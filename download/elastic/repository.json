@@ -1,6 +1,6 @@
 {
   "Description": "Download results into elasticsearch.",
-  "Language": "Python",
+  "Language": "PowerShell",
   "Tags": [
     "Connector",
     "Elastic",
