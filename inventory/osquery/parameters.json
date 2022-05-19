@@ -1,8 +1,21 @@
 [
 	{
-		"Name":"Query",
+		"Name": "Query",
 		"Type": 0,
-		"IsOptional":false,
-		"DefaultValue":".all startup_items"
+		"IsOptional": false,
+		"DefaultValue": ".all startup_items"
+	},
+	{
+		"Name": "Format for Elastic",
+		"Type": 2,
+		"IsOptional": true,
+		"DefaultValue": "false",
+		"Description": "When selected, will format the output to send to Elastic."
+	},
+	{
+		"Name": "Query Name",
+		"Type": 0,
+		"IsOptional": true,
+		"DefaultValue": "RunwayQuery"
 	}
 ]
