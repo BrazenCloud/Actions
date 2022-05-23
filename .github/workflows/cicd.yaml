@@ -30,6 +30,24 @@ jobs:
         run: |
           ./runway.bin login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
 
+      - name: Test Each Action
+        shell: pwsh
+        run: |
+          Install-Module Pester -MinimumVersion 5.3
+          $config = New-PesterConfiguration
+          $config.Output.CIFormat = 'GithubActions'
+          $config.Run.Path = '.\reposcripts\actions.tests.ps1'
+          $config.TestResult.Enabled = $true
+          $config.TestResult.OutputFormat = 'JUnitXml'
+          Invoke-Pester -Configuration $config
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          junit_files: "testResults.xml"
+
+
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
         shell: pwsh
