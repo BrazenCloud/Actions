@@ -46,6 +46,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [deploy:msi](deploy/msi)
   - [deploy:runway](deploy/runway)
 - download
+  - [download:combine](download/combine)
   - [download:elastic](download/elastic)
   - [download:file](download/file)
   - [download:syslog](download/syslog)
@@ -92,9 +93,12 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [secops:BriMorLRC](secops/BriMorLRC)
   - [secops:CDIR](secops/CDIR)
   - [secops:CDIRwParams](secops/CDIRwParams)
+  - [secops:chkrootkit](secops/chkrootkit)
   - [secops:CyLR](secops/CyLR)
   - [secops:lastactivity](secops/lastactivity)
   - [secops:loki_memory](secops/loki_memory)
+  - [secops:lynis](secops/lynis)
+  - [secops:rkhunter](secops/rkhunter)
   - [secops:winpmem](secops/winpmem)
   - [secops:yara_ransomware](secops/yara_ransomware)
 - template
