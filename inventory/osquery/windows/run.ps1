@@ -7,6 +7,8 @@ Write-host "Running query: $search"
 
 $queryResults = .\windows\osqueryi.exe "$search" --json
 
+Write-Host "Query results: $queryResults"
+
 # if formatting for elastic, use the filebeat osquery module format
 if ($settings.'Format for Elastic'.ToString() -eq 'true') {
     $out = @{
