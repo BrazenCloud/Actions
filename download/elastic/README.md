@@ -9,14 +9,34 @@ Download results into elasticsearch.
   - Connector
   - Elastic
   - Windows
-- Language: Python
+- Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
 ## Parameters
 
-- URL
+- https
+  - Type: Boolean
+  - IsOptional: False
+  - DefaultValue: true
+- Server and port
   - Type: String
   - IsOptional: False
   - DefaultValue: 
+- Index Name
+  - Type: String
+  - IsOptional: False
+  - DefaultValue: runwayjobs
+- Skip Cert Check
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: false
+- Authorization
+  - Type: Password
+  - IsOptional: True
+  - DefaultValue: 
+- Is User Authentication
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: false
 <!-- endregion -->

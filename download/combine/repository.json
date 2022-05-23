@@ -1,0 +1,8 @@
+{
+  "Description": "Combines all previous results on the same Runner into a single result.",
+  "Language": "PowerShell",
+  "Tags": [
+    "Results",
+    "Windows"
+  ]
+}

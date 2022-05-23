@@ -1,2 +1,2 @@
 COPY . .
-RUN_WIN windows\run.bat
+RUN_WIN "pwsh.exe -ExecutionPolicy Bypass -File .\Windows\script.ps1"

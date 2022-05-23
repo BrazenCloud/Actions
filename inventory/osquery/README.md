@@ -18,4 +18,13 @@ Run osquery on the host.
   - Type: String
   - IsOptional: False
   - DefaultValue: .all startup_items
+- Format for Elastic
+  - Description: When selected, will format the output to send to Elastic.
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: false
+- Query Name
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: RunwayQuery
 <!-- endregion -->
