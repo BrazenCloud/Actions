@@ -23,7 +23,7 @@ jobs:
 
       - name: Auth to Runway
         run: |
-          ./runway.bin login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
+          ./runway.bin -S staging.runway.host login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
 
       - name: Test Each Action
         shell: pwsh
@@ -46,9 +46,9 @@ jobs:
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1 -Test
+        run: ./reposcripts/publish.ps1 -Test -Server 'staging.runway.host'
       
       - name: Publish Each Action on Push
         if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1
+        run: ./reposcripts/publish.ps1 -Server 'staging.runway.host'
