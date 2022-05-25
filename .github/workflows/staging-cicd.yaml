@@ -1,0 +1,56 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Staging Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download runway.bin
+        run: |
+          wget https://runwaydownloads.blob.core.windows.net/appdl/runway.bin
+          chmod +x ./runway.bin
+
+      - name: Download any executables
+        shell: pwsh
+        run: ./reposcripts/replaceExecutables.ps1
+
+      - name: Auth to Runway
+        run: |
+          ./runway.bin -S staging.runway.host login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
+
+      - name: Test Each Action
+        shell: pwsh
+        run: |
+          Install-Module Pester -MinimumVersion 5.3
+          $config = New-PesterConfiguration
+          $config.Output.CIFormat = 'GithubActions'
+          $config.Run.Path = '.\reposcripts\actions.tests.ps1'
+          $config.TestResult.Enabled = $true
+          $config.TestResult.OutputFormat = 'JUnitXml'
+          Invoke-Pester -Configuration $config
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          junit_files: "testResults.xml"
+
+
+      - name: Build Each Action on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        shell: pwsh
+        run: ./reposcripts/publish.ps1 -Test -Server 'staging.runway.host'
+      
+      - name: Publish Each Action on Push
+        if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
+        shell: pwsh
+        run: ./reposcripts/publish.ps1 -Server 'staging.runway.host'
