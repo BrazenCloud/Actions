@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Event Log Name",
+        "Type": 0,
+        "DefaultValue": "Security",
+        "IsOptional": false
+    },
+    {
+        "Name": "Tail Count",
+        "Type": 1,
+        "DefaultValue": "100",
+        "IsOptional": true
+    },
+    {
+        "Name": "Wait Time in Minutes",
+        "Type": 1,
+        "DefaultValue": "10",
+        "IsOptional": true
+    },
+    {
+        "Name": "XPath Query",
+        "Type": 0,
+        "DefaultValue": "*[System[(EventID=4625)]]",
+        "IsOptional": true
+    }
+]
