@@ -1,18 +1,65 @@
-$settings = Get-Content .\settings.json | ConvertFrom-Json
+#$settings = Get-Content .\settings.json | ConvertFrom-Json
 
+$logNameTemplate = @'
+  - name: {logname}
+    ignore_older: {timeinminutes}m
+    no_more_events: {nomoreevents}
+'@
 
-if ([int]$settings.'Tail Count' -gt 0) {
-    Write-Host "Retrieving the previous $($settings.'Tail Count') logs from the $($settings.'Event Log Name') log."
+$logNameTemplate = if ($settings.Stream.ToString() -eq 'true') {
+    $logNameTemplate -replace '\{nomoreevents\}', 'stop'
+} else {
+    $logNameTemplate -replace '\{nomoreevents\}', 'stop'
+}
+
+$output = @{
+    File   = @'
+output.file:
+  enabled: true
+  codec.json:
+    pretty: false
+  path: {path}
+  filename: winlogbeat
+  number_of_files: 2
+'@
+    Stream = @'
+output.console:
+  enabled: true
+  codec.json:
+    pretty: false
+'@
+}
+
+$ymlContent = Get-Content '.\windows\winlogbeat\templateWinLogBeat.yml' -Raw
+
+if ([int]$settings.'Tail Time in Minutes' -gt 0) {
+    Write-Host "Retrieving the previous $($settings.'Tail Time in Minutes') minutes logs from the $($settings.'Event Log Name') log(s)."
+
+    $replaceLogName = foreach ($logname in $settings.'Event Log Name' -split ',') {
+        ($logNameTemplate -replace '\{logname\}', $logname) -replace '\{timeinminutes\}', $settings.'Tail Time in Minutes'
+        
+    }
+
+    $ymlContent = $ymlContent -replace '\{logname\}', ($replaceLogName -join "`n")
     
-    # Get 'Tail Count' number of events and output to results floder
-    $eSplat = @{
-        LogName   = $settings.'Event Log Name'
-        MaxEvents = $settings.'Tail Count'
+    # if stream, output to console. Else output to file
+    if ($settings.Stream.ToString() -eq 'true') {
+        #$resultsFolder = (Get-Item .\results).FullName
+        
+        $ymlContent = $ymlContent -replace '\{output\}', $output['Stream']
+        $ymlContent | Out-File .\windows\winlogbeat\winlogbeat.yml
+        Set-Location $PSScriptRoot\winlogbeat
+        .\winlogbeat.exe --path.logs "$resultsFolder\logs"
+        Set-Location ..\..
+    } else {
+        $resultsFolder = (Get-Item .\results).FullName
+        $fileOutput = $output['File'] -replace '\{path\}', $resultsFolder
+        $ymlContent = $ymlContent -replace '\{output\}', $fileOutput
+        $ymlContent | Out-File .\windows\winlogbeat\winlogbeat.yml
+        Set-Location $PSScriptRoot\winlogbeat
+        .\winlogbeat.exe --path.logs "$resultsFolder\logs"
+        Set-Location ..\..
     }
-    if ($settings.'XPath Query'.Length -gt 0) {
-        $eSplat['FilterXPath'] = $settings.'XPath Query'
-    }
-    Get-WinEvent @eSplat | ConvertTo-Json -Depth 5 | Out-File ".\results\$($env:COMPUTERNAME)_$(Get-Date -UFormat %s)_events.json"
 } elseif ([int]$settings.'Wait Time in Minutes' -gt 0) {
     Write-Host "Streaming the logs from the $($settings.'Event Log Name') log for $($settings.'Wait Time in Minutes')."
 

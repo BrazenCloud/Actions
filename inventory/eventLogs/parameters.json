@@ -1,14 +1,20 @@
 [
     {
-        "Name": "Event Log Name",
+        "Name": "Event Log Names",
         "Type": 0,
         "DefaultValue": "Security",
         "IsOptional": false
     },
     {
-        "Name": "Tail Count",
+        "Name": "Tail Time in Minutes",
         "Type": 1,
-        "DefaultValue": "100",
+        "DefaultValue": "1",
+        "IsOptional": true
+    },
+    {
+        "Name": "Stream",
+        "Type": 2,
+        "DefaultValue": "false",
         "IsOptional": true
     },
     {
