@@ -12,7 +12,7 @@
         "IsOptional": true
     },
     {
-        "Name": "Stream",
+        "Name": "Stream Name",
         "Type": 2,
         "DefaultValue": "false",
         "IsOptional": true

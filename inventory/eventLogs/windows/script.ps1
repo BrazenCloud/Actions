@@ -44,12 +44,17 @@ if ([int]$settings.'Tail Time in Minutes' -gt 0) {
     
     # if stream, output to console. Else output to file
     if ($settings.Stream.ToString() -eq 'true') {
-        #$resultsFolder = (Get-Item .\results).FullName
-        
+        # Set the winlogbeat config to output to console
         $ymlContent = $ymlContent -replace '\{output\}', $output['Stream']
         $ymlContent | Out-File .\windows\winlogbeat\winlogbeat.yml
+
+        # Stream the output
+        $rw = '..\stagingrunway.exe'
+        $commandString = "-N -S $($settings.host) stream --connect $($settings.'Stream Name') --input pipe://stdin"
+        Write-Host "$rw $commandString"
+        $resultsFolder = (Get-Item .\results).FullName
         Set-Location $PSScriptRoot\winlogbeat
-        .\winlogbeat.exe --path.logs "$resultsFolder\logs"
+        Invoke-Command -ScriptBlock ([scriptblock]::Create(".\winlogbeat.exe --path.logs $resultsFolder\logs | %{`$_.ToString()} | $rw $commandString"))
         Set-Location ..\..
     } else {
         $resultsFolder = (Get-Item .\results).FullName
