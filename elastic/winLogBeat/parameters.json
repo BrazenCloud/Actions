@@ -1,0 +1,51 @@
+[
+    {
+        "Name": "Event Log Names",
+        "Type": 0,
+        "DefaultValue": "default",
+        "Description": "If left as 'default', the default winlogbeat event log configuration is used.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Tail Time in Minutes",
+        "Type": 1,
+        "DefaultValue": "60",
+        "IsOptional": true
+    },
+    {
+        "Name": "Stream",
+        "Type": 2,
+        "DefaultValue": "",
+        "IsOptional": true
+    },
+    {
+        "Name": "Stream Name",
+        "Type": 0,
+        "DefaultValue": "",
+        "IsOptional": true
+    },
+    {
+        "Name": "Elastic Url",
+        "Type": 0,
+        "DefaultValue": "localhost:9200",
+        "IsOptional": true
+    },
+    {
+        "Name": "Wait Time in Minutes",
+        "Type": 1,
+        "DefaultValue": "10",
+        "IsOptional": true
+    },
+    {
+        "Name": "Elastic User Name",
+        "Type": 0,
+        "DefaultValue": "elastic",
+        "IsOptional": true
+    },
+    {
+        "Name": "Elastic User Password",
+        "Type": 3,
+        "DefaultValue": "",
+        "IsOptional": true
+    }
+]
