@@ -6,7 +6,7 @@ param (
 )
 
 if (-not (Get-Module Runway -ListAvailable)) { 
-    Install-Module Runway -Repository PSGallery
+    Install-Module Runway -Repository PSGallery -Force
 }
 
 $connectSplat = @{
