@@ -2,7 +2,7 @@ param (
     [string]$Email,
     [string]$Password,
     [string]$Server = 'portal.runawy.host',
-    [switch]$IncludeWindows,
+    [switch]$IncludeWindows
 )
 
 if (-not (Get-Module Runway -ListAvailable)) { 
