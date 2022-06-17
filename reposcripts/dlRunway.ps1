@@ -1,7 +1,7 @@
 param (
     [string]$Email,
     [string]$Password,
-    [string]$Server = 'portal.runawy.host',
+    [string]$Server = 'portal.runway.host',
     [switch]$IncludeWindows
 )
 
