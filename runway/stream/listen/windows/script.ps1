@@ -8,8 +8,5 @@ if ($settings.'Output Type'.ToLower() -match 'tcp|pipe|file') {
         $commandString += " --timeout $($settings.TimeOut)"
     }
     Write-Host "$rw $commandString"
-
-    & $rw -N who
-
     Invoke-Command -ScriptBlock ([scriptblock]::Create("$rw $commandString")) *> .\results\stdout.txt
 }
