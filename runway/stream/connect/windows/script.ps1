@@ -10,7 +10,7 @@ $settings
 
 if ($settings.'Output Type'.ToLower() -match 'tcp|pipe|file') {
     $rw = '.\windows\runway.exe'
-    $commandString = "-N stream --connect $($settings.'Stream Name') --output $($settings.'Output Type')://$($settings.Address)"
+    $commandString = "-N -S $($settings.host) stream --connect $($settings.'Stream Name') --output $($settings.'Output Type')://$($settings.Address)"
     if ($settings.TimeOut) {
         $commandString += " --timeout $($settings.TimeOut)"
     }
