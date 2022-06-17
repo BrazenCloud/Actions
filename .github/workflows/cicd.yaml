@@ -18,9 +18,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Download runway.bin
-        run: |
-          wget https://runwaydownloads.blob.core.windows.net/appdl/runway.bin
-          chmod +x ./runway.bin
+        shell: pwsh
+        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }} -Server 'staging.runway.host'
 
       - name: Download any executables
         shell: pwsh
@@ -46,7 +45,6 @@ jobs:
         if: always()
         with:
           junit_files: "testResults.xml"
-
 
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
