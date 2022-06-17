@@ -1,15 +1,15 @@
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 $settings
 
-if ($settings.'Input Type'.ToLower() -match 'tcp|pipe|file') {
+if ($settings.'Output Type'.ToLower() -match 'tcp|pipe|file') {
     $rw = '.\windows\runway.exe'
-    $commandString = "-N stream --listen $($settings.'Stream Name') --input $($settings.'Input Type')://$($settings.Address)"
+    $commandString = "-N -S $($settings.host) stream --listen $($settings.'Stream Name') --output $($settings.'Output Type')://$($settings.Address) --persistent"
     if ($settings.TimeOut) {
         $commandString += " --timeout $($settings.TimeOut)"
     }
     Write-Host "$rw $commandString"
 
-    & $rw who
+    & $rw -N who
 
-    Invoke-Command -ScriptBlock ([scriptblock]::Create("$rw $commandString"))
+    Invoke-Command -ScriptBlock ([scriptblock]::Create("$rw $commandString")) *> .\results\stdout.txt
 }
