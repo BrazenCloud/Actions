@@ -19,7 +19,7 @@ jobs:
 
       - name: Download runway.bin
         shell: pwsh
-        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }} -Server 'staging.runway.host'
+        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }}
 
       - name: Download any executables
         shell: pwsh
