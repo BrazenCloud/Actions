@@ -1,0 +1,11 @@
+{
+    "Description": "Uses WinLogBeat to collect event logs.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Events",
+        "EventLog",
+        "Windows",
+        "Elastic",
+        "WinLogBeat"
+    ]
+}

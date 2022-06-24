@@ -50,6 +50,8 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [download:elastic](download/elastic)
   - [download:file](download/file)
   - [download:syslog](download/syslog)
+- elastic
+  - [elastic:winLogBeat](elastic/winLogBeat)
 - endpoint
   - [endpoint:collectFile](endpoint/collectFile)
   - [endpoint:CreateUpdateRegistryKey](endpoint/CreateUpdateRegistryKey)
@@ -74,6 +76,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
 - inventory
   - [inventory:accounts](inventory/accounts)
   - [inventory:dnscache](inventory/dnscache)
+  - [inventory:eventLogs](inventory/eventLogs)
   - [inventory:netstat](inventory/netstat)
   - [inventory:osquery](inventory/osquery)
   - [inventory:tasklog](inventory/tasklog)

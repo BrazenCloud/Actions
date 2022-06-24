@@ -20,7 +20,7 @@ Listens for a Runway Stream
   - Description: The name of the stream to listen for.
   - Type: String
   - IsOptional: False
-- Input Type
+- Output Type
   - Description: The type of connection to make.
   - Type: String
   - IsOptional: False

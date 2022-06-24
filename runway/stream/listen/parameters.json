@@ -6,7 +6,7 @@
         "IsOptional": false
     },
     {
-        "Name": "Input Type",
+        "Name": "Output Type",
         "Type": 0,
         "DefaultValue": "tcp, pipe, or file",
         "Description": "The type of connection to make.",
@@ -25,5 +25,5 @@
         "DefaultValue": "15m",
         "Description": "The timeout for the stream.",
         "IsOptional": true
-    }   
+    }
 ]
