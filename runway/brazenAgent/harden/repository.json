@@ -1,8 +1,9 @@
 {
-    "Description": "Harden's the sensitive files of the BrazenAgent",
+    "Description": "Harden's the sensitive files of the BrazenAgent.",
     "Language": "PowerShell",
     "Tags": [
         "BrazenAgent",
-        "Harden"
+        "Harden",
+        "ACL"
     ]
 }
