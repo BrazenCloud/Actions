@@ -1,0 +1,8 @@
+[
+    {
+        "Name": "Harden Agent Files",
+        "Type": 1,
+        "Description": "Hardens the files in the agent install directory.",
+        "IsOptional": true
+    }
+]
