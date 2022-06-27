@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Harden Agent Folder Access",
+        "Type": 2,
+        "Description": "Hardens the files in the agent install directory.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Reset Folder Access to Default",
+        "Type": 2,
+        "Description": "Sets the access of the agents install directory to default.",
+        "IsOptional": true
+    }
+]
