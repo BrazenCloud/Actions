@@ -25,7 +25,7 @@ if ($settings.'Harden Agent Files'.ToString() -eq 'true') {
         $acl.SetAccessRuleProtection($true, $true)
 
         # Remove Users
-        $acl.Access | Where-Object { $removeIds -notcontains $_.IdentityReference } | ForEach-Object {
+        $acl.Access | Where-Object { $removeIds -contains $_.IdentityReference } | ForEach-Object {
             $acl.RemoveAccessRule($_)
         }
         Set-Acl $path -AclObject $acl
