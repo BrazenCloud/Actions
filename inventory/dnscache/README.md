@@ -12,6 +12,7 @@ Collect the dns cache of the host.
 - Language: via cmdline
 - Supported Operating Systems:
   - Windows
+  - Linux
 
 ## Parameters
 
