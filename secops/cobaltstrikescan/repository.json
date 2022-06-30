@@ -1,0 +1,10 @@
+{
+  "Description": "This action will scan processes for cobaltstrike injected processes and beacons.",
+  "Language": "Executable",
+  "Tags": [
+    "INECTED CODE",
+    "MALWARE",
+    "IR",
+    "Windows"
+  ]
+}
