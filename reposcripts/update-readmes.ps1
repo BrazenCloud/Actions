@@ -14,7 +14,7 @@ $manifests = Get-ChildItem .\ -Filter manifest.txt -Recurse
 foreach ($manifest in $manifests) {
     $replace = @{}
 
-    $rPath = $manifest.FullName.Replace($baseDir.FullName,'').Trim('\/')
+    $rPath = $manifest.FullName.Replace($baseDir.FullName, '').Trim('\/')
     $replace['name'] = ($rPath -split '\\|\/' | Select-Object -SkipLast 1) -join ':'
     
     $path = Split-Path $manifest.FullName
@@ -68,16 +68,16 @@ foreach ($manifest in $manifests) {
         if ($line -match '\{([a-zA-Z]+)\}') {
             if ($replace.Keys -contains $Matches.1) {
                 if ($replace[$($Matches.1)].GetType().BaseType.Name -eq 'Array') {
-                    if (($replace[$($Matches.1)] | ?{$_}).Count -gt 0) {
-                        $line -replace '\{([a-zA-Z]+)\}',"$($replace[$($Matches.1)] -join "`n  - ")"
+                    if (($replace[$($Matches.1)] | Where-Object { $_ }).Count -gt 0) {
+                        $line -replace '\{([a-zA-Z]+)\}', "$($replace[$($Matches.1)] -join "`n  - ")"
                     } else {
-                        $line -replace '\{([a-zA-Z]+)\}',"None specified."
+                        $line -replace '\{([a-zA-Z]+)\}', "None specified."
                     }
                 } else {
-                    $line -replace '\{([a-zA-Z]+)\}',"$($replace[$($Matches.1)])"
+                    $line -replace '\{([a-zA-Z]+)\}', "$($replace[$($Matches.1)])"
                 }
             } else {
-                $line -replace '\{([a-zA-Z]+)\}',"None specified."
+                $line -replace '\{([a-zA-Z]+)\}', "None specified."
             }
         } else {
             $line
@@ -99,8 +99,23 @@ foreach ($manifest in $manifests) {
         }
     }
 
-    $tReadmeContent | Out-File $path\README.md
-    if ($null -ne $extraLines) {
-        $extraLines | Out-File $path\README.md -Append
+    # Write the file + extra lines if they exist
+    $outText = if ($extraLines) {
+        ($tReadmeContent + $extraLines) -join "`r`n"
+    } else {
+        ($tReadmeContent) -join "`r`n"
     }
+    # Initially LF
+    $outText | Out-File $path\README.md -NoNewline
+    # Append a new line
+    "`r`n" | Out-File $path\README.md -Append
+    # Read the file, minus the last line
+    $text = Get-Content $path\README.md | Select-Object -SkipLast 1
+    # Write as CLRF
+    $text | Out-File $path\README.md
+    <#
+        I know this way of writing the file is confusing, but this is how I am able
+        to write the file without Git noticing a change. I want to be able to write
+        the file every time and not worry about re-committing into Git.
+    #>
 }
