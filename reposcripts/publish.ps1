@@ -1,10 +1,11 @@
 param (
     [switch]$Test,
-    [string]$Server = 'portal.runway.host'
+    [string]$Server = 'portal.runway.host',
+    [string]$BasePublishPath = './'
 )
 
-$baseDir = Get-Item ./
-foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
+$baseDir = Get-Item $BasePublishPath
+foreach ($manifest in (Get-ChildItem $BasePublishPath -Filter manifest.txt -Recurse)) {
     
     # Determine namespace based on folder structure
     $rPath = $manifest.FullName.Replace($baseDir.FullName, '').Trim('\/')
@@ -16,6 +17,6 @@ foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
     if ($Test.IsPresent) {
         ./runway.bin -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
     } else {
-        & ./runway.bin -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
+        & $rw -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
     }
 }
