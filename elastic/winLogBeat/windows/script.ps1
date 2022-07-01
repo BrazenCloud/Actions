@@ -60,7 +60,7 @@ output.elasticsearch:
 '@
 }
 
-$ymlContent = Get-Content '.\windows\winlogbeat2\templateWinLogBeat.yml' -Raw
+$ymlContent = Get-Content '.\windows\winlogbeat\templateWinLogBeat.yml' -Raw
 
 if ($settings.'Event Log Names' -eq 'default') {
     Write-Host 'Using default event log settings.'
@@ -97,14 +97,14 @@ if ($settings.Stream.ToString() -eq 'true') {
     $ymlContent = $ymlContent -replace '\{output\}', $fileOutput
 }
 
-$ymlContent | Out-File .\windows\winlogbeat2\winlogbeat.yml
+$ymlContent | Out-File .\windows\winlogbeat\winlogbeat.yml
 $ymlContent | Out-File .\results\winlogbeat.yml
 
 if ($settings.Stream.ToString() -eq 'true') {
     $command = "Start-Sleep -Seconds 15;.\winlogbeat.exe --path.logs '$resultsFolder\logs'"
     $encodedCommand = [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($command))
     $procSplat = @{
-        WorkingDirectory       = "$PSScriptRoot\winlogbeat2"
+        WorkingDirectory       = "$PSScriptRoot\winlogbeat"
         FilePath               = 'powershell.exe'
         ArgumentList           = "-ExecutionPolicy Bypass -encodedCommand $encodedCommand"
         RedirectStandardOutput = "$resultsFolder\connectstdout.txt"
@@ -117,7 +117,7 @@ if ($settings.Stream.ToString() -eq 'true') {
     Write-Host $command
     Invoke-Command -ScriptBlock ([scriptblock]::Create($command)) -NoNewScope
 } else {
-    Set-Location $PSScriptRoot\winlogbeat2
+    Set-Location $PSScriptRoot\winlogbeat
     .\winlogbeat.exe --path.logs "$resultsFolder\logs"
     Set-Location ..\..
 }
