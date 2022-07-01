@@ -17,7 +17,11 @@ foreach ($manifest in (Get-ChildItem $BasePublishPath -Filter manifest.txt -Recu
     
     # Publish the Action
     if ($Test.IsPresent) {
-        & $UtilityPath -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
+        if ($Public.IsPresent) {
+            & $UtilityPath -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" --PUBLIC
+        } else {
+            & $UtilityPath -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
+        }
     } else {
         if ($Public.IsPresent) {
             & $UtilityPath -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
