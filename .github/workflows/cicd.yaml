@@ -54,4 +54,4 @@ jobs:
       - name: Publish Each Action on Push
         if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1
+        run: ./reposcripts/publish.ps1 -Public
