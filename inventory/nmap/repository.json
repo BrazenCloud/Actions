@@ -1,0 +1,10 @@
+{
+  "Description": "Use Nmap to port scan the local host.",
+  "Language": "via cmdline",
+  "Tags": [
+    "Inventory",
+    "Portscan",
+    "Network",
+    "Linux"
+  ]
+}
