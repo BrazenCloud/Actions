@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "Memory Scan",
+        "Type": 2,
+        "DefaultValue": "True",
+        "Description": "Scan memory for rootkits in memory",
+        "IsOptional": true
+    },
+    {
+        "Name": "default no params",
+        "Type": 0,
+        "DefaultValue": "true",
+        "Description": "Leverage default binaries",
+        "IsOptional": true
+    }
+    
+]
