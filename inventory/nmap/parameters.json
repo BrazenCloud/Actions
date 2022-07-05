@@ -9,7 +9,7 @@
 		"Type": 0,
 		"DefaultValue":"192.168.0.0/24",
 		"IsOptional":true
-	}
+	},
     {
 		"Name":"All-Ports?",
 		"Type": 2,
