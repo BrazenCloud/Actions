@@ -1,18 +1,9 @@
 [
-	{
-		"Name":"Custom Host",
-		"Type": 2,
-		"IsOptional":true
-	},
+	
 	{ 
 		"Name":"Network Subnet",
 		"Type": 0,
 		"DefaultValue":"192.168.0.0/24",
-		"IsOptional":true
-	},
-    {
-		"Name":"All-Ports?",
-		"Type": 2,
 		"IsOptional":true
 	},
 	{ 
