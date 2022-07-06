@@ -1,0 +1,15 @@
+[
+	
+	{ 
+		"Name":"Network Subnet",
+		"Type": 0,
+		"DefaultValue":"192.168.0.0/24",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Ports to scan",
+		"Type": 0,
+		"DefaultValue":"-p 0-65535",
+		"IsOptional":true
+	}
+]
