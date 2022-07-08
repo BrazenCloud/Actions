@@ -1,18 +1,20 @@
 <!-- region Generated -->
-# inventory:nmap
+# secops:yum-verify
 
-Collect the dns cache of the host.
+Validate Linux Packages with yum verify-all
 
 ## Metadata
 
 - Tags:
+  - Inventory
+  - Packages
+  - Validation
   - Linux
-  - Windows
 - Language: via cmdline
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-None specified.
+
 <!-- endregion -->

@@ -9,10 +9,10 @@ Collect the dns cache of the host.
   - DNS
   - Network
   - Windows
+  - Linux
 - Language: via cmdline
 - Supported Operating Systems:
   - Windows
-  - Linux
 
 ## Parameters
 

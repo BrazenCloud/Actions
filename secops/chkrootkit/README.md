@@ -17,5 +17,9 @@ The chkrootkit tool checks for rootkits. http://www.chkrootkit.org/
 
 ## Parameters
 
-None specified.
+- Parameters
+  - Description: Leverage default binaries
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
 <!-- endregion -->

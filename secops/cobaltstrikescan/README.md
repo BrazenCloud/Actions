@@ -1,12 +1,13 @@
 <!-- region Generated -->
-# secops:CobaltStrikeScan
+# secops:cobaltstrikescan
 
-Runs the CyLR live response collection tool.
+This action will scan processes for cobaltstrike injected processes and beacons.
 
 ## Metadata
 
 - Tags:
-  - INJECTED CODE
+  - Injected Code
+  - Malware
   - IR
   - Windows
 - Language: Executable

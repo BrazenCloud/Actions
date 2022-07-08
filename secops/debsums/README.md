@@ -1,18 +1,23 @@
 <!-- region Generated -->
-# inventory:nmap
+# secops:debsums
 
-Collect the dns cache of the host.
+Validate Linux Packages with Debsums
 
 ## Metadata
 
 - Tags:
+  - Inventory
+  - Packages
+  - Validation
   - Linux
-  - Windows
 - Language: via cmdline
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-None specified.
+- cliparams
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: -s
 <!-- endregion -->

@@ -1,7 +1,7 @@
 <!-- region Generated -->
-# template:binary
+# secops:turboscanner
 
-This is a template binary action.
+Turboscanner will scan for localhost services running and articulate cpu usage.
 
 ## Metadata
 
