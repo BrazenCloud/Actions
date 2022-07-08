@@ -1,0 +1,27 @@
+[
+	
+	{ 
+		"Name":"Default Analysis",
+		"Type": 0,
+		"DefaultValue":"-A -qc it -qc ia -qc sI -qc i",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Add strings output",
+		"Type": 0,
+		"DefaultValue":"-qc izz",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Scanned file filename and path",
+		"Type": 0,
+		"DefaultValue":"c:\\windows\\blah.exe",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Output as json",
+		"Type": 0,
+		"DefaultValue":"-qc ij",
+		"IsOptional":true
+	}
+]
