@@ -1,6 +1,6 @@
 $settings = Get-Content .\settings.json | ConvertFrom-Json
 
-$command = ".\radare2.exe $($settings.Parameters)"
+$command = ".\windows\radare2.exe $($settings.Parameters)"
 
 if ($settings.'Add Strings Output'.ToString() -eq 'true') {
     $command = "$command -qc izz"
