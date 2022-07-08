@@ -1,9 +1,8 @@
 [
-	
-	{ 
-		"Name":"cliparams",
-		"Type": 0,
-		"DefaultValue":"-s",
-		"IsOptional":true
-	}
+    {
+        "Name": "cliparams",
+        "Type": 0,
+        "DefaultValue": "-s",
+        "IsOptional": true
+    }
 ]
