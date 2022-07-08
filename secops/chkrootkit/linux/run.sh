@@ -2,4 +2,9 @@
 
 cd "${0%/*}"
 
-./chkrootkit
+sudo apt-get install jq -y
+apt-get install jq -y
+
+params=$(jq -r '."Parameters"' ../settings.json)
+
+./chkrootkit $params
