@@ -78,6 +78,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [inventory:dnscache](inventory/dnscache)
   - [inventory:eventLogs](inventory/eventLogs)
   - [inventory:netstat](inventory/netstat)
+  - [inventory:nmap](inventory/nmap)
   - [inventory:osquery](inventory/osquery)
   - [inventory:tasklog](inventory/tasklog)
 - map
@@ -90,6 +91,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [powershell:RunCommand](powershell/RunCommand)
   - [powershell:SetExecPolicy](powershell/SetExecPolicy)
 - runway
+  - [runway:brazenAgent:harden](runway/brazenAgent/harden)
   - [runway:stream:connect](runway/stream/connect)
   - [runway:stream:listen](runway/stream/listen)
 - secops
@@ -97,13 +99,18 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [secops:CDIR](secops/CDIR)
   - [secops:CDIRwParams](secops/CDIRwParams)
   - [secops:chkrootkit](secops/chkrootkit)
+  - [secops:cobaltstrikescan](secops/cobaltstrikescan)
   - [secops:CyLR](secops/CyLR)
+  - [secops:debsums](secops/debsums)
   - [secops:lastactivity](secops/lastactivity)
   - [secops:loki_memory](secops/loki_memory)
   - [secops:lynis](secops/lynis)
+  - [secops:radare2](secops/radare2)
   - [secops:rkhunter](secops/rkhunter)
+  - [secops:turboscanner](secops/turboscanner)
   - [secops:winpmem](secops/winpmem)
   - [secops:yara_ransomware](secops/yara_ransomware)
+  - [secops:yum-verify](secops/yum-verify)
 - template
   - [template:batch](template/batch)
   - [template:binary](template/binary)
