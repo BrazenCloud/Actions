@@ -1,8 +1,9 @@
 [
     {
-        "Name": "cliparams",
+        "Name": "Parameters",
         "Type": 0,
         "DefaultValue": "-s",
+        "Description": "By default, -s silences OK packages.",
         "IsOptional": true
     }
 ]
