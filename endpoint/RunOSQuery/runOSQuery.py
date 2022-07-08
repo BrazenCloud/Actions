@@ -21,11 +21,13 @@ class run_os_query(base_action, object):
     # The perform_action is a specific action implementation, it should 
     # populate the response that will be written as json.
     #
-    import subprocess
+    
     def perform_action(self):
         self.response.name = "Run OSQuery"
         self.type = "RunOSQuery"
+        
         try:
+         import subprocess
             # execute a process on the host, pipe the process stdout
             proc = subprocess.Popen(['osqueryi', '--json', self.query], stdout=subprocess.PIPE)
             # get the piped stdout
