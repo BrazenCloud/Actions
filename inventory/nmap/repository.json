@@ -5,6 +5,7 @@
     "Inventory",
     "Portscan",
     "Network",
+    "Nmap",
     "Linux"
   ]
 }
