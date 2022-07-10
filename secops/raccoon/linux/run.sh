@@ -16,6 +16,9 @@ apt-get install jq -y
 apt-get install pip -y
 apt install jq -y
 apt install pip -y
+sudo apt-get install whois -y
+apt-get install whois -y
+apt install whois -y
 pip install raccoon-scanner
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
