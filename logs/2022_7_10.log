@@ -10,3 +10,5 @@
 [7/10/2022 15:40:8]Failed to publish action. Server returned (500)
 [7/10/2022 15:40:25]Successfully built app package 'inventory-check_domain.apt'
 [7/10/2022 15:40:26]Failed to publish action. Server returned (500)
+[7/10/2022 16:27:7]Successfully built app package 'inventory-check_domain.apt'
+[7/10/2022 16:27:11]Successfully published action 'inventory:check_domain' to runway repository
