@@ -12,6 +12,10 @@ $pythonCMD
 
 sudo apt-get install jq -y
 sudo apt-get install pip -y
+apt-get install jq -y
+apt-get install pip -y
+apt install jq -y
+apt install pip -y
 pip install raccoon-scanner
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
@@ -19,5 +23,5 @@ verbose1=$(jq -r '."quietmode"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute raccooon
-raccoon $verbose1 -f --vulners-nmap-scan $hosttoscan1 -o ../results.txt
+raccoon $hosttoscan1 $verbose1 -f --vulners-nmap-scan -o ../results.txt
 
