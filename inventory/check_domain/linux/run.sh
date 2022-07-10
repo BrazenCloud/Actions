@@ -2,7 +2,7 @@
 
 cd "${0%/*}"
 
-pythonCMD="python"
+pythonCMD="python3"
 
 if ! [ -x "$(command -v python)" ]; then
     # no python installed
@@ -25,7 +25,7 @@ python3 -m venv check_domain && source check_domain/bin/activate
 apt-get install python3-venv -y
 # Install prerequisite pip required modules
 pip install -r ../requirements.txt
-python3 -m venv check_domain && source check_domain/bin/activate
+python3.7 -m venv check_domain && source check_domain/bin/activate
 
 #set executable permission
 chmod +x check_domain.py
