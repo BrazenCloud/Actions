@@ -18,6 +18,6 @@ hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
 verbose1=$(jq -r '."quietmode"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
-# Execute intelspy
+# Execute raccooon
 raccoon $verbose1 -f --vulners-nmap-scan $hosttoscan1 -o ../results
 
