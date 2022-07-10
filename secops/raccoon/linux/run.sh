@@ -19,5 +19,5 @@ verbose1=$(jq -r '."quietmode"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute raccooon
-raccoon $verbose1 -f --vulners-nmap-scan $hosttoscan1 -o ../results
+raccoon $verbose1 -f --vulners-nmap-scan $hosttoscan1 -o ../results.txt
 
