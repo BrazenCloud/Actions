@@ -1,0 +1,26 @@
+[
+	{
+		"Name":"Domain",
+		"Type": 0,
+		"DefaultValue":"-d domainexample.com"
+		"IsOptional":true
+	},
+	{ 
+		"Name":"SELECTOR_DKIM",
+		"Type": 0,
+		"DefaultValue":"-s default",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"SELECTOR_BMI",
+		"Type": 0,
+		"DefaultValue":"-b default",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"Verbose",
+		"Type": 0,
+		"DefaultValue":"-v",
+		"IsOptional":true
+	}
+]
