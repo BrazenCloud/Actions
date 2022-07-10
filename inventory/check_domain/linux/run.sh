@@ -25,6 +25,7 @@ python3 -m venv check_domain && source check_domain/bin/activate
 apt-get install python3-venv -y
 # Install prerequisite pip required modules
 pip install -r ../requirements.txt
+./python3.7 -m venv check_domain && source check_domain/bin/activate
 
 #set executable permission
 chmod +x check_domain.py
@@ -34,5 +35,5 @@ selector1=$(jq -r '."SELECTOR_DKIM"' ../settings.json)
 selector2=$(jq -r '."SELECTOR_BMI"' ../settings.json)
 verbose1=$(jq -r '."Verbose"' ../settings.json)
 
-$pythonCMD -m venv check_domain && source check_domain/bin/activate & ./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
+$pythonCMD ./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
 
