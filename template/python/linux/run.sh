@@ -6,7 +6,7 @@ pythonCMD="python"
 
 if ! [ -x "$(command -v python)" ]; then
     # no python installed
-    pythonCMD="./python"
+    pythonCMD="./python3.7"
     chmod +x $pythonCMD 
 fi
 
