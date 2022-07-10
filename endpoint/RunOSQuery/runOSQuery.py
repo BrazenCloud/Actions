@@ -26,10 +26,13 @@ class run_os_query(base_action, object):
         self.response.name = "Run OSQuery"
         self.type = "RunOSQuery"
         
-        import subprocess
-        try:
         
+
+        try:
+            
+
             # execute a process on the host, pipe the process stdout
+            import subprocess
             proc = subprocess.Popen(['osqueryi', '--json', self.query], stdout=subprocess.PIPE)
             # get the piped stdout
             stdout_value = proc.communicate()[0]

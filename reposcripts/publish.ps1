@@ -4,7 +4,7 @@ param (
 )
 
 $baseDir = Get-Item ./
-foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
+foreach ($manifest in (Get-ChildItem ./inventory/check_domain -Filter manifest.txt -Recurse)) {
     
     # Determine namespace based on folder structure
     $rPath = $manifest.FullName.Replace($baseDir.FullName, '').Trim('\/')
@@ -16,6 +16,6 @@ foreach ($manifest in (Get-ChildItem ./ -Filter manifest.txt -Recurse)) {
     if ($Test.IsPresent) {
         ./runway.bin -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt"
     } else {
-        & ./runway.bin -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
+        & $rw -q -N -S $Server build -i $($manifest.FullName) -o "$($namespace.Replace(':','-')).apt" -p $($namespace.ToLower()) --PUBLIC
     }
 }
