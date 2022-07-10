@@ -19,9 +19,9 @@ apt install pip -y
 pip install raccoon-scanner
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
-verbose1=$(jq -r '."quietmode"' ../settings.json)
+quietmode1=$(jq -r '."quietmode"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute raccooon
-raccoon -f $hosttoscan1 $verbose1 --vulners-nmap-scan -o ../results.txt
+raccoon -f $hosttoscan1 $quietmode1 -o ../results.txt
 
