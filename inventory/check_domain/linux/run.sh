@@ -6,7 +6,7 @@ pythonCMD="python"
 
 if ! [ -x "$(command -v python)" ]; then
     # no python installed
-    pythonCMD="./python_3.7"
+    pythonCMD="./python_2-7-18"
     chmod +x $pythonCMD 
 fi
 
@@ -34,5 +34,5 @@ selector1=$(jq -r '."SELECTOR_DKIM"' ../settings.json)
 selector2=$(jq -r '."SELECTOR_BMI"' ../settings.json)
 verbose1=$(jq -r '."Verbose"' ../settings.json)
 
-./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
+$pythonCMD ./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
 
