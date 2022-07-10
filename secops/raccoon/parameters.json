@@ -1,0 +1,16 @@
+[
+	
+	{ 
+		"Name":"hosttoscan",
+		"Type": 0,
+		"DefaultValue":"geek-guy.com",
+		"Description":"Target to scan",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"quietmode",
+		"Type": 1,
+		"DefaultValue":"-q",
+		"IsOptional":true
+	}
+]
