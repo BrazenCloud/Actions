@@ -2,7 +2,7 @@
 	{
 		"Name":"Domain",
 		"Type": 0,
-		"DefaultValue":"-d domainexample.com"
+		"DefaultValue":"-d domainexample.com",
 		"IsOptional":true
 	},
 	{ 
