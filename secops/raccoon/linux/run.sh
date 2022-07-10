@@ -12,7 +12,7 @@ $pythonCMD
 
 sudo apt-get install jq -y
 sudo apt-get install pip -y
-pip install raccoon-scanner -y
+pip install raccoon-scanner
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
 verbose1=$(jq -r '."quietmode"' ../settings.json)
