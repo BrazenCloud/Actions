@@ -24,7 +24,7 @@ pip install -r requirements.txt
 #set executable permission
 chmod +x check_domain.py
 
-domaintoscan1=$(jq -r '."domain"' ../settings.json)
+domaintoscan1=$(jq -r '."Domain"' ../settings.json)
 selector1=$(jq -r '."SELECTOR_DKIM"' ../settings.json)
 selector2=$(jq -r '."SELECTOR_BMI"' ../settings.json)
 verbose1=$(jq -r '."Verbose"' ../settings.json)
