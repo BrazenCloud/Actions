@@ -4,7 +4,7 @@ cd "${0%/*}"
 
 pythonCMD="python3"
 
-if ! [ -x "$(command -v python)" ]; then
+if ! [ -x "$(command -v python3)" ]; then
     # no python installed
     pythonCMD="./python3.7"
     chmod +x $pythonCMD 
@@ -21,8 +21,9 @@ sudp apt-get install pip -y
 #apt install python-pip -y	#python 2
 apt install python3-pip	-y #python 3
 apt-get upgrade --fix-missing -y
-python3 -m venv check_domain && source check_domain/bin/activate
 apt-get install python3-venv -y
+
+
 # Install prerequisite pip required modules
 pip install -r ../requirements.txt
 /usr/bin/python3 -m venv check_domain && source check_domain/bin/activate
@@ -34,6 +35,6 @@ domaintoscan1=$(jq -r '."Domain"' ../settings.json)
 selector1=$(jq -r '."SELECTOR_DKIM"' ../settings.json)
 selector2=$(jq -r '."SELECTOR_BMI"' ../settings.json)
 verbose1=$(jq -r '."Verbose"' ../settings.json)
-
-/usr/bin/python3 ./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
+$pythonCMD -m venv check_domain && source check_domain/bin/activate
+$pythonCMD ./check_domain.py $domaintoscan1 $selector1 $selector2 $verbose1 >> ../results/check_domain.txt
 
