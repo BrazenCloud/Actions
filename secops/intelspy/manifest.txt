@@ -1,2 +1,0 @@
-COPY . .
-RUN_LIN linux\run.sh
