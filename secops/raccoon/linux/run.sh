@@ -26,4 +26,4 @@ quietmode1=$(jq -r '."quietmode1"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute raccooon
-raccoon -f $hosttoscan1 --outdir ../results/raccoon.txt
+raccoon -f $hosttoscan1 --outdir ../results/$hosttoscan1
