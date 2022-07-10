@@ -22,6 +22,7 @@ sudp apt-get install pip -y
 apt install python3-pip	-y #python 3
 apt-get upgrade --fix-missing -y
 python3 -m venv check_domain && source check_domain/bin/activate
+apt-get install python3-venv -y
 # Install prerequisite pip required modules
 pip install -r ../requirements.txt
 
