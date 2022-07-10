@@ -1,0 +1,16 @@
+[
+	
+	{ 
+		"Name":"hosttoscan",
+		"Type": 0,
+		"DefaultValue":"geek-guy.com",
+		"Description":"Target to scan"
+		"IsOptional":true
+	},
+	{ 
+		"Name":"verbose",
+		"Type": 0,
+		"DefaultValue":"-v",
+		"IsOptional":true
+	}
+]
