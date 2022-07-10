@@ -19,8 +19,8 @@ apt-get install jq -y
 apt-get install pip -y
 sudp apt-get install pip -y
 apt install pip -y
-sudo apt-install pip -y
-apt-get --fix-missing
+sudo apt install pip -y
+apt-get upgrade --fix-missing
 
 
 # Install prerequisite pip required modules
