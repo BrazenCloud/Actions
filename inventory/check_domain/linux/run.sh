@@ -16,6 +16,10 @@ sudo apt-get install python3 -y
 apt install python3 -y
 sudo apt install python3 -y
 apt-get install jq -y
+apt-get install pip -y
+sudp apt-get install pip -y
+apt install pip -y
+sudo apt-install pip -y
 
 
 # Install prerequisite pip required modules
