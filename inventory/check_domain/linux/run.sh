@@ -20,6 +20,7 @@ apt-get install pip -y
 sudp apt-get install pip -y
 apt install pip -y
 sudo apt-install pip -y
+apt-get --fix-missing
 
 
 # Install prerequisite pip required modules
