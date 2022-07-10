@@ -8,7 +8,7 @@ Version 3
 import dns.resolver
 from argparse import ArgumentParser
 from sys import exit, argv
-from rich import print ("")
+from rich import print
 import re
 
 
