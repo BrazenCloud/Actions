@@ -8,8 +8,8 @@
 		"IsOptional":true
 	},
 	{ 
-		"Name":"quietmode",
-		"Type": 1,
+		"Name":"quietmode1",
+		"Type": 0,
 		"DefaultValue":"-q",
 		"IsOptional":true
 	}
