@@ -9,7 +9,7 @@
 	},
 	{ 
 		"Name":"quietmode",
-		"Type": 2,
+		"Type": 0,
 		"DefaultValue":"-q",
 		"IsOptional":true
 	}
