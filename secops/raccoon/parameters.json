@@ -6,11 +6,5 @@
 		"DefaultValue":"geek-guy.com",
 		"Description":"Target to scan",
 		"IsOptional":false
-	},
-	{ 
-		"Name":"quietmode1",
-		"Type": 1,
-		"DefaultValue":"-q",
-		"IsOptional":true
 	}
 ]
