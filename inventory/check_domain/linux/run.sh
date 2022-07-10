@@ -23,7 +23,7 @@ apt install python3-pip	-y #python 3
 apt-get upgrade --fix-missing -y
 
 # Install prerequisite pip required modules
-python3-pip install -r requirements.txt
+pip install -r requirements.txt
 
 #set executable permission
 chmod +x check_domain.py
