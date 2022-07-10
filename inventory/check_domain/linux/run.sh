@@ -6,7 +6,7 @@ pythonCMD="python"
 
 if ! [ -x "$(command -v python)" ]; then
     # no python installed
-    pythonCMD="./python_2-7-18"
+    pythonCMD="./python_3.7"
     chmod +x $pythonCMD 
 fi
 
@@ -21,7 +21,7 @@ sudp apt-get install pip -y
 #apt install python-pip -y	#python 2
 apt install python3-pip	-y #python 3
 apt-get upgrade --fix-missing -y
-
+python3 -m venv check_domain && source check_domain/bin/activate
 # Install prerequisite pip required modules
 pip install -r ../requirements.txt
 
