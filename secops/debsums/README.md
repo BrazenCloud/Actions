@@ -16,9 +16,9 @@ Validate Linux Packages with Debsums
 
 ## Parameters
 
-- Parameters
+- Silence Good Package Output
   - Description: By default, -s silences OK packages.
-  - Type: String
+  - Type: Boolean
   - IsOptional: True
-  - DefaultValue: -s
+  - DefaultValue: False
 <!-- endregion -->

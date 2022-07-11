@@ -7,7 +7,7 @@ Detailed raccooon host Reconnaissance tool.
 
 - Tags:
   - IR
-  - Recon
+  - RECON
   - Executable
   - Linux
 - Language: Executable
