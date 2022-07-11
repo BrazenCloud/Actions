@@ -14,12 +14,12 @@ sudo apt-get install jq -y
 sudo apt-get install pip -y
 apt-get install jq -y
 apt-get install pip -y
-apt install jq -y
-apt install pip -y
-sudo apt-get install whois -y
-apt-get install whois -y
-apt install whois -y
-pip install fierce
+apt install jq -y > /dev/null
+apt install pip -y > /dev/null
+sudo apt-get install whois -y > /dev/null
+apt-get install whois -y > /dev/null
+apt install whois -y > /dev/null
+pip install fierce  > /dev/null
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
 #quietmode=$(jq -r '."quietmode"' ../settings.json)
