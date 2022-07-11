@@ -23,7 +23,11 @@ if (Test-Path $settings.'Scanned file filename and path') {
     $sb = [scriptblock]::Create("$command '$path'")
 
     Write-Host "Running command: $sb"
-    Invoke-Command $sb
+    if ($settings.'Output as json'.ToString() -eq 'true') {
+        Invoke-Command $sb | Tee-Object -FilePath .\results\radare2_output.json
+    } else {
+        Invoke-Command $sb | Tee-Object -FilePath .\results\radare2_output.txt
+    }
 } else {
     Throw "'$($settings.'Scanned file filename and path')' is not a valid path."
 }

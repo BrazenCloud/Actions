@@ -1,19 +1,28 @@
 <!-- region Generated -->
-# template:binary
+# secops:fierce
 
-This is a template binary action.
+DNS tool to discover non-contiguous ip space and hosts.
 
 ## Metadata
 
 - Tags:
-  - Template
+  - IR
+  - RECON
   - Executable
-  - Windows
+  - Linux
 - Language: Executable
 - Supported Operating Systems:
-  - Windows
+  - Linux
 
 ## Parameters
 
-None specified.
+- hosttoscan
+  - Description: Target to scan
+  - Type: String
+  - IsOptional: False
+  - DefaultValue: geek-guy.com
+- widemode
+  - Description: Widen Discovery to target's /24 network
+  - Type: Boolean
+  - IsOptional: True
 <!-- endregion -->

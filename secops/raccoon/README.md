@@ -1,19 +1,24 @@
 <!-- region Generated -->
-# template:binary
+# secops:raccoon
 
-This is a template binary action.
+Detailed raccooon host Reconnaissance tool.
 
 ## Metadata
 
 - Tags:
-  - Template
+  - IR
+  - Recon
   - Executable
-  - Windows
+  - Linux
 - Language: Executable
 - Supported Operating Systems:
-  - Windows
+  - Linux
 
 ## Parameters
 
-None specified.
+- hosttoscan
+  - Description: Target to scan
+  - Type: String
+  - IsOptional: False
+  - DefaultValue: geek-guy.com
 <!-- endregion -->
