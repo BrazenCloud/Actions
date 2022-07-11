@@ -1,8 +1,7 @@
 [
     {
-        "Name": "Parameters",
+        "Name": "Silence Good Package Output",
         "Type": 2,
-        "DefaultValue": "-s",
         "Description": "By default, -s silences OK packages.",
         "IsOptional": true
     }

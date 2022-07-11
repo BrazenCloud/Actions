@@ -7,8 +7,17 @@ sudo apt install debsums -y > /dev/null
 sudo apt-get install jq -y > /dev/null
 apt-get install jq -y > /dev/null
 
-params=$(jq -r '."Parameters"' ../settings.json)
+silence=$(jq -r '."Silence Good Package Output"' ../settings.json)
 
+if [ $silence -eq 'true' ]
+then
+# Execute Debsums
+debsums -s >> ../results/debsums.txt
+else
+# Execute Debsums
 # outputting debsums to results
-debsums $params >> ../results/debsums.txt
+debsums >> ../results/debsums.txt
+fi
+
+
 
