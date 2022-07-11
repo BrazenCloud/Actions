@@ -26,4 +26,4 @@ quietmode1=$(jq -r '."quietmode1"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute Fierce
-fierce --domain $hosttoscan1 --connect >> ../results/$hosttoscan1
+fierce --domain $hosttoscan1 --connect >> ../results/$hosttoscan1.txt
