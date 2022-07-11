@@ -9,7 +9,7 @@ apt-get install jq -y > /dev/null
 
 silence=$(jq -r '."Silence Good Package Output"' ../settings.json)
 
-if [ $silence]
+if [ $silence = true ]
 then
 # Execute Debsums
 debsums -s >> ../results/debsums.txt
