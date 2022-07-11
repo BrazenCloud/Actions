@@ -16,7 +16,8 @@ Validate Linux Packages with Debsums
 
 ## Parameters
 
-- cliparams
+- Parameters
+  - Description: By default, -s silences OK packages.
   - Type: String
   - IsOptional: True
   - DefaultValue: -s

@@ -1,12 +1,13 @@
 <!-- region Generated -->
-# template:binary
+# secops:pecmd
 
-This is a template binary action.
+Collect the prefetch cache from Windows systems.
 
 ## Metadata
 
 - Tags:
-  - Template
+  - PECmd
+  - IR
   - Executable
   - Windows
 - Language: Executable
