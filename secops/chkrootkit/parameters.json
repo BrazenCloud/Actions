@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Parameters",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "Leverage default binaries",
+        "IsOptional": true
+    }
+]

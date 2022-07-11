@@ -1,0 +1,16 @@
+[
+	
+	{ 
+		"Name":"hosttoscan",
+		"Type": 0,
+		"DefaultValue":"geek-guy.com",
+		"Description":"Target to scan",
+		"IsOptional":false
+	},
+	{ 
+		"Name":"widemode",
+		"Type": 2,
+		"Description":"Widen Discovery to target's /24 network",
+		"IsOptional":true
+	}
+]

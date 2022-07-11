@@ -1,0 +1,10 @@
+{
+  "Description": "Examine files with hash, strings and imported funtions for malware analysis.",
+  "Language": "via Radare2",
+  "Tags": [
+    "Malware",
+    "IR",
+    "Radare2",
+    "Windows"
+  ]
+}

@@ -23,8 +23,10 @@ $l64 = $dls | Where-Object { $_.Platform -eq 'Linux64' }
 Invoke-RwDownloadContentPublicFile -Id $l64.Id -OutFile ./runway.bin
 
 # DL the latest Winows executable
-$w64 = $dls | Where-Object { $_.Platform -eq 'Windows64' }
-Invoke-RwDownloadContentPublicFile -Id $w64.Id -OutFile ./runway.exe
+if ($IncludeWindows.IsPresent) {
+    $w64 = $dls | Where-Object { $_.Platform -eq 'Windows64' }
+    Invoke-RwDownloadContentPublicFile -Id $w64.Id -OutFile ./runway.exe
+}
 
 # Enable execution on the Linux executable for pipeline purposes
 chmod +x ./runway.bin

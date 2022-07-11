@@ -7,12 +7,14 @@
     },
     {
         "Name": "Tail Count",
+        "Description": "The number of most recent events to pull.",
         "Type": 1,
         "DefaultValue": "100",
         "IsOptional": true
     },
     {
         "Name": "Wait Time in Minutes",
+        "Description": "The number of minutes to listen for new events.",
         "Type": 1,
         "DefaultValue": "10",
         "IsOptional": true

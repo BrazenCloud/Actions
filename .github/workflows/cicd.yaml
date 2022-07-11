@@ -19,7 +19,7 @@ jobs:
 
       - name: Download runway.bin
         shell: pwsh
-        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }}
+        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }} -IncludeWindows
 
       - name: Download any executables
         shell: pwsh
@@ -54,4 +54,4 @@ jobs:
       - name: Publish Each Action on Push
         if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1
+        run: ./reposcripts/publish.ps1 -Public
