@@ -1,0 +1,10 @@
+{
+  "Description": "DNS tool to discover non-contiguous ip space and hosts.",
+  "Language": "Executable",
+  "Tags": [
+    "IR",
+    "RECON",
+    "Executable",
+    "Linux"
+  ]
+}

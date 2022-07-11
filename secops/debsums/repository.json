@@ -1,0 +1,10 @@
+{
+  "Description": "Validate Linux Packages with Debsums",
+  "Language": "via cmdline",
+  "Tags": [
+    "Inventory",
+    "Packages",
+    "Validation",
+    "Linux"
+  ]
+}

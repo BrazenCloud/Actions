@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Parameters",
+        "Type": 2,
+        "DefaultValue": "-s",
+        "Description": "By default, -s silences OK packages.",
+        "IsOptional": true
+    }
+]
