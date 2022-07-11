@@ -12,3 +12,6 @@ results/
 settings.json
 output.json
 output.upload.json
+
+*.apt
+/logs/*
