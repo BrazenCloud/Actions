@@ -18,6 +18,8 @@ else
 # outputting debsums to results
 debsums >> ../results/debsums.txt
 fi
+echo "Action Done"
+
 
 
 
