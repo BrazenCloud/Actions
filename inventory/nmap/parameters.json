@@ -15,7 +15,7 @@
 	{ 
 		"Name":"Max rate packets per second",
 		"Type": 0,
-		"DefaultValue":"--max-rate 50",
+		"DefaultValue":"--max-rate 5",
 		"IsOptional":true
 	}
 ]
