@@ -1,0 +1,5 @@
+requests
+selenium
+urllib3
+fake_useragent
+pyOpenSSL
