@@ -6,7 +6,7 @@ param (
     [switch]$Public
 )
 
-$baseDir = Get-Item $BasePublishPath
+$baseDir = Get-Item $PSScriptRoot/../
 foreach ($manifest in (Get-ChildItem $BasePublishPath -Filter manifest.txt -Recurse)) {
     
     # Determine namespace based on folder structure
