@@ -1,5 +1,5 @@
 {
-  "Description": "Detailed raccooon host Reconnaissance tool.",
+  "Description": "Hosthunter discovers assets related to initial host for Attack Surface Exploration.",
   "Language": "Executable",
   "Tags": [
     "IR",
