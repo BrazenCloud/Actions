@@ -3,7 +3,7 @@
 	{ 
 		"Name":"hosttoscan",
 		"Type": 0,
-		"DefaultValue":"geek-guy.com",
+		"DefaultValue":"8.8.8.8",
 		"Description":"Target to scan",
 		"IsOptional":false
 	}

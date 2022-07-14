@@ -1,0 +1,177 @@
+([('hosthunter.exe',
+   'C:\\Users\\Lawrence '
+   'Pingree\\source\\repos\\Actions\\Actions\\secops\\hosthunter\\linux\\build\\hosthunter\\hosthunter.exe',
+   'EXECUTABLE'),
+  ('python310.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\python310.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('unicodedata',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_decimal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_lzma',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('select',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_queue',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_brotli',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\_brotli.cp310-win_amd64.pyd',
+   'EXTENSION'),
+  ('_cffi_backend',
+   'C:\\Users\\Lawrence '
+   'Pingree\\source\\repos\\Actions\\Actions\\secops\\hosthunter\\linux\\_cffi_backend.cp310-win_amd64.pyd',
+   'EXTENSION'),
+  ('cryptography.hazmat.bindings._openssl',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\cryptography\\hazmat\\bindings\\_openssl.pyd',
+   'EXTENSION'),
+  ('cryptography.hazmat.bindings._rust',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
+  ('_uuid',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('pyexpat',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_ssl',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('libcrypto-1_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('MSVCP140.dll', 'C:\\Windows\\system32\\MSVCP140.dll', 'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('python3.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\python3.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1520.0_x64__qbz5n2kfra8p0\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('base_library.zip',
+   'C:\\Users\\Lawrence '
+   'Pingree\\source\\repos\\Actions\\Actions\\secops\\hosthunter\\linux\\build\\hosthunter\\base_library.zip',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\RECORD',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('selenium\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\py.typed',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\METADATA',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v101\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v101\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\mutation-listener.js',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\mutation-listener.js',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\isDisplayed.js',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\LICENSE',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\LICENSE',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v103\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v103\\py.typed',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\LICENSE.PSF',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\LICENSE.PSF',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\WHEEL',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v102\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v102\\py.typed',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\INSTALLER',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\findElements.js',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\findElements.js',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\top_level.txt',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\getAttribute.js',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\getAttribute.js',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\LICENSE.BSD',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\LICENSE.BSD',
+   'DATA'),
+  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'DATA'),
+  ('cryptography-35.0.0.dist-info\\LICENSE.APACHE',
+   'c:\\users\\lawrence '
+   'pingree\\appdata\\local\\packages\\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\\localcache\\local-packages\\python310\\site-packages\\cryptography-35.0.0.dist-info\\LICENSE.APACHE',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Lawrence '
+   'Pingree\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\certifi\\py.typed',
+   'DATA')],)
