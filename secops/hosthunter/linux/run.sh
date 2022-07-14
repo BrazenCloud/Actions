@@ -17,4 +17,4 @@ quietmode1=$(jq -r '."quietmode1"' ../settings.json)
 #examplevar=$(jq -r '."Example"' ../settings.json)
 
 # Execute raccooon
-../hosthunter -t $hosttoscan1 -f CSV -o ../results/$hosttoscan1/hosts.csv
+./hosthunter -t $hosttoscan1 -f CSV -o ../results/$hosttoscan1/hosts.csv
