@@ -1,3 +1,0 @@
-COPY . .
-RUN_LIN linux/run.sh
-RUN_WIN "powershell.exe -executionpolicy bypass windows\run.ps1"
