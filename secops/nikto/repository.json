@@ -1,11 +1,12 @@
 {
-  "Description": "Use Nmap to port scan the local host, also installs nmap from apt-get if not installed.",
+  "Description": "Nikto can scan webservers for common vulnerabilties and directories.",
   "Language": "via cmdline",
   "Tags": [
-    "Inventory",
+    "Web Security",
     "Portscan",
+    "Inventory",
     "Network",
-    "Nmap",
+    "Nikto",
     "Linux"
   ]
 }
