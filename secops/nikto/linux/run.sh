@@ -1,5 +1,5 @@
 cd "${0%/*}"
-IRED_PKGS="perl libnet-ssleay-perl openssl libauthen-pam-perl libio-pty-perl jq"
+REQIRED_PKGS="perl libnet-ssleay-perl openssl libauthen-pam-perl libio-pty-perl jq"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKG2_OK" ]; then
@@ -15,5 +15,5 @@ hosttoscan1=$(jq -r '."hosttoscan1"' ../settings.json)
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
-./nikto --host $hosttoscan1 >> ../results/nikto.txt
+./nikto.pl --host $hosttoscan1 >> ../results/nikto.txt
 
