@@ -1,0 +1,12 @@
+{
+  "Description": "Nikto can scan webservers for common vulnerabilties and directories.",
+  "Language": "via cmdline",
+  "Tags": [
+    "Web Security",
+    "Portscan",
+    "Inventory",
+    "Network",
+    "Nikto",
+    "Linux"
+  ]
+}
