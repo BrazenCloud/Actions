@@ -15,8 +15,8 @@ PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install o
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
-  sudo apt-get --yes install $REQUIRED_PKGS 
-  apt-get --yes install $REQUIRED_PKGS
+  sudo apt-get --yes install $REQUIRED_PKGS --fix-missing
+  apt-get --yes install $REQUIRED_PKGS --fix-missing
 fi
 pip3 install raccoon-scanner
 
