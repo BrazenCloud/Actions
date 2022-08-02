@@ -1,6 +1,6 @@
 cd "${0%/*}"
 
-REQUIRED_PKGS="pip whois fierce"
+REQUIRED_PKGS="pip whois fierce python"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
