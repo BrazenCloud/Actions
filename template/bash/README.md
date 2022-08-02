@@ -1,15 +1,16 @@
 <!-- region Generated -->
-# inventory:nmap
+# template:bash
 
-Use Nmap to port scan the local host, also installs nmap from apt-get if not installed.
+Nikto can scan webservers for common vulnerabilties and directories.
 
 ## Metadata
 
 - Tags:
-  - Inventory
+  - Web Security
   - Portscan
+  - Inventory
   - Network
-  - Nmap
+  - Nikto
   - Linux
 - Language: via cmdline
 - Supported Operating Systems:
@@ -17,16 +18,8 @@ Use Nmap to port scan the local host, also installs nmap from apt-get if not ins
 
 ## Parameters
 
-- Network Subnet
+- hosttoscan1
   - Type: String
   - IsOptional: True
-  - DefaultValue: 192.168.0.0/24
-- Ports to scan
-  - Type: String
-  - IsOptional: True
-  - DefaultValue: -p 0-65535
-- Max rate packets per second
-  - Type: String
-  - IsOptional: True
-  - DefaultValue: --max-rate 50
+  - DefaultValue: www.example.com
 <!-- endregion -->

@@ -28,5 +28,5 @@ Use Nmap to port scan the local host, also installs nmap from apt-get if not ins
 - Max rate packets per second
   - Type: String
   - IsOptional: True
-  - DefaultValue: --max-rate 50
+  - DefaultValue: --max-rate 5
 <!-- endregion -->
