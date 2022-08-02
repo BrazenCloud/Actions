@@ -10,6 +10,15 @@ fi
 
 $pythonCMD
 
+REQUIRED_PKGS="jq pip whois raccoon-scanner"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS: $PKGS_OK
+if [ "" = "$PKGS_OK" ]; then
+  echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
+  sudo apt-get --yes install $REQUIRED_PKGS 
+  apt-get --yes install $REQUIRED_PKGS
+fi
+
 sudo apt-get install jq -y > /dev/null
 sudo apt-get install pip -y > /dev/null
 apt-get install jq -y > /dev/null
