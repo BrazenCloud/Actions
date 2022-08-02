@@ -9,7 +9,6 @@ if [ "" = "$PKGS_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS
 fi
 
-
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +x ./chkrootkit
-./chkrootkit $params
+./chkrootkit $params >> ../results/chkrootkit.txt
