@@ -9,8 +9,6 @@ if ! [ -x "$(command -v python)" ]; then
     chmod +x $pythonCMD 
 fi
 
-$pythonCMD
-
 REQUIRED_PKGS="jq pip whois fierce python3"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
