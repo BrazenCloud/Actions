@@ -34,7 +34,7 @@ widemode=$(jq -r '."widemode"' ../settings.json)
 # # do the thing
 # fi
 
-if [ $widemode -eq 'true' ]
+if [ $widemode -eq "true" ]
 then
 widemode="--wide"
 # do the thing
