@@ -1,8 +1,8 @@
 cd "${0%/*}"
 REQIRED_PKGS="perl libnet-ssleay-perl openssl libauthen-pam-perl libio-pty-perl jq"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
-if [ "" = "$PKG2_OK" ]; then
+if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
   sudo apt-get --yes install $REQUIRED_PKGS 
   apt-get --yes install $REQUIRED_PKGS
