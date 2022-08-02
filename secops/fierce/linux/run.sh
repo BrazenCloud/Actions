@@ -13,8 +13,9 @@ pip install fierce  > /dev/null
 
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
-#quietmode=$(jq -r '."quietmode"' ../settings.json)
 widemode=$(jq -r '."widemode"' ../settings.json)
+#quietmode=$(jq -r '."quietmode"' ../settings.json)
+
 
 # if [ $quietmode -eq 'true' ]
 # then
@@ -25,12 +26,12 @@ widemode=$(jq -r '."widemode"' ../settings.json)
 # # do the thing
 # fi
 
-if [ $widemode == "true" ]
+if [ $widemode == 'true' ]
 then
-  widemode="--wide"
+  echo true
 # do the thing
 else
-  widemode=""
+  echo false
 # do the thing
 fi
 
