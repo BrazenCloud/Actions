@@ -2,7 +2,7 @@
 
 cd "${0%/*}"
 
-REQUIRED_PKG2="jq"
+REQUIRED_PKG2="jq apt-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2: $PKG2_OK
 if [ "" = "$PKG2_OK" ]; then
