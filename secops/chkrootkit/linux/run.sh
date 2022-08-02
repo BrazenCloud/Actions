@@ -1,5 +1,3 @@
-#!/bin/sh
-
 cd "${0%/*}"
 
 REQUIRED_PKG2="jq apt-utils"
