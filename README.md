@@ -1,16 +1,16 @@
-# Runway Actions
+# BrazenCloud Actions
 
-This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your Runway tenant for your use.
+This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your BrazenCloud tenant for your use.
 
-You can sign up for a free Runway account here: [Runway Portal](https://portal.runway.host/)
+You can sign up for a free BrazenCloud account here: [BrazenCloud Portal](https://portal.runway.host/)
 
 ## Action Development
 
-To understand how an Action in Runway works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
+To understand how an Action in BrazenCloud works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
 
 ## Deploying an Action to Runway
 
-To understand how to deploy Actions from a Git repository into Runway, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
+To understand how to deploy Actions from a Git repository into BrazenCloud, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
 
 ## Action Table of Contents
 <!-- region Generated -->
@@ -44,7 +44,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [demo:sql:ImportDB](demo/sql/ImportDB)
 - deploy
   - [deploy:msi](deploy/msi)
-  - [deploy:runway](deploy/runway)
+  - [deploy:BrazenCloud](deploy/BrazenCloud)
 - download
   - [download:combine](download/combine)
   - [download:elastic](download/elastic)
@@ -91,9 +91,9 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [powershell:RunCommand](powershell/RunCommand)
   - [powershell:SetExecPolicy](powershell/SetExecPolicy)
 - runway
-  - [runway:brazenAgent:harden](runway/brazenAgent/harden)
-  - [runway:stream:connect](runway/stream/connect)
-  - [runway:stream:listen](runway/stream/listen)
+  - [BrazenCloud:brazenAgent:harden](BrazenCloud/brazenAgent/harden)
+  - [BrazenCloud:stream:connect](BrazenCloud/stream/connect)
+  - [BrazenCloud:stream:listen](BrazenCloud/stream/listen)
 - secops
   - [secops:BriMorLRC](secops/BriMorLRC)
   - [secops:CDIR](secops/CDIR)
