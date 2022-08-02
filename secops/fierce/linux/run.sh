@@ -10,16 +10,15 @@ fi
 
 $pythonCMD
 
-sudo apt-get install jq -y
-sudo apt-get install pip -y
-apt-get install jq -y
-apt-get install pip -y
-apt install jq -y > /dev/null
-apt install pip -y > /dev/null
-sudo apt-get install whois -y > /dev/null
-apt-get install whois -y > /dev/null
-apt install whois -y > /dev/null
-pip install fierce  > /dev/null
+REQUIRED_PKGS="pip whois fierce"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS: $PKGS_OK
+if [ "" = "$PKGS_OK" ]; then
+  echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
+  sudo apt-get --yes install $REQUIRED_PKGS 
+  apt-get --yes install $REQUIRED_PKGS
+fi
+
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
 #quietmode=$(jq -r '."quietmode"' ../settings.json)
