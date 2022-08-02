@@ -1,0 +1,11 @@
+{
+  "Description": "Install Aide file integrity monitoring, initialize and update the database.",
+  "Language": "via cmdline",
+  "Tags": [
+    "AIDE",
+    "Inventory",
+    "File Integrity",
+    "Files",
+    "Linux"
+  ]
+}

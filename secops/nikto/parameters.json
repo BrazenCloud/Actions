@@ -1,0 +1,10 @@
+[
+	
+	{ 
+		"Name":"hosttoscan1",
+		"Type": 0,
+		"DefaultValue":"www.example.com",
+		"IsOptional":true
+	}
+	
+]
