@@ -19,16 +19,6 @@ if [ "" = "$PKGS_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS
 fi
 
-sudo apt-get install jq -y > /dev/null
-sudo apt-get install pip -y > /dev/null
-apt-get install jq -y > /dev/null
-apt-get install pip -y > /dev/null
-apt install jq -y > /dev/null
-apt install pip -y > /dev/null
-sudo apt-get install whois -y > /dev/null
-apt-get install whois -y > /dev/null
-apt install whois -y > /dev/null
-pip install raccoon-scanner  > /dev/null
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
 quietmode1=$(jq -r '."quietmode1"' ../settings.json)
