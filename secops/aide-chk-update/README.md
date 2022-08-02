@@ -1,15 +1,15 @@
 <!-- region Generated -->
-# inventory:nmap
+# secops:aide-chk-update
 
-Use Nmap to port scan the local host, also installs nmap from apt-get if not installed.
+Install Aide file integrity monitoring, initialize and update the database.
 
 ## Metadata
 
 - Tags:
+  - AIDE
   - Inventory
-  - Portscan
-  - Network
-  - Nmap
+  - File Integrity
+  - Files
   - Linux
 - Language: via cmdline
 - Supported Operating Systems:
@@ -28,5 +28,5 @@ Use Nmap to port scan the local host, also installs nmap from apt-get if not ins
 - Max rate packets per second
   - Type: String
   - IsOptional: True
-  - DefaultValue: --max-rate 50
+  - DefaultValue: --max-rate 5
 <!-- endregion -->

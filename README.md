@@ -1,16 +1,16 @@
-# Runway Actions
+# BrazenCloud Actions
 
-This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your Runway tenant for your use.
+This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your BrazenCloud tenant for your use.
 
-You can sign up for a free Runway account here: [Runway Portal](https://portal.runway.host/)
+You can sign up for a free BrazenCloud account here: [BrazenCloud Portal](https://portal.runway.host/)
 
 ## Action Development
 
-To understand how an Action in Runway works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
+To understand how an Action in BrazenCloud works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
 
 ## Deploying an Action to Runway
 
-To understand how to deploy Actions from a Git repository into Runway, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
+To understand how to deploy Actions from a Git repository into BrazenCloud, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
 
 ## Action Table of Contents
 <!-- region Generated -->
@@ -95,6 +95,8 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [runway:stream:connect](runway/stream/connect)
   - [runway:stream:listen](runway/stream/listen)
 - secops
+  - [secops:aide-chk-update](secops/aide-chk-update)
+  - [secops:aide-install](secops/aide-install)
   - [secops:BriMorLRC](secops/BriMorLRC)
   - [secops:CDIR](secops/CDIR)
   - [secops:CDIRwParams](secops/CDIRwParams)
@@ -106,6 +108,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [secops:lastactivity](secops/lastactivity)
   - [secops:loki_memory](secops/loki_memory)
   - [secops:lynis](secops/lynis)
+  - [secops:nikto](secops/nikto)
   - [secops:pecmd](secops/pecmd)
   - [secops:raccoon](secops/raccoon)
   - [secops:radare2](secops/radare2)
@@ -115,6 +118,7 @@ To understand how to deploy Actions from a Git repository into Runway, see our [
   - [secops:yara_ransomware](secops/yara_ransomware)
   - [secops:yum-verify](secops/yum-verify)
 - template
+  - [template:bash](template/bash)
   - [template:batch](template/batch)
   - [template:binary](template/binary)
   - [template:parameters](template/parameters)
