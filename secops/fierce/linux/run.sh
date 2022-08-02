@@ -1,14 +1,5 @@
 cd "${0%/*}"
 
-
-pythonCMD="python"
-
-if ! [ -x "$(command -v python)" ]; then
-    # no python installed
-    pythonCMD="./python3.7"
-    chmod +x $pythonCMD 
-fi
-
 REQUIRED_PKGS="jq pip whois fierce python3"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
@@ -36,10 +27,10 @@ widemode=$(jq -r '."widemode"' ../settings.json)
 
 if [ $widemode == "true" ]
 then
-widemode="--wide"
+  widemode="--wide"
 # do the thing
 else
-widemode=""
+  widemode=""
 # do the thing
 fi
 
