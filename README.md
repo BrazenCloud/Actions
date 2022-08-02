@@ -44,7 +44,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [demo:sql:ImportDB](demo/sql/ImportDB)
 - deploy
   - [deploy:msi](deploy/msi)
-  - [deploy:BrazenCloud](deploy/BrazenCloud)
+  - [deploy:runway](deploy/runway)
 - download
   - [download:combine](download/combine)
   - [download:elastic](download/elastic)
@@ -91,10 +91,12 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [powershell:RunCommand](powershell/RunCommand)
   - [powershell:SetExecPolicy](powershell/SetExecPolicy)
 - runway
-  - [BrazenCloud:brazenAgent:harden](BrazenCloud/brazenAgent/harden)
-  - [BrazenCloud:stream:connect](BrazenCloud/stream/connect)
-  - [BrazenCloud:stream:listen](BrazenCloud/stream/listen)
+  - [runway:brazenAgent:harden](runway/brazenAgent/harden)
+  - [runway:stream:connect](runway/stream/connect)
+  - [runway:stream:listen](runway/stream/listen)
 - secops
+  - [secops:aide-chk-update](secops/aide-chk-update)
+  - [secops:aide-install](secops/aide-install)
   - [secops:BriMorLRC](secops/BriMorLRC)
   - [secops:CDIR](secops/CDIR)
   - [secops:CDIRwParams](secops/CDIRwParams)
@@ -106,6 +108,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:lastactivity](secops/lastactivity)
   - [secops:loki_memory](secops/loki_memory)
   - [secops:lynis](secops/lynis)
+  - [secops:nikto](secops/nikto)
   - [secops:pecmd](secops/pecmd)
   - [secops:raccoon](secops/raccoon)
   - [secops:radare2](secops/radare2)
@@ -115,6 +118,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:yara_ransomware](secops/yara_ransomware)
   - [secops:yum-verify](secops/yum-verify)
 - template
+  - [template:bash](template/bash)
   - [template:batch](template/batch)
   - [template:binary](template/binary)
   - [template:parameters](template/parameters)
