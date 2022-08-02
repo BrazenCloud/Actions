@@ -663,7 +663,7 @@ usr/sbin/in.telnet sbin/vobiscum  usr/sbin/jcd usr/sbin/atd2 usr/bin/.etc .lp \
 etc/ld.so.hash sbin/init.zk usr/lib/in.httpd usr/lib/in.pop3d nlsadmin"
    dir="var/run/.tmp lib/.so usr/lib/.fx var/local/.lpd dev/rd/cdb \
    var/spool/lp/admins/.lp var/adm/sa/.adm usr/lib/lib.so1.so"
-   files=`${find} ${ROOTDIR}dev -type f -exec ${egrep} -l "^[0-5] " {} \;`
+   files=`${find} ${ROOTDIR}dev -type f -fstype devpts -exec ${egrep} -l "^[0-5] " {} \;`
    if [ "${files}" != "" ]; then
       echo
       echo ${files}
