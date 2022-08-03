@@ -1,15 +1,36 @@
 #!/bin/sh
 cd "${0%/*}"
 
-REQUIRED_PKGS="jq apt-utils binutils"
-PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
-echo Checking for $REQUIRED_PKGS: $PKGS_OK
-if [ "" = "$PKGS_OK" ]; then
-  echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
-  sudo apt-get --yes install $REQUIRED_PKGS
-  apt-get --yes install $REQUIRED_PKGS
+REQUIRED_PKGS1="jq"
+PKGS1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS1|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS1: $PKGS1_OK
+if [ "" = "$PKGS1_OK" ]; then
+  echo "No $REQUIRED_PKGS1. Setting up $REQUIRED_PKGS1."
+  sudo apt-get --yes install $REQUIRED_PKGS1
+  apt-get --yes install $REQUIRED_PKGS1
   apt-get --yes install --fix-missing
 fi
+
+REQUIRED_PKGS2="apt-utils"
+PKGS2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS2|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS2: $PKGS2_OK
+if [ "" = "$PKGS2_OK" ]; then
+  echo "No $REQUIRED_PKGS2. Setting up $REQUIRED_PKGS2."
+  sudo apt-get --yes install $REQUIRED_PKGS2
+  apt-get --yes install $REQUIRED_PKGS2
+  apt-get --yes install --fix-missing
+fi
+
+REQUIRED_PKGS3="binutils"
+PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS3|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS3: $PKGS3_OK
+if [ "" = "$PKGS3_OK" ]; then
+  echo "No $REQUIRED_PKGS3. Setting up $REQUIRED_PKGS3."
+  sudo apt-get --yes install $REQUIRED_PKGS3
+  apt-get --yes install $REQUIRED_PKGS3
+  apt-get --yes install --fix-missing
+fi
+
 then
 if [ $(ls -l /bin/sh| grep 'dash') = dash ]; then
   sudo mv /bin/sh /bin/sh.orig
