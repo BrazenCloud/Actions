@@ -31,7 +31,6 @@ if [ "" = "$PKGS3_OK" ]; then
   apt-get --yes install --fix-missing
 fi
 
-then
 if [ $(ls -l /bin/sh| grep 'dash') = dash ]; then
   sudo mv /bin/sh /bin/sh.orig
   mv /bin/sh /bin/sh.orig
