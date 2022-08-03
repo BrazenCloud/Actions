@@ -49,8 +49,7 @@ then
 #  echo "Executing Bash Install"
 #  sudo mv /bin/sh /bin/sh.orig
 #  mv /bin/sh /bin/sh.orig
-
-fi
+#fi
 ls -al
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +x chkrootkit
