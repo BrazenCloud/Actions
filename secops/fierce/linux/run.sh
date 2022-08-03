@@ -2,7 +2,7 @@
 cd "${0%/*}"
 
 REQUIRED_PKGS="jq pip whois fierce python3"
-PKG_OKS=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
+PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
@@ -27,12 +27,12 @@ widemode=$(jq -r '."widemode"' ../settings.json)
 # # do the thing
 # fi
 
-if [ $widemode == "true" ]
+if [ $widemode == 'true' ]
 then
-  echo true
+  widemode="--wide"
 # do the thing
 else
-  echo false
+  widemode=""
 # do the thing
 fi
 
