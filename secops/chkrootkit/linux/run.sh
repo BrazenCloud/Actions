@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cd "${0%/*}"
 
 REQUIRED_PKGS="jq apt-utils"
@@ -11,4 +13,4 @@ fi
 
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +x ./chkrootkit
-sh ./chkrootkit $params >> ../results/chkrootkit.txt
+./chkrootkit $params >> ../results/chkrootkit.txt
