@@ -1,4 +1,5 @@
 #!/bin/sh
+  
 cd "${0%/*}"
 
 REQUIRED_PKGS1="jq"
@@ -41,16 +42,15 @@ if [ "" = "$PKGS4_OK" ]; then
   apt-get --yes install --fix-missing
 fi
 
-#str=$(ls -l /bin/sh| grep 'dash')
+str=$(ls -l /bin/sh| grep 'dash')
 #
-#if [ ${#str} > 0 ];
-#then
+if [ ${#str} > 0 ];
+then
 #  echo "Executing Bash Install"
 #  sudo mv /bin/sh /bin/sh.orig
 #  mv /bin/sh /bin/sh.orig
-#  sudo ln -s /bin/bash /bin/sh
-#  ln -s /bin/bash /bin/sh
-#fi
+ln -s /bin/bash /bin/sh
+fi
 ls -al
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +x chkrootkit
