@@ -1,3 +1,4 @@
+#!/bin/sh
 cd "${0%/*}"
 
 REQUIRED_PKGS1="jq"
@@ -53,4 +54,4 @@ fi
 ls -al
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +x chkrootkit.sh
-bash chkrootkit.sh $params >> ../results/chkrootkit.txt
+./chkrootkit.sh $params >> ../results/chkrootkit.txt
