@@ -11,13 +11,14 @@ if [ "" = "$PKG1_OK" ]; then
   apt-get --yes install $REQUIRED_PKG1 
 fi
 
-pythonCMD="python"
-
-if ! [ -x "$(command -v python)" ]; then
-    # no python installed
-    pythonCMD="./.python_2-7-18"
-    chmod +x $pythonCMD 
+REQUIRED_PKG2="python"
+PKG_OK2=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
+echo Checking for $REQUIRED_PKG2: $PKG1_OK
+if [ "" = "$PKG2_OK" ]; then
+  echo "No $REQUIRED_PKG1. Setting up $REQUIRED_PKG2."
+  sudo apt-get --yes install $REQUIRED_PKG2
+  apt-get --yes install $REQUIRED_PKG2 
 fi
 
-$pythonCMD netstat.py >> ../results/results.json
+python netstat.py >> ../results/results.json
 
