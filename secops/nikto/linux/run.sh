@@ -16,5 +16,6 @@ hosttoscan1=$(jq -r '."hosttoscan1"' ../settings.json)
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
+perl ./nikto.pl -update
 perl ./nikto.pl --host $hosttoscan1 >> ../results/nikto.txt
 
