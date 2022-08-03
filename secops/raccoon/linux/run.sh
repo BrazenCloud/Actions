@@ -10,7 +10,7 @@ fi
 
 $pythonCMD
 
-REQUIRED_PKGS="jq pip3 whois apt-utils"
+REQUIRED_PKGS="jq python python3 pip3 whois apt-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
