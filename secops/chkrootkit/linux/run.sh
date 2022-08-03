@@ -49,7 +49,7 @@ then
 #  echo "Executing Bash Install"
 #  sudo mv /bin/sh /bin/sh.orig
 #  mv /bin/sh /bin/sh.orig
-ln -s /bin/bash /bin/sh
+
 fi
 ls -al
 params=$(jq -r '."Parameters"' ../settings.json)
