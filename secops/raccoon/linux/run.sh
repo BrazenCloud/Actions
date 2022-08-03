@@ -6,6 +6,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="python2"
@@ -14,6 +15,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="pip"
@@ -22,6 +24,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="whois"
@@ -30,6 +33,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="pip"
@@ -38,6 +42,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="whois"
@@ -46,6 +51,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="apt-utils"
@@ -54,6 +60,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="nmap"
@@ -62,6 +69,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="openssl"
@@ -70,6 +78,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 REQUIRED_PKG="iputils-ping"
@@ -78,6 +87,7 @@ echo Checking for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG --fix-missing
+  apt-get --yes install $REQUIRED_PKG --fix-missing
 fi
 
 pip install raccoon-scanner
