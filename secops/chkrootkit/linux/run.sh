@@ -1,5 +1,4 @@
 #!/bin/sh
-
 cd "${0%/*}"
 
 REQUIRED_PKGS="jq apt-utils binutils"
@@ -13,5 +12,5 @@ if [ "" = "$PKGS_OK" ]; then
 fi
 
 params=$(jq -r '."Parameters"' ../settings.json)
-chmod +X ./chkrootkit
+chmod +X chkrootkit
 chkrootkit $params >> ../results/chkrootkit.txt
