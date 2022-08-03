@@ -11,6 +11,13 @@ if [ "" = "$PKGS_OK" ]; then
   apt-get --yes install --fix-missing
 fi
 
+if [[ $(ls -l /bin/sh| grep 'dash') = *dash* ]]; then
+  sudo mv /bin/sh /bin/sh.orig
+  mv /bin/sh /bin/sh.orig
+  sudo ln -s /bin/bash /bin/sh
+  ln -s /bin/bash /bin/sh
+fi
+
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +X chkrootkit
 sh ./chkrootkit $params >> ../results/chkrootkit.txt
