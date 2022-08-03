@@ -10,7 +10,7 @@ fi
 
 $pythonCMD
 
-REQUIRED_PKGS="jq python python3 pip3 whois apt-utils"
+REQUIRED_PKGS="jq python2 pip whois apt-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
@@ -18,7 +18,7 @@ if [ "" = "$PKGS_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKGS --fix-missing
   apt-get --yes install $REQUIRED_PKGS --fix-missing
 fi
-pip3 install raccoon-scanner
+pip install raccoon-scanner
 
 hosttoscan1=$(jq -r '."hosttoscan"' ../settings.json)
 quietmode1=$(jq -r '."quietmode1"' ../settings.json)
