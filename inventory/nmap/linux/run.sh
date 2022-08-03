@@ -1,7 +1,7 @@
 cd "${0%/*}"
 
 REQUIRED_PKG1="nmap"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG1|grep "install ok installed")
+PKG_OK1=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG1|grep "install ok installed")
 echo Checking for $REQUIRED_PKG1: $PKG1_OK
 if [ "" = "$PKG1_OK" ]; then
   echo "No $REQUIRED_PKG1. Setting up $REQUIRED_PKG1."
@@ -10,7 +10,7 @@ if [ "" = "$PKG1_OK" ]; then
 fi
 
 REQUIRED_PKG2="jq"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
+PKG2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2: $PKG2_OK
 if [ "" = "$PKG2_OK" ]; then
   echo "No $REQUIRED_PKG2. Setting up $REQUIRED_PKG2."
