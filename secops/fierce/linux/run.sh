@@ -26,7 +26,7 @@ widemode=$(jq -r '."widemode"' ../settings.json)
 # # do the thing
 # fi
 
-if [ $widemode == 'true' ]
+if [ $widemode == "true" ]
 then
   echo true
 # do the thing
