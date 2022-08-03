@@ -11,7 +11,7 @@ if [ "" = "$PKG1_OK" ]; then
   apt-get --yes install $REQUIRED_PKG1 
 fi
 
-REQUIRED_PKG2="python"
+REQUIRED_PKG2="python2"
 PKG_OK2=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2: $PKG1_OK
 if [ "" = "$PKG2_OK" ]; then
