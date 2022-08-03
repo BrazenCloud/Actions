@@ -29,6 +29,17 @@ if [ "" = "$PKGS3_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS3
   apt-get --yes install --fix-missing
 fi
+
+REQUIRED_PKGS3="bash"
+PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS4|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS4: $PKGS4_OK
+if [ "" = "$PKGS4_OK" ]; then
+  echo "No $REQUIRED_PKGS4. Setting up $REQUIRED_PKGS4."
+  sudo apt-get --yes install $REQUIRED_PKGS4
+  apt-get --yes install $REQUIRED_PKGS4
+  apt-get --yes install --fix-missing
+fi
+
 #str=$(ls -l /bin/sh| grep 'dash')
 #
 #if [ ${#str} > 0 ];
