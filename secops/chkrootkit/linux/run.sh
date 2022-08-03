@@ -13,5 +13,5 @@ if [ "" = "$PKGS_OK" ]; then
 fi
 
 params=$(jq -r '."Parameters"' ../settings.json)
-chmod +x ./chkrootkit.sh
-./chkrootkit.sh $params >> ../results/chkrootkit.txt
+chmod +x ./chkrootkit
+./chkrootkit $params >> ../results/chkrootkit.txt
