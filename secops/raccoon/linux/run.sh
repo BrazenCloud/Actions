@@ -1,20 +1,12 @@
 cd "${0%/*}"
 
-pythonCMD="python"
-
-if ! [ -x "$(command -v python)" ]; then
-    # no python installed
-    pythonCMD="./python3.7"
-    chmod +x $pythonCMD 
-fi
-
-$pythonCMD
-
 REQUIRED_PKGS="jq python2 pip whois apt-utils iputils-ping nmap openssl"
 PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
+  sudo apt-get update
+  apt-get update
   sudo apt-get --yes install $REQUIRED_PKGS --fix-missing
   apt-get --yes install $REQUIRED_PKGS --fix-missing
 fi
