@@ -1,3 +1,4 @@
+#!/bin/bash
 cd "${0%/*}"
 REQIRED_PKGS="perl libnet-ssleay-perl openssl libauthen-pam-perl libio-pty-perl jq"
 PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
