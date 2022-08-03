@@ -13,4 +13,4 @@ fi
 
 params=$(jq -r '."Parameters"' ../settings.json)
 chmod +X chkrootkit
-chkrootkit $params >> ../results/chkrootkit.txt
+sh ./chkrootkit $params >> ../results/chkrootkit.txt
