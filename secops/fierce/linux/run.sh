@@ -1,3 +1,4 @@
+#!/bin/bash
 cd "${0%/*}"
 
 REQUIRED_PKGS="jq pip whois fierce python3"
