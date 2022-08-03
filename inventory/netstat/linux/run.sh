@@ -20,5 +20,5 @@ if [ "" = "$PKG2_OK" ]; then
   apt-get --yes install $REQUIRED_PKG2 
 fi
 
-python netstat.py >> ../results/results.json
+python2 netstat.py >> ../results/results.json
 
