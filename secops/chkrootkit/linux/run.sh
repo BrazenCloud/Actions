@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 cd "${0%/*}"
 
 REQUIRED_PKGS1="jq"
