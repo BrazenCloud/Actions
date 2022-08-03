@@ -11,7 +11,7 @@ fi
 $pythonCMD
 
 REQUIRED_PKGS="jq python2 pip whois apt-utils nmap openssl"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
+PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
