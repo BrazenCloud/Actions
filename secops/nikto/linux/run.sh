@@ -1,9 +1,8 @@
 #!/bin/bash
 cd "${0%/*}"
 
-
-REQIRED_PKGS="libnet-ssleay-perl"
-PKGS1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
+REQIRED_PKGS="openssl"
+PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
   echo "No $REQUIRED_PKGS. Setting up $REQUIRED_PKGS."
@@ -11,7 +10,7 @@ if [ "" = "$PKGS_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS
 fi
 
-REQIRED_PKGS1="openssl"
+REQIRED_PKGS1="libnet-ssleay-perl"
 PKGS1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS1|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS1: $PKGS1_OK
 if [ "" = "$PKGS1_OK" ]; then
@@ -30,8 +29,8 @@ if [ "" = "$PKGS2_OK" ]; then
 fi
 
 REQIRED_PKGS3="libio-pty-perl"
-PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS3|grep "install ok installed")
-echo Checking for $REQUIRED_PKGS: $PKGS3_OK
+PKGS3_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS3|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS3: $PKGS3_OK
 if [ "" = "$PKGS3_OK" ]; then
   echo "No $REQUIRED_PKGS3. Setting up $REQUIRED_PKGS3."
   sudo apt-get --yes install $REQUIRED_PKGS3 
@@ -39,8 +38,8 @@ if [ "" = "$PKGS3_OK" ]; then
 fi
 
 REQIRED_PKGS4="jq"
-PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS4|grep "install ok installed")
-echo Checking for $REQUIRED_PKGS: $PKGS4_OK
+PKGS4_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS4|grep "install ok installed")
+echo Checking for $REQUIRED_PKGS4: $PKGS4_OK
 if [ "" = "$PKGS4_OK" ]; then
   echo "No $REQUIRED_PKGS4. Setting up $REQUIRED_PKGS4."
   sudo apt-get --yes install $REQUIRED_PKGS4 
