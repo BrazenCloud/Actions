@@ -39,7 +39,7 @@ if [ "" = "$PKGS3_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS3
 fi
 
-python3-pip install fierce  > /dev/null
+pip install fierce  > /dev/null
 
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
