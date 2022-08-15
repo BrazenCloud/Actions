@@ -1,0 +1,16 @@
+[
+	
+	{ 
+		"Name":"localstreamport",
+		"Type": 0,
+		"DefaultValue":"2514",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"localistenport",
+		"Type": 0,
+		"DefaultValue":"1514",
+		"IsOptional":false
+	}
+	
+]

@@ -1,0 +1,10 @@
+{
+  "Description": "FluentBit is a remote syslog receiver and forwarder.",
+  "Language": "via cmdline",
+  "Tags": [
+    "Logs",
+    "Syslog",
+    "FluentBit",
+    "Linux"
+  ]
+}
