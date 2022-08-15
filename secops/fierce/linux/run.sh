@@ -19,13 +19,13 @@ if [ "" = "$PKGS4_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS4
 fi
 
-REQUIRED_PKGS2="pip3"
+REQUIRED_PKGS2="pip"
 PKGS2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2S: $PKGS2_OK
 if [ "" = "$PKGS2_OK" ]; then
   echo "No $REQUIRED_PKGS2. Setting up $REQUIRED_PKGS2."
-  sudo apt-get --yes install $REQUIRED_PKGS2 
-  apt-get --yes install $REQUIRED_PKGS2
+  sudo apt-get --yes install $REQUIRED_PKGS2 --fix-missing
+  apt-get --yes install $REQUIRED_PKGS2 --fix-missing
 fi
 
 REQUIRED_PKGS3="whois"
@@ -33,11 +33,11 @@ PKGS3_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS3|grep "instal
 echo Checking for $REQUIRED_PKGS: $PKGS3_OK
 if [ "" = "$PKGS3_OK" ]; then
   echo "No $REQUIRED_PKGS3. Setting up $REQUIRED_PKGS3."
-  sudo apt-get --yes install $REQUIRED_PKGS3
+  sudo apt-get --yes install $REQUIRED_PKGS3 
   apt-get --yes install $REQUIRED_PKGS3
 fi
 
-pip3 install fierce  > /dev/null
+python3-pip install fierce  > /dev/null
 
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
