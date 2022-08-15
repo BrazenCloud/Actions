@@ -1,7 +1,9 @@
 #!/bin/bash
 cd "${0%/*}"
 
-REQIRED_PKGS="openssl"
+
+
+REQUIRED_PKGS="openssl"
 PKGS_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS: $PKGS_OK
 if [ "" = "$PKGS_OK" ]; then
@@ -10,7 +12,7 @@ if [ "" = "$PKGS_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS
 fi
 
-REQIRED_PKGS1="libnet-ssleay-perl"
+REQUIRED_PKGS1="libnet-ssleay-perl"
 PKGS1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS1|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS1: $PKGS1_OK
 if [ "" = "$PKGS1_OK" ]; then
@@ -19,7 +21,7 @@ if [ "" = "$PKGS1_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS1
 fi
 
-REQIRED_PKGS2="libauthen-pam-perl"
+REQUIRED_PKGS2="libauthen-pam-perl"
 PKGS2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS2|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS2: $PKGS2_OK
 if [ "" = "$PKGS2_OK" ]; then
@@ -28,7 +30,7 @@ if [ "" = "$PKGS2_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS2
 fi
 
-REQIRED_PKGS3="libio-pty-perl"
+REQUIRED_PKGS3="libio-pty-perl"
 PKGS3_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS3|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS3: $PKGS3_OK
 if [ "" = "$PKGS3_OK" ]; then
@@ -37,7 +39,7 @@ if [ "" = "$PKGS3_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS3
 fi
 
-REQIRED_PKGS4="jq"
+REQUIRED_PKGS4="jq"
 PKGS4_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS4|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS4: $PKGS4_OK
 if [ "" = "$PKGS4_OK" ]; then
@@ -45,6 +47,7 @@ if [ "" = "$PKGS4_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKGS4 
   apt-get --yes install $REQUIRED_PKGS4
 fi
+
 
 chmod +x ./nikto.pl
 
