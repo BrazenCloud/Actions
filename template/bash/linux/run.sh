@@ -8,6 +8,20 @@ if [ "" = "$PKG2_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS
 fi
 
+# check if jq is installed
+if ! [ -x "$(command -v jq)" ]; then
+    echo "Installing jq"
+
+    # check for sudo, install
+    if [ -x "$(command -v sudo)" ]; then
+        sudo apt-get install jq -y
+    else
+        apt-get install jq -y
+    fi
+else
+    echo "jq already installed"
+fi
+
 chmod +x ./nikto.pl
 
 hosttoscan1=$(jq -r '."hosttoscan1"' ../settings.json)
