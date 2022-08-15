@@ -1,6 +1,8 @@
 #!/bin/bash
 cd "${0%/*}"
 
+apt-get update --fix-missing
+
 REQUIRED_PKGS1="jq"
 PKGS1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS1|grep "install ok installed")
 echo Checking for $REQUIRED_PKGS1: $PKGS1_OK
