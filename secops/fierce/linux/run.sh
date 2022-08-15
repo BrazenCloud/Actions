@@ -19,7 +19,7 @@ if [ "" = "$PKGS4_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS4
 fi
 
-REQUIRED_PKGS2="pip"
+REQUIRED_PKGS2="pip3"
 PKGS2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKGS2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2S: $PKGS2_OK
 if [ "" = "$PKGS2_OK" ]; then
@@ -37,7 +37,7 @@ if [ "" = "$PKGS3_OK" ]; then
   apt-get --yes install $REQUIRED_PKGS3
 fi
 
-pip install fierce  > /dev/null
+pip3 install fierce  > /dev/null
 
 
 hosttoscan=$(jq -r '."hosttoscan"' ../settings.json)
