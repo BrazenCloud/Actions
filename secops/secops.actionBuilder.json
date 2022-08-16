@@ -1,0 +1,187 @@
+[
+    {
+        "Name": "chkrootkit",
+        "Description": "The chkrootkit tool checks for rootkits. http://www.chkrootkit.org/",
+        "Tags": [
+            "Rootkit",
+            "IR",
+            "Collection"
+        ],
+        "Language": "Shell",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Command": "chkrootkit",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [
+            {
+                "Name": "binutils",
+                "TestCommand": "strings"
+            }
+        ]
+    },
+    {
+        "Name": "debsums",
+        "Description": "Validate Linux Packages with Debsums",
+        "Tags": [
+            "Inventory",
+            "Packages",
+            "Validation"
+        ],
+        "Language": "",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Command": "debsums",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "One",
+        "ActionParameters": [
+            {
+                "Name": "Silent",
+                "CommandParameters": "-s",
+                "Description": "Silences OK packages."
+            }
+        ],
+        "RequiredPackages": [
+            {
+                "Name": "debsums",
+                "TestCommand": "debsums"
+            }
+        ]
+    },
+    {
+        "Name": "lynis",
+        "Description": "The Lynis tool audits the security of a system. https://cisofy.com/lynis/",
+        "Tags": [
+            "IR",
+            "Collection",
+            "Lynis"
+        ],
+        "Language": "Shell",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Command": "lynis",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "audit system --log-file ../results/lynis.log --no-colors",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": [
+            "chown -R 0:0 ./",
+            "chmod -R u=rw,g=r,o=r ./",
+            "chmod +x ./lynis"
+        ]
+    },
+    {
+        "Name": "PECmd",
+        "Description": "Collect the prefetch cache from Windows systems.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "IR",
+            "Executable"
+        ],
+        "Language": "Executable",
+        "Command": "pecmd.exe",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "-d 'C:\\Windows\\Prefetch' --json ..\\results\\ --jsonf pecmdresults.json",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [
+            {
+                "Name": "Directory",
+                "CommandParameters": "-d {value} --json ..\\results\\ --jsonf pecmdresults.json",
+                "Description": "Directory to process"
+            },
+            {
+                "Name": "File",
+                "CommandParameters": "-f {value} --json ..\\results\\ --jsonf pecmdresults.json",
+                "Description": "File to process"
+            }
+        ],
+        "RequiredPackages": []
+    },
+    {
+        "Name": "rkhunter",
+        "Description": "The rkhunter tool checks for rootkits. http://rkhunter.sourceforge.net/",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Tags": [
+            "IR",
+            "Collection",
+            "Rootkit"
+        ],
+        "Language": "Shell",
+        "Command": "rkhunter",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "--check --sk --logfile ../results/rkhunter.log --nocolors",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": [
+            "chmod +x ./installer.sh",
+            "./installer.sh --install"
+        ]
+    },
+    {
+        "Name": "turboscanner",
+        "Description": "Turboscanner will scan for localhost services running and articulate cpu usage.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Executable"
+        ],
+        "Language": "Executable",
+        "Command": "turbo-scanner_010w.exe",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "localhost",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": []
+    },
+    {
+        "Name": "winpmem",
+        "Description": "Dumps a memory image.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Memory"
+        ],
+        "Language": "Executable",
+        "Command": "winpmem_mini_x64_rc2.exe",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "..\\results\\snapshot.bin",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": []
+    }
+]
