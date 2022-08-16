@@ -44,5 +44,5 @@ Parameters=$(jq -r '."Parameters"' ../settings.json)
 if [ ! -z "$Parameters" ] ; then
     lynis $Parameters
 else
-    lynis audit system --log-file ../results/lynis.log --no-colors
+    lynis
 fi
