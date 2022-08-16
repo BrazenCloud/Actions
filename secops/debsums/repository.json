@@ -2,11 +2,11 @@
   "Description": "Validate Linux Packages with Debsums",
   "Language": "Generated Bash",
   "Tags": [
-    "debsums",
-    "Linux",
     "Inventory",
     "Packages",
-    "Validation"
+    "Validation",
+    "debsums",
+    "Linux"
   ],
   "Glyph": null
 }
