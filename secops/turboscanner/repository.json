@@ -2,8 +2,9 @@
   "Description": "Turboscanner will scan for localhost services running and articulate cpu usage.",
   "Language": "Executable",
   "Tags": [
-    "Template",
     "Executable",
+    "turboscanner",
     "Windows"
-  ]
+  ],
+  "Glyph": null
 }
