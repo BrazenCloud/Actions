@@ -3,4 +3,8 @@ $settings = Get-Content ..\settings.json | ConvertFrom-Json
 
 
 
-turboscanner turbo-scanner_010w.exe localhost >> ..\results\turboscanner.txt
+if ( $settings.'Parameters'.ToString().Length -gt 0 ) {
+    turbo-scanner_010w.exe $($settings.'Parameters') | Out-File ..\results\out.txt -Append
+} else {
+    turbo-scanner_010w.exe | Out-File ..\results\out.txt -Append
+}
