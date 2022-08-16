@@ -1,10 +1,11 @@
 {
   "Description": "The Lynis tool audits the security of a system. https://cisofy.com/lynis/",
-  "Language": "shell",
+  "Language": "Shell",
   "Tags": [
     "IR",
     "Collection",
-    "Linux",
-    "Lynis"
-  ]
+    "Lynis",
+    "Linux"
+  ],
+  "Glyph": null
 }
