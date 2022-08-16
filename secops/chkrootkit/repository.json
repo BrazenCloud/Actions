@@ -1,11 +1,12 @@
 {
   "Description": "The chkrootkit tool checks for rootkits. http://www.chkrootkit.org/",
-  "Language": "shell",
+  "Language": "Shell",
   "Tags": [
-    "IR",
-    "Collection",
+    "chkrootkit",
     "Linux",
     "Rootkit",
-    "chkrootkit"
-  ]
+    "IR",
+    "Collection"
+  ],
+  "Glyph": null
 }
