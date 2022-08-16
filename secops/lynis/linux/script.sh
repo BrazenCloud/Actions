@@ -38,11 +38,11 @@ chmod +x ./lynis
 
 
 
-Parameters=$(jq -r '."Parameters"' ../settings.json)
+CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 
 
-if [ ! -z "$Parameters" ] ; then
-    lynis $Parameters
+if [ ! -z "$CustomParameters" ] ; then
+    lynis $CustomParameters
 else
     lynis
 fi

@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Parameters",
+    "Name": "Custom Parameters",
     "Type": 0,
     "DefaultValue": "audit system --log-file ../results/lynis.log --no-colors",
     "Description": "Parameters typed here are passed directly to the command.",

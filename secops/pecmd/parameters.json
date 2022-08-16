@@ -14,7 +14,7 @@
     "IsOptional": true
   },
   {
-    "Name": "Parameters",
+    "Name": "Custom Parameters",
     "Type": 0,
     "DefaultValue": "-d 'C:\\Windows\\Prefetch' --json ..\\results\\ --jsonf pecmdresults.json",
     "Description": "Parameters typed here are passed directly to the command.",

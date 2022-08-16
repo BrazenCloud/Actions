@@ -37,11 +37,11 @@ chmod +x ./installer.sh
 
 
 
-Parameters=$(jq -r '."Parameters"' ../settings.json)
+CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 
 
-if [ ! -z "$Parameters" ] ; then
-    rkhunter $Parameters
+if [ ! -z "$CustomParameters" ] ; then
+    rkhunter $CustomParameters
 else
     rkhunter
 fi

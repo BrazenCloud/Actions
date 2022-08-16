@@ -48,11 +48,11 @@ else
     echo "binutils already installed"
 fi
 
-Parameters=$(jq -r '."Parameters"' ../settings.json)
+CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 
 
-if [ ! -z "$Parameters" ] ; then
-    chkrootkit $Parameters
+if [ ! -z "$CustomParameters" ] ; then
+    chkrootkit $CustomParameters
 else
     chkrootkit
 fi

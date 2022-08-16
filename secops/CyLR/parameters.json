@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Parameters",
+    "Name": "Custom Parameters",
     "Type": 0,
     "DefaultValue": "-od ..\\results",
     "Description": "Parameters typed here are passed directly to the command.",
