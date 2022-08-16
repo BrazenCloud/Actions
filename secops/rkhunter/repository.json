@@ -1,11 +1,12 @@
 {
   "Description": "The rkhunter tool checks for rootkits. http://rkhunter.sourceforge.net/",
-  "Language": "shell",
+  "Language": "Shell",
   "Tags": [
     "IR",
     "Collection",
-    "Linux",
     "Rootkit",
-    "rkhunter"
-  ]
+    "rkhunter",
+    "Linux"
+  ],
+  "Glyph": null
 }

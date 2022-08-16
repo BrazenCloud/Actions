@@ -1,0 +1,9 @@
+[
+  {
+    "Name": "Parameters",
+    "Type": 0,
+    "DefaultValue": "--check --sk --logfile ../results/rkhunter.log --nocolors",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
+]
