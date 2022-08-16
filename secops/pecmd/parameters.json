@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Directory",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Directory to process",
+    "IsOptional": true
+  },
+  {
+    "Name": "File",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "File to process",
+    "IsOptional": true
+  },
+  {
+    "Name": "Parameters",
+    "Type": 0,
+    "DefaultValue": "-d 'C:\\Windows\\Prefetch' --json ..\\results\\ --jsonf pecmdresults.json",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
+]

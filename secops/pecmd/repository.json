@@ -2,9 +2,10 @@
   "Description": "Collect the prefetch cache from Windows systems.",
   "Language": "Executable",
   "Tags": [
-    "PECmd",
     "IR",
     "Executable",
+    "PECmd",
     "Windows"
-  ]
+  ],
+  "Glyph": null
 }
