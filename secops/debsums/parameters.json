@@ -9,7 +9,7 @@
   {
     "Name": "Parameters",
     "Type": 0,
-    "DefaultValue": null,
+    "DefaultValue": "",
     "Description": "Parameters typed here are passed directly to the command.",
     "IsOptional": true
   }
