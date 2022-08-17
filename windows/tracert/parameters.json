@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Skip Resolving",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Do not resolve addresses to hostnames",
+    "IsOptional": true
+  },
+  {
+    "Name": "Max hops",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Maximum number of hops to search for target.",
+    "IsOptional": true
+  },
+  {
+    "Name": "timeout",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Wait timeout milliseconds for each reply.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Target Name",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The destination of the route trace",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "-d brazencloud.com",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

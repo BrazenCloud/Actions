@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "All",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Passes /all",
+    "IsOptional": true
+  },
+  {
+    "Name": "Release",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Passes /release",
+    "IsOptional": true
+  },
+  {
+    "Name": "Renew",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Passes /renew",
+    "IsOptional": true
+  },
+  {
+    "Name": "Flush DNS",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Passes /flushdns",
+    "IsOptional": true
+  },
+  {
+    "Name": "Register DNS",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Passes /registerdns",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

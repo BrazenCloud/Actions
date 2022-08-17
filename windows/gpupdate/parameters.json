@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Target",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Computer or User",
+    "IsOptional": true
+  },
+  {
+    "Name": "Force",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Replaces all policy settings instead of just ones that have changed.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "/Force",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

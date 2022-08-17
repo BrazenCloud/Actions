@@ -1,0 +1,10 @@
+{
+  "Description": "Display information about users logged on to the system.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "quser",
+    "Windows"
+  ],
+  "Glyph": null
+}

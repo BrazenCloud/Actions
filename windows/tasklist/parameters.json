@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Show Services",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Displays services hosted in each process.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Output Format",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Specifies the output format. Valid values: TABLE, LIST, CSV.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Filter",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Displays a set of tasks that match a given criteria specified by the filter.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "/FO CSV",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

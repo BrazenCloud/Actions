@@ -1,0 +1,10 @@
+{
+  "Description": "Device registration troubleshooter tool",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "dsregcmd",
+    "Windows"
+  ],
+  "Glyph": null
+}

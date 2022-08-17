@@ -1,0 +1,10 @@
+{
+  "Description": "Resolves DNS names to IP addresses",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "nslookup",
+    "Windows"
+  ],
+  "Glyph": null
+}

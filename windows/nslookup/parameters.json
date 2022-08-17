@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Host",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The host to lookup.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Server",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The server to query.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "brazencloud.com",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "Description": "This command line tool displays the Resultant Set of Policy (RSoP) information for a target user and computer.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "gpresult",
+    "Windows"
+  ],
+  "Glyph": null
+}

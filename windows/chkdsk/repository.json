@@ -1,0 +1,10 @@
+{
+  "Description": "Checks a disk and displays a status report.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "chkdsk",
+    "Windows"
+  ],
+  "Glyph": null
+}

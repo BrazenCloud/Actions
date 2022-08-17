@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Scope",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Computer or User",
+    "IsOptional": true
+  },
+  {
+    "Name": "XML Format",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Saves the output in XML format.",
+    "IsOptional": true
+  },
+  {
+    "Name": "HTML Format",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Saves the output in HTML format.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "/SCOPE COMPUTER /R",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "Description": "Updates multiple Group Policy settings.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "gpupdate",
+    "Windows"
+  ],
+  "Glyph": null
+}

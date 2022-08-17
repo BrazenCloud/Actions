@@ -1,0 +1,10 @@
+{
+  "Description": "Runs the reg command.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "reg",
+    "Windows"
+  ],
+  "Glyph": null
+}
