@@ -24,7 +24,8 @@
                 "Name": "binutils",
                 "TestCommand": "strings"
             }
-        ]
+        ],
+        "PreCommands": []
     },
     {
         "Name": "CyLR",
