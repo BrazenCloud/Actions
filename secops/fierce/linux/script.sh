@@ -57,7 +57,7 @@ declare -a arr
 if [ ! -z "$CustomParameters" ]; then
     fierce $CustomParameters
 elif [ ! -z "$Targettoscan" ] || [ ${WideMode} == "true" ] ; then
-    if [ ${#Target to scan} -gt 0 ]; then
+    if [ ! -z "$Targettoscan" ] ; then
         arr+=("--domain $Targettoscan --connect")
     fi
     if [ ${WideMode} == "true" ] ; then
