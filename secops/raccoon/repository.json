@@ -1,10 +1,12 @@
 {
-  "Description": "Detailed raccooon host Reconnaissance tool.",
+  "Description": "Detailed host Reconnaissance tool.",
   "Language": "Executable",
   "Tags": [
     "IR",
-    "RECON",
+    "Recon",
     "Executable",
+    "Raccoon",
     "Linux"
-  ]
+  ],
+  "Glyph": null
 }

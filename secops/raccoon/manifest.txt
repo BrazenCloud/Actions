@@ -1,2 +1,3 @@
 COPY . .
-RUN_LIN linux\run.sh
+
+RUN_LIN linux/script.sh
