@@ -56,11 +56,11 @@ declare -a arr
 
 if [ ! -z "$CustomParameters" ]; then
     fierce $CustomParameters
-elif [ ! -z "$Targettoscan" ] || [ ${WideMode} == "true" ] ; then
+elif [ ! -z "$Targettoscan" ] || [[ ${WideMode} == "true" ]] ; then
     if [ ! -z "$Targettoscan" ] ; then
         arr+=("--domain $Targettoscan --connect")
     fi
-    if [ ${WideMode} == "true" ] ; then
+    if [[ ${WideMode} == "true" ]] ; then
         arr+=("--wide")
     fi
     fierce ${arr[*]}

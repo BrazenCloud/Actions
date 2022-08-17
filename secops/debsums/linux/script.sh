@@ -52,7 +52,7 @@ Silent=$(jq -r '."Silent"' ../settings.json)
 CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 
 
-if [ ${Silent} == "true" ] ; then
+if [[ ${Silent} == "true" ]] ; then
     debsums -s >> ../results/out.txt
 elif [ ! -z "$CustomParameters" ]; then
     debsums $CustomParameters >> ../results/out.txt
