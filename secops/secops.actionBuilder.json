@@ -27,6 +27,28 @@
         ]
     },
     {
+        "Name": "CyLR",
+        "Description": "Runs the CyLR live response collection tool.",
+        "Tags": [
+            "CyLR",
+            "IR"
+        ],
+        "Language": "Executable",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Command": ".\\CyLR.exe",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "-od ..\\results",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
         "Name": "debsums",
         "Description": "Validate Linux Packages with Debsums",
         "Tags": [
@@ -58,6 +80,69 @@
                 "TestCommand": "debsums"
             }
         ]
+    },
+    {
+        "Name": "Fierce",
+        "Description": "DNS tool to discover non-contiguous ip space and hosts.",
+        "Tags": [
+            "IR",
+            "Recon",
+            "Executable"
+        ],
+        "Language": "Executable",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Command": "fierce",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Target to scan",
+                "CommandParameters": "--domain {value} --connect",
+                "Description": "Target to scan",
+                "Required": true
+            },
+            {
+                "Name": "Wide Mode",
+                "CommandParameters": "--wide",
+                "Description": "Widen Discovery to target's /24 network"
+            }
+        ],
+        "RequiredPackages": [
+            {
+                "Name": "pip",
+                "TestCommand": "pip"
+            }
+        ],
+        "PreCommands": [
+            "pip install fierce > /dev/null"
+        ]
+    },
+    {
+        "Name": "LastActivityView",
+        "Description": "Runs the LastActivityView Windows tool.",
+        "Tags": [
+            "Executable"
+        ],
+        "Language": "Executable",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Command": "lastactivityview.exe",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "/shtml ..\\results\\lastactivityview.html",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
     },
     {
         "Name": "lynis",
