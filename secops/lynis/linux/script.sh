@@ -32,11 +32,11 @@ else
     echo "jq already installed"
 fi
 
+
+
 chown -R 0:0 ./
 chmod -R u=rw,g=r,o=r ./
 chmod +x ./lynis
-
-
 
 CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 

@@ -32,10 +32,10 @@ else
     echo "jq already installed"
 fi
 
+
+
 chmod +x ./installer.sh
 ./installer.sh --install
-
-
 
 CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 

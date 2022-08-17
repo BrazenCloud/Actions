@@ -32,8 +32,6 @@ else
     echo "jq already installed"
 fi
 
-pip install fierce > /dev/null
-
 # check if pip is installed
 if ! [ -x "$(command -v pip)" ]; then
     echo "Installing pip"
@@ -47,6 +45,8 @@ if ! [ -x "$(command -v pip)" ]; then
 else
     echo "pip already installed"
 fi
+
+pip install fierce > /dev/null
 
 Targettoscan=$(jq -r '."Target to scan"' ../settings.json)
 WideMode=$(jq -r '."Wide Mode"' ../settings.json)

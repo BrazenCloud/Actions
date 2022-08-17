@@ -32,8 +32,6 @@ else
     echo "jq already installed"
 fi
 
-
-
 # check if binutils is installed
 if ! [ -x "$(command -v strings)" ]; then
     echo "Installing binutils"
@@ -47,6 +45,8 @@ if ! [ -x "$(command -v strings)" ]; then
 else
     echo "binutils already installed"
 fi
+
+
 
 CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
 

@@ -32,8 +32,6 @@ else
     echo "jq already installed"
 fi
 
-
-
 # check if debsums is installed
 if ! [ -x "$(command -v debsums)" ]; then
     echo "Installing debsums"
@@ -47,6 +45,8 @@ if ! [ -x "$(command -v debsums)" ]; then
 else
     echo "debsums already installed"
 fi
+
+
 
 Silent=$(jq -r '."Silent"' ../settings.json)
 CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
