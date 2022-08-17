@@ -205,6 +205,56 @@
         "RequiredPackages": []
     },
     {
+        "Name": "Raccoon",
+        "Description": "Detailed host Reconnaissance tool.",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Tags": [
+            "IR",
+            "Recon",
+            "Executable"
+        ],
+        "Language": "Executable",
+        "Command": "raccoon",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Host to scan",
+                "CommandParameters": "-f {value} --outdir ../results/{value}",
+                "Description": "The host to scan with Raccoon",
+                "Required": true
+            },
+            {
+                "Name": "Skip Health Check",
+                "CommandParameters": "--skip-health-check",
+                "Description": "Skips checking for the webserver's existence"
+            }
+        ],
+        "RequiredPackages": [
+            {
+                "Name": "pip",
+                "TestCommand": "pip"
+            },
+            {
+                "Name": "nmap",
+                "TestCommand": "nmap"
+            },
+            {
+                "Name": "openssl",
+                "TestCommand": "openssl"
+            }
+        ],
+        "PreCommands": [
+            "pip install raccoon-scanner > /dev/null"
+        ]
+    },
+    {
         "Name": "rkhunter",
         "Description": "The rkhunter tool checks for rootkits. http://rkhunter.sourceforge.net/",
         "OperatingSystems": [
@@ -268,6 +318,39 @@
         "RedirectCommandOutput": false,
         "ParameterLogic": "One",
         "ActionParameters": [],
+        "RequiredPackages": []
+    },
+    {
+        "Name": "Yum",
+        "Description": "Validate Linux Packages with yum verify-all",
+        "OperatingSystems": [
+            "Linux"
+        ],
+        "Tags": [
+            "Inventory",
+            "Packages",
+            "Validation"
+        ],
+        "Language": "Executable",
+        "Command": "yum",
+        "ExtraFolders": [],
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "One",
+        "ActionParameters": [
+            {
+                "Name": "Verify All",
+                "CommandParameters": "verify-all",
+                "Description": "Verify all packages"
+            },
+            {
+                "Name": "Update",
+                "CommandParameters": "update",
+                "Description": "Yum update"
+            }
+        ],
         "RequiredPackages": []
     }
 ]
