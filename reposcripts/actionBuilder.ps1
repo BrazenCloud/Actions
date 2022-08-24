@@ -3,7 +3,7 @@ param (
 )
 
 if (-not (Get-Module BrazenCloud.ActionBuilder -ListAvailable)) { 
-    Install-Module BrazenCloud.ActionBuilder -Repository PSGallery -Force
+    Install-Module BrazenCloud.ActionBuilder -Repository PSGallery -Force -AllowPrerelease
 }
 
 $abConfigs = Get-ChildItem $BasePath -Filter *.actionBuilder.json -Recurse
