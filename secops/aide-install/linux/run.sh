@@ -1,7 +1,16 @@
 cd "${0%/*}"
 
+REQUIRED_PKG0="postfix"
+PKG0_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG0|grep "install ok installed")
+echo Checking for $REQUIRED_PKG0: $PKG0_OK
+if [ "" = "$PKG0_OK" ]; then
+  echo "No $REQUIRED_PKG0. Setting up $REQUIRED_PKG0."
+  sudo apt-get --yes install $REQUIRED_PKG0
+  apt-get --yes install $REQUIRED_PKG0
+fi
+
 REQUIRED_PKG1="aide"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG1|grep "install ok installed")
+PKG1_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG1|grep "install ok installed")
 echo Checking for $REQUIRED_PKG1: $PKG1_OK
 if [ "" = "$PKG1_OK" ]; then
   echo "No $REQUIRED_PKG1. Setting up $REQUIRED_PKG1."
