@@ -8,13 +8,17 @@ The Lynis tool audits the security of a system. https://cisofy.com/lynis/
 - Tags:
   - IR
   - Collection
-  - Linux
   - Lynis
-- Language: shell
+  - Linux
+- Language: Shell
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-None specified.
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: audit system --log-file ../results/lynis.log --no-colors
 <!-- endregion -->

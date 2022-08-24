@@ -1,34 +1,35 @@
 <!-- region Generated -->
-# secops:pecmd
+# secops:yum
 
-Collect the prefetch cache from Windows systems.
+Validate Linux Packages with yum verify-all
 
 ## Metadata
 
 - Tags:
-  - IR
-  - Executable
-  - PECmd
-  - Windows
+  - Inventory
+  - Packages
+  - Validation
+  - Yum
+  - Linux
 - Language: Executable
 - Supported Operating Systems:
-  - Windows
+  - Linux
 
 ## Parameters
 
-- Directory
-  - Description: Directory to process
-  - Type: String
+- Verify All
+  - Description: Verify all packages
+  - Type: Boolean
   - IsOptional: True
   - DefaultValue: 
-- File
-  - Description: File to process
-  - Type: String
+- Update
+  - Description: Yum update
+  - Type: Boolean
   - IsOptional: True
   - DefaultValue: 
 - Custom Parameters
   - Description: Parameters typed here are passed directly to the command.
   - Type: String
   - IsOptional: True
-  - DefaultValue: -d 'C:\Windows\Prefetch' --json ..\results\ --jsonf pecmdresults.json
+  - DefaultValue: 
 <!-- endregion -->

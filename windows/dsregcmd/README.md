@@ -1,13 +1,13 @@
 <!-- region Generated -->
-# secops:winpmem
+# windows:dsregcmd
 
-Dumps a memory image.
+Device registration troubleshooter tool
 
 ## Metadata
 
 - Tags:
-  - Memory
-  - winpmem
+  - Utilities
+  - dsregcmd
   - Windows
 - Language: Executable
 - Supported Operating Systems:
@@ -16,8 +16,8 @@ Dumps a memory image.
 ## Parameters
 
 - Custom Parameters
-  - Description: Parameters typed here are passed directly to the command.
+  - Description: If edited, this take precedence over all other parameters.
   - Type: String
   - IsOptional: True
-  - DefaultValue: ..\results\snapshot.bin
+  - DefaultValue: /status
 <!-- endregion -->

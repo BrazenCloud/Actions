@@ -6,19 +6,19 @@ The chkrootkit tool checks for rootkits. http://www.chkrootkit.org/
 ## Metadata
 
 - Tags:
+  - Rootkit
   - IR
   - Collection
-  - Linux
-  - Rootkit
   - chkrootkit
-- Language: shell
+  - Linux
+- Language: Shell
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-- Parameters
-  - Description: Leverage default binaries
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
   - Type: String
   - IsOptional: True
   - DefaultValue: 

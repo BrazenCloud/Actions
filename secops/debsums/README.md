@@ -9,16 +9,22 @@ Validate Linux Packages with Debsums
   - Inventory
   - Packages
   - Validation
+  - debsums
   - Linux
-- Language: via cmdline
+- Language: Generated Bash
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-- Silence Good Package Output
-  - Description: By default, -s silences OK packages.
+- Silent
+  - Description: Silences OK packages.
   - Type: Boolean
   - IsOptional: True
-  - DefaultValue: False
+  - DefaultValue: 
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
 <!-- endregion -->

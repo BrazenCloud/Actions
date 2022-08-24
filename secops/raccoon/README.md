@@ -1,14 +1,15 @@
 <!-- region Generated -->
 # secops:raccoon
 
-Detailed raccooon host Reconnaissance tool.
+Detailed host Reconnaissance tool.
 
 ## Metadata
 
 - Tags:
   - IR
-  - RECON
+  - Recon
   - Executable
+  - Raccoon
   - Linux
 - Language: Executable
 - Supported Operating Systems:
@@ -16,9 +17,19 @@ Detailed raccooon host Reconnaissance tool.
 
 ## Parameters
 
-- hosttoscan
-  - Description: Target to scan
+- Host to scan
+  - Description: The host to scan with Raccoon
   - Type: String
   - IsOptional: False
-  - DefaultValue: geek-guy.com
+  - DefaultValue: 
+- Skip Health Check
+  - Description: Skips checking for the webserver's existence
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: 
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
 <!-- endregion -->
