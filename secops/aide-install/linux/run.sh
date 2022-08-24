@@ -10,12 +10,21 @@ if [ "" = "$PKG1_OK" ]; then
 fi
 
 REQUIRED_PKG2="jq"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
+PKG2_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG2|grep "install ok installed")
 echo Checking for $REQUIRED_PKG2: $PKG2_OK
 if [ "" = "$PKG2_OK" ]; then
   echo "No $REQUIRED_PKG2. Setting up $REQUIRED_PKG2."
   sudo apt-get --yes install $REQUIRED_PKG2 
   apt-get --yes install $REQUIRED_PKG2
+fi
+
+REQUIRED_PKG3="jq"
+PKG3_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG3|grep "install ok installed")
+echo Checking for $REQUIRED_PKG3: $PKG3_OK
+if [ "" = "$PKG3_OK" ]; then
+  echo "No $REQUIRED_PKG3. Setting up $REQUIRED_PKG3."
+  sudo apt-get --yes install $REQUIRED_PKG3 
+  apt-get --yes install $REQUIRED_PKG3
 fi
 
 # Example parameters
@@ -25,6 +34,7 @@ fi
 
 # write nscd cache stats to dns_cache
 aideinit >> ../results/aidinit.txt
+cp /var/lib/aide/aide.db{.new,}
 aide -i >> ../results/aide-init.txt
 aide -u >> ../results/aide-update.txt
 
