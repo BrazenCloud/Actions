@@ -35,6 +35,6 @@ fi
 # write nscd cache stats to dns_cache
 aideinit -y --config /etc/aide/aide.conf >> ../results/aidinit.txt
 cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db
-aide --config /etc/aide/aide.conf -i >> ../results/aide-init.txt
-aide --config /etc/aide/aide.conf -u >> ../results/aide-update.txt
+aide -y --config /etc/aide/aide.conf -i >> ../results/aide-init.txt
+aide -y --config /etc/aide/aide.conf -u >> ../results/aide-update.txt
 
