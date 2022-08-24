@@ -33,7 +33,7 @@ fi
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
-dpkg --configure -a >> ../results/dpkg-cnfg.txt
+apt-get install -f -y >> ../results/apt-cnfg.txt
 echo doinginitinstall
 aideinit --config /etc/aide/aide.conf -y >> ../results/aidinit.txt
 echo doingaideinitdb
