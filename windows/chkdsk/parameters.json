@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Volume",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Specifies the drive letter (followed by a colon), mount point, or volume name.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Scan",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "If specified, passes the /scan parameter",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "C: /scan /I /C",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

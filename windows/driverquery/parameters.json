@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Format",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Specifies the output format. TABLE, LIST, or CSV",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

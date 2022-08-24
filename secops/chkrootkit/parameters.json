@@ -1,9 +1,9 @@
 [
-    {
-        "Name": "Parameters",
-        "Type": 0,
-        "DefaultValue": "",
-        "Description": "Leverage default binaries",
-        "IsOptional": true
-    }
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
 ]

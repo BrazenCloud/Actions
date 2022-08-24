@@ -1,0 +1,10 @@
+{
+  "Description": "Displays IP configuration information.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "ipconfig",
+    "Windows"
+  ],
+  "Glyph": null
+}

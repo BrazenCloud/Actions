@@ -1,10 +1,12 @@
 {
   "Description": "Validate Linux Packages with Debsums",
-  "Language": "via cmdline",
+  "Language": "Generated Bash",
   "Tags": [
     "Inventory",
     "Packages",
     "Validation",
+    "debsums",
     "Linux"
-  ]
+  ],
+  "Glyph": null
 }

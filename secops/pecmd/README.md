@@ -6,9 +6,9 @@ Collect the prefetch cache from Windows systems.
 ## Metadata
 
 - Tags:
-  - PECmd
   - IR
   - Executable
+  - PECmd
   - Windows
 - Language: Executable
 - Supported Operating Systems:
@@ -16,5 +16,19 @@ Collect the prefetch cache from Windows systems.
 
 ## Parameters
 
-None specified.
+- Directory
+  - Description: Directory to process
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
+- File
+  - Description: File to process
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: -d 'C:\Windows\Prefetch' --json ..\results\ --jsonf pecmdresults.json
 <!-- endregion -->

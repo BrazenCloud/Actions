@@ -3,6 +3,8 @@
   "Language": "Executable",
   "Tags": [
     "Memory",
+    "winpmem",
     "Windows"
-  ]
+  ],
+  "Glyph": null
 }

@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Scan",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Scans integrity of all protected system files and repairs files with problems when possible.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Verify Only",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Scans integrity of all protected system files. No repair operation is performed.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Scan File",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Scans integrity of the referenced file, repairs file if problems are identified. Specify full path <file>",
+    "IsOptional": true
+  },
+  {
+    "Name": "Verify File",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Verifies the integrity of the file with full path <file>.  No repair operation is performed.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "/SCANNOW",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

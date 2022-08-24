@@ -1,10 +1,23 @@
 [
-	
-	{ 
-		"Name":"hosttoscan",
-		"Type": 0,
-		"DefaultValue":"geek-guy.com",
-		"Description":"Target to scan",
-		"IsOptional":false
-	}
+  {
+    "Name": "Host to scan",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The host to scan with Raccoon",
+    "IsOptional": false
+  },
+  {
+    "Name": "Skip Health Check",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Skips checking for the webserver's existence",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
 ]

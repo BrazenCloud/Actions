@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Verify All",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Verify all packages",
+    "IsOptional": true
+  },
+  {
+    "Name": "Update",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Yum update",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
+]

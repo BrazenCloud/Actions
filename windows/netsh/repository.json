@@ -1,0 +1,10 @@
+{
+  "Description": "Runs the netsh command",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "netsh",
+    "Windows"
+  ],
+  "Glyph": null
+}

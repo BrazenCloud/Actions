@@ -1,0 +1,12 @@
+{
+  "Description": "Validate Linux Packages with yum verify-all",
+  "Language": "Executable",
+  "Tags": [
+    "Inventory",
+    "Packages",
+    "Validation",
+    "Yum",
+    "Linux"
+  ],
+  "Glyph": null
+}

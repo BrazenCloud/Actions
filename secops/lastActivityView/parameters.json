@@ -1,0 +1,9 @@
+[
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "/shtml ..\\results\\lastactivityview.html",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
+]

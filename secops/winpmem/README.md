@@ -7,6 +7,7 @@ Dumps a memory image.
 
 - Tags:
   - Memory
+  - winpmem
   - Windows
 - Language: Executable
 - Supported Operating Systems:
@@ -14,5 +15,9 @@ Dumps a memory image.
 
 ## Parameters
 
-None specified.
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: ..\results\snapshot.bin
 <!-- endregion -->

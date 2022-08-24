@@ -1,0 +1,10 @@
+{
+  "Description": "Display information about Remote Desktop Services sessions.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "qwinsta",
+    "Windows"
+  ],
+  "Glyph": null
+}

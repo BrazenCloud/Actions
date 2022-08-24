@@ -1,0 +1,10 @@
+{
+  "Description": "Scans the integrity of all protected system files and replaces incorrect versions with correct Microsoft versions.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "sfc",
+    "Windows"
+  ],
+  "Glyph": null
+}

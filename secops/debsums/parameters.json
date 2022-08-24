@@ -1,9 +1,16 @@
 [
-    {
-        "Name": "Silence Good Package Output",
-        "Type": 2,
-        "DefaultValue": false,
-        "Description": "By default, -s silences OK packages.",
-        "IsOptional": true
-    }
+  {
+    "Name": "Silent",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Silences OK packages.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
 ]

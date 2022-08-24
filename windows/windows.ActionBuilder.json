@@ -1,0 +1,533 @@
+[
+    {
+        "Name": "chkdsk",
+        "Description": "Checks a disk and displays a status report.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "chkdsk",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "C: /scan /I /C",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Volume",
+                "CommandParameters": "{value}",
+                "Description": "Specifies the drive letter (followed by a colon), mount point, or volume name."
+            },
+            {
+                "Name": "Scan",
+                "CommandParameters": "/scan",
+                "Description": "If specified, passes the /scan parameter"
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "driverquery",
+        "Description": "Enables an administrator to display a list of installed device drivers.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "driverquery",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Format",
+                "CommandParameters": "/FO {value}",
+                "Description": "Specifies the output format. TABLE, LIST, or CSV"
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "dsregcmd",
+        "Description": "Device registration troubleshooter tool",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "dsregcmd",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/status",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "gpresult",
+        "Description": "This command line tool displays the Resultant Set of Policy (RSoP) information for a target user and computer.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "gpresult",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/SCOPE COMPUTER /R",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Scope",
+                "CommandParameters": "/SCOPE {value}",
+                "Description": "Computer or User"
+            },
+            {
+                "Name": "XML Format",
+                "CommandParameters": "/X ../results/gpresult.xml",
+                "Description": "Saves the output in XML format."
+            },
+            {
+                "Name": "HTML Format",
+                "CommandParameters": "/H ../results/gpresult.html",
+                "Description": "Saves the output in HTML format."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "gpupdate",
+        "Description": "Updates multiple Group Policy settings.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "gpupdate",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/Force",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Target",
+                "CommandParameters": "/Target:{value}",
+                "Description": "Computer or User"
+            },
+            {
+                "Name": "Force",
+                "CommandParameters": "/Force",
+                "Description": "Replaces all policy settings instead of just ones that have changed."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "ipconfig",
+        "Description": "Displays IP configuration information.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "ipconfig",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "All",
+        "ActionParameters": [
+            {
+                "Name": "All",
+                "CommandParameters": "/all",
+                "Description": "Passes /all"
+            },
+            {
+                "Name": "Release",
+                "CommandParameters": "/release",
+                "Description": "Passes /release"
+            },
+            {
+                "Name": "Renew",
+                "CommandParameters": "/renew",
+                "Description": "Passes /renew"
+            },
+            {
+                "Name": "Flush DNS",
+                "CommandParameters": "/flushdns",
+                "Description": "Passes /flushdns"
+            },
+            {
+                "Name": "Register DNS",
+                "CommandParameters": "/registerdns",
+                "Description": "Passes /registerdns"
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "netsh",
+        "Description": "Runs the netsh command",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "netsh",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/?",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "nslookup",
+        "Description": "Resolves DNS names to IP addresses",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "nslookup",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "brazencloud.com",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Host",
+                "CommandParameters": "{value}",
+                "Description": "The host to lookup."
+            },
+            {
+                "Name": "Server",
+                "CommandParameters": "{value}",
+                "Description": "The server to query."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "ping",
+        "Description": "Packet internet groper",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "ping",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "-n 4 1.1.1.1",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Count",
+                "CommandParameters": "-n {value}",
+                "Description": "The number of queries to send."
+            },
+            {
+                "Name": "Resolve address to hostname",
+                "CommandParameters": "-a",
+                "Description": "Resolves addresses to hostnames."
+            },
+            {
+                "Name": "Target",
+                "CommandParameters": "{value}",
+                "Description": "The target to ping."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "qwinsta",
+        "Description": "Display information about Remote Desktop Services sessions.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "qwinsta",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "quser",
+        "Description": "Display information about users logged on to the system.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "quser",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "reg",
+        "Description": "Runs the reg command.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "reg",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [
+            {
+                "Name": "QUERY",
+                "CommandParameters": "QUERY {value}",
+                "Description": "Choose one parameter! Passes a value to QUERY"
+            },
+            {
+                "Name": "ADD",
+                "CommandParameters": "ADD {value}",
+                "Description": "Choose one parameter! Passes a value to ADD"
+            },
+            {
+                "Name": "DELETE",
+                "CommandParameters": "DELETE {value}",
+                "Description": "Choose one parameter! Passes a value to DELETE"
+            },
+            {
+                "Name": "COPY",
+                "CommandParameters": "COPY {value}",
+                "Description": "Choose one parameter! Passes a value to COPY"
+            },
+            {
+                "Name": "SAVE",
+                "CommandParameters": "SAVE {value}",
+                "Description": "Choose one parameter! Passes a value to SAVE"
+            },
+            {
+                "Name": "RESTORE",
+                "CommandParameters": "RESTORE {value}",
+                "Description": "Choose one parameter! Passes a value to RESTORE"
+            },
+            {
+                "Name": "LOAD",
+                "CommandParameters": "LOAD {value}",
+                "Description": "Choose one parameter! Passes a value to LOAD"
+            },
+            {
+                "Name": "UNLOAD",
+                "CommandParameters": "UNLOAD {value}",
+                "Description": "Choose one parameter! Passes a value to UNLOAD"
+            },
+            {
+                "Name": "COMPARE",
+                "CommandParameters": "COMPARE {value}",
+                "Description": "Choose one parameter! Passes a value to COMPARE"
+            },
+            {
+                "Name": "EXPORT",
+                "CommandParameters": "EXPORT {value}",
+                "Description": "Choose one parameter! Passes a value to EXPORT"
+            },
+            {
+                "Name": "IMPORT",
+                "CommandParameters": "IMPORT {value}",
+                "Description": "Choose one parameter! Passes a value to IMPORT"
+            },
+            {
+                "Name": "FLAGS",
+                "CommandParameters": "FLAGS {value}",
+                "Description": "Choose one parameter! Passes a value to FLAGS"
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "sfc",
+        "Description": "Scans the integrity of all protected system files and replaces incorrect versions with correct Microsoft versions.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "sfc",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/SCANNOW",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "One",
+        "ActionParameters": [
+            {
+                "Name": "Scan",
+                "CommandParameters": "/SCANNOW",
+                "Description": "Scans integrity of all protected system files and repairs files with problems when possible."
+            },
+            {
+                "Name": "Verify Only",
+                "CommandParameters": "/VERIFYONLY",
+                "Description": "Scans integrity of all protected system files. No repair operation is performed."
+            },
+            {
+                "Name": "Scan File",
+                "CommandParameters": "/SCANFILE={value}",
+                "Description": "Scans integrity of the referenced file, repairs file if problems are identified. Specify full path <file>"
+            },
+            {
+                "Name": "Verify File",
+                "CommandParameters": "/VERIFYFILE={value}",
+                "Description": "Verifies the integrity of the file with full path <file>.  No repair operation is performed."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "tasklist",
+        "Description": "This tool displays a list of currently running processes on either a local or remote machine.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "tasklist",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "/FO CSV",
+        "RedirectCommandOutput": true,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Show Services",
+                "CommandParameters": "/SVC",
+                "Description": "Displays services hosted in each process."
+            },
+            {
+                "Name": "Output Format",
+                "CommandParameters": "/FO {value}",
+                "Description": "Specifies the output format. Valid values: TABLE, LIST, CSV."
+            },
+            {
+                "Name": "Filter",
+                "CommandParameters": "/FI {value}",
+                "Description": "Displays a set of tasks that match a given criteria specified by the filter."
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    },
+    {
+        "Name": "tracert",
+        "Description": "Runs the tracert command.",
+        "OperatingSystems": [
+            "Windows"
+        ],
+        "Tags": [
+            "Utilities"
+        ],
+        "Language": "Executable",
+        "Command": "tracert",
+        "ExtraFolders": null,
+        "IncludeParametersParameter": true,
+        "ParametersParameterDescription": "If edited, this take precedence over all other parameters.",
+        "DefaultParameters": "-d brazencloud.com",
+        "RedirectCommandOutput": false,
+        "ParameterLogic": "Combine",
+        "ActionParameters": [
+            {
+                "Name": "Skip Resolving",
+                "CommandParameters": "-d",
+                "Description": "Do not resolve addresses to hostnames"
+            },
+            {
+                "Name": "Max hops",
+                "CommandParameters": "-h {value}",
+                "Description": "Maximum number of hops to search for target."
+            },
+            {
+                "Name": "timeout",
+                "CommandParameters": "-w {value}",
+                "Description": "Wait timeout milliseconds for each reply."
+            },
+            {
+                "Name": "Target Name",
+                "CommandParameters": "{value}",
+                "Description": "The destination of the route trace"
+            }
+        ],
+        "RequiredPackages": [],
+        "PreCommands": []
+    }
+]

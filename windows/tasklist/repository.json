@@ -1,0 +1,10 @@
+{
+  "Description": "This tool displays a list of currently running processes on either a local or remote machine.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "tasklist",
+    "Windows"
+  ],
+  "Glyph": null
+}

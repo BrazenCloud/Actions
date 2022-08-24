@@ -1,0 +1,10 @@
+{
+  "Description": "Enables an administrator to display a list of installed device drivers.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "driverquery",
+    "Windows"
+  ],
+  "Glyph": null
+}

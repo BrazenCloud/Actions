@@ -1,0 +1,10 @@
+{
+  "Description": "Runs the tracert command.",
+  "Language": "Executable",
+  "Tags": [
+    "Utilities",
+    "tracert",
+    "Windows"
+  ],
+  "Glyph": null
+}

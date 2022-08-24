@@ -15,5 +15,9 @@ Runs the CyLR live response collection tool.
 
 ## Parameters
 
-None specified.
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: -od ..\results
 <!-- endregion -->

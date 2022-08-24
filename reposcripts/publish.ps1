@@ -3,15 +3,20 @@ param (
     [string]$Server = 'portal.runway.host',
     [string]$BasePublishPath = './',
     [string]$UtilityPath = './runway.bin',
-    [switch]$Public
+    [switch]$Public,
+    [string]$NameSpacePrefix
 )
 
 $baseDir = Get-Item $PSScriptRoot/../
 foreach ($manifest in (Get-ChildItem $BasePublishPath -Filter manifest.txt -Recurse)) {
     
     # Determine namespace based on folder structure
-    $rPath = $manifest.FullName.Replace($baseDir.FullName, '').Trim('\/')
-    $namespace = ($rPath -split '\\|\/' | Select-Object -SkipLast 1) -join ':'
+    if ($NameSpacePrefix.Length -gt 0) {
+        $namespace = $NameSpacePrefix + ':' + $manifest.Directory.Name
+    } else {
+        $rPath = $manifest.FullName.Replace($baseDir.FullName, '').Trim('\/')
+        $namespace = ($rPath -split '\\|\/' | Select-Object -SkipLast 1) -join ':'
+    }
     Write-Host "----------------------------------------------"
     Write-Host "Found: '$rPath', publishing as '$namespace'..."
     

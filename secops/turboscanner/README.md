@@ -6,8 +6,8 @@ Turboscanner will scan for localhost services running and articulate cpu usage.
 ## Metadata
 
 - Tags:
-  - Template
   - Executable
+  - turboscanner
   - Windows
 - Language: Executable
 - Supported Operating Systems:
@@ -15,5 +15,9 @@ Turboscanner will scan for localhost services running and articulate cpu usage.
 
 ## Parameters
 
-None specified.
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: localhost
 <!-- endregion -->

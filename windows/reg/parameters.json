@@ -1,0 +1,93 @@
+[
+  {
+    "Name": "QUERY",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to QUERY",
+    "IsOptional": true
+  },
+  {
+    "Name": "ADD",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to ADD",
+    "IsOptional": true
+  },
+  {
+    "Name": "DELETE",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to DELETE",
+    "IsOptional": true
+  },
+  {
+    "Name": "COPY",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to COPY",
+    "IsOptional": true
+  },
+  {
+    "Name": "SAVE",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to SAVE",
+    "IsOptional": true
+  },
+  {
+    "Name": "RESTORE",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to RESTORE",
+    "IsOptional": true
+  },
+  {
+    "Name": "LOAD",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to LOAD",
+    "IsOptional": true
+  },
+  {
+    "Name": "UNLOAD",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to UNLOAD",
+    "IsOptional": true
+  },
+  {
+    "Name": "COMPARE",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to COMPARE",
+    "IsOptional": true
+  },
+  {
+    "Name": "EXPORT",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to EXPORT",
+    "IsOptional": true
+  },
+  {
+    "Name": "IMPORT",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to IMPORT",
+    "IsOptional": true
+  },
+  {
+    "Name": "FLAGS",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "Choose one parameter! Passes a value to FLAGS",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]

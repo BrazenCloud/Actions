@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Count",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The number of queries to send.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Resolve address to hostname",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Resolves addresses to hostnames.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Target",
+    "Type": 0,
+    "DefaultValue": null,
+    "Description": "The target to ping.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "-n 4 1.1.1.1",
+    "Description": "If edited, this take precedence over all other parameters.",
+    "IsOptional": true
+  }
+]
