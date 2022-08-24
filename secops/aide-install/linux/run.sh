@@ -24,7 +24,10 @@ fi
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
-aideinit -y >> ../results/aidinit.txt
-aide -i >> ../results/aide-init.txt
-aide -u >> ../results/aide-update.txt
+echo doinginitinstall
+aideinit --config /etc/aide/aide.conf -y >> ../results/aidinit.txt
+echo doingaideinitdb
+aide --config /etc/aide/aide.conf -i >> ../results/aide-init.txt
+echo doingaide
+aide --config /etc/aide/aide.conf -u >> ../results/aide-update.txt
 
