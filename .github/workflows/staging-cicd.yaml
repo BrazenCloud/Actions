@@ -24,7 +24,7 @@ jobs:
 
       - name: Auth to Runway
         run: |
-          ./runway.bin -S staging.runway.host login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
+          ./runway.bin -S staging.brazencloud.com login -u ${{ secrets.RUNWAY_EMAIL }} -p ${{ secrets.RUNWAY_PASSWORD }}
 
       - name: Test Each Action
         shell: pwsh
