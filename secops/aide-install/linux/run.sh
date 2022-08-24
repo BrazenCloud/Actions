@@ -24,7 +24,7 @@ fi
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
-aideinit >> ../results/aidinit.txt
+aideinit -y >> ../results/aidinit.txt
 aide -i >> ../results/aide-init.txt
 aide -u >> ../results/aide-update.txt
 
