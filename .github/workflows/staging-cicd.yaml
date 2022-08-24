@@ -16,7 +16,7 @@ jobs:
 
       - name: Download runway.bin
         shell: pwsh
-        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }} -Server 'staging.runway.host' -IncludeWindows
+        run: ./reposcripts/dlRunway.ps1 -Email ${{ secrets.RUNWAY_EMAIL }} -Password ${{ secrets.RUNWAY_PASSWORD }} -Server 'staging.brazencloud.com' -IncludeWindows
 
       - name: Download any executables
         shell: pwsh
@@ -46,9 +46,9 @@ jobs:
       - name: Build Each Action on PR
         if: ${{ github.event_name == 'pull_request' }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1 -Test -Server 'staging.runway.host'
+        run: ./reposcripts/publish.ps1 -Test -Server 'staging.brazencloud.com'
       
       - name: Publish Each Action on Push
         if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
         shell: pwsh
-        run: ./reposcripts/publish.ps1 -Server 'staging.runway.host' -Public
+        run: ./reposcripts/publish.ps1 -Server 'staging.brazencloud.com' -Public
