@@ -46,6 +46,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [deploy:msi](deploy/msi)
   - [deploy:runway](deploy/runway)
 - download
+  - [download:brazencloudIndex](download/brazencloudIndex)
   - [download:combine](download/combine)
   - [download:elastic](download/elastic)
   - [download:file](download/file)
