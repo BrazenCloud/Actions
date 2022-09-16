@@ -1,0 +1,10 @@
+{
+    "Description": "Download results into a BrazenCloud index.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Connector",
+        "BrazenCloud",
+        "Windows"
+    ],
+    "Glyph": "cloud-download"
+}
