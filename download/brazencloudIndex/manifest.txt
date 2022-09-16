@@ -1,0 +1,2 @@
+COPY . .
+RUN_WIN "powershell.exe -ExecutionPolicy Bypass -File .\windows\script.ps1"

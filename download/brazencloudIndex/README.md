@@ -1,13 +1,13 @@
 <!-- region Generated -->
-# deploy:runway
+# download:brazencloudIndex
 
-Deploy runway agent to neighboring hosts.
+Download results into a BrazenCloud index.
 
 ## Metadata
 
 - Tags:
-  - Runway
-  - Deploy
+  - Connector
+  - BrazenCloud
   - Windows
 - Language: PowerShell
 - Supported Operating Systems:
@@ -15,12 +15,8 @@ Deploy runway agent to neighboring hosts.
 
 ## Parameters
 
-- IP Range
+- Index Name
   - Type: String
   - IsOptional: False
-  - DefaultValue: 
-- Enrollment Token
-  - Type: String
-  - IsOptional: False
-  - DefaultValue: 
+  - DefaultValue: {jobId}
 <!-- endregion -->
