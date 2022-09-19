@@ -1,0 +1,8 @@
+[
+    {
+        "Name": "Index Name",
+        "Type": 0,
+        "DefaultValue": "{jobId}",
+        "IsOptional": false
+    }
+]

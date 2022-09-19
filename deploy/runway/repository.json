@@ -1,6 +1,6 @@
 {
   "Description": "Deploy runway agent to neighboring hosts.",
-  "Language": "Python",
+  "Language": "PowerShell",
   "Tags": [
     "Runway",
     "Deploy",
