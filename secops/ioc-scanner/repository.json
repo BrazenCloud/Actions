@@ -1,5 +1,5 @@
 {
-  "Description": "Ioc-scanner can scan for an md5 hash across filesystems.",
+  "Description": "Ioc-scanner can scan for an md5 hash across Linux filesystems.",
   "Language": "via cmdline",
   "Tags": [
     "IOC",
