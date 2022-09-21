@@ -1,9 +1,9 @@
 [
 	
 	{ 
-		"Name":"hosttoscan1",
+		"Name":"Hash",
 		"Type": 0,
-		"DefaultValue":"www.example.com",
+		"DefaultValue":"MD5HASH",
 		"IsOptional":true
 	}
 	

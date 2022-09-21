@@ -1,12 +1,12 @@
 {
-  "Description": "Fastfinder can scan for files across filesystems.",
+  "Description": "Ioc-scanner can scan for an md5 hash across filesystems.",
   "Language": "via cmdline",
   "Tags": [
     "IOC",
     "Filescan",
     "Inventory",
     "Network",
-    "Fastfinder",
+    "ioc-scanner",
     "Linux"
   ]
 }
