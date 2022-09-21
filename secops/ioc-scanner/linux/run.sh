@@ -13,6 +13,7 @@ Hash=$(jq -r '."Hash"' ../settings.json)
 #subnet1=$(jq -r '."Network Subnet"' ../settings.json)
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 chmod +x ./ioc_scanner
+rm hashfile.txt
 echo $Hash >> hashfile.txt
 
 # write nscd cache stats to dns_cache
