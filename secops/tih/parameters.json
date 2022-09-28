@@ -3,19 +3,22 @@
 	{ 
 		"Name":"Hash",
 		"Type": 0,
-		"DefaultValue":"MD5HASH",
+		"DefaultValue":"",
+		"Description":"MD5HASH",
 		"IsOptional":true
 	},
 	{ 
 		"Name":"URL",
 		"Type": 0,
-		"DefaultValue":"URL",
+		"DefaultValue":"",
+		"Description": "URL",
 		"IsOptional":true
 	},
 	{ 
 		"Name":"IPADDRESS",
 		"Type": 0,
-		"DefaultValue":"IPADDRESS",
+		"DefaultValue":"",
+		"Description":"IPADDRESS",
 		"IsOptional":true
 	}
 	

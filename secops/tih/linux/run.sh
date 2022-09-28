@@ -44,7 +44,7 @@ if ! [ -x "$(command -v pip)" ]; then
     fi
 else
     echo "pip already installed"
-
+fi
 
 pip install -r requirements.txt > /dev/null
 chmod +x tih.py
@@ -53,20 +53,22 @@ chmod +x tih.py
 # Hosttoscan=$(jq -r '."Host to scan"' ../settings.json)
 # SkipHealthCheck=$(jq -r '."Skip Health Check"' ../settings.json)
 # CustomParameters=$(jq -r '."Custom Parameters"' ../settings.json)
+
 Hash=$(jq -r '."Hash"' ../settings.json)
 URL=$(jq -r '."URL"' ../settings.json)
+IPADDRESS=$(jq -r '."IPADDRESS"' ../settings.json)
 
 if [ ! -z "$Hash" ]; then
     tih.py -md5 $Hash >> ../results/$Hash.txt;
-    fi
+fi
 
-    if [ ! -z "$URL" ] ; then
+if [ ! -z "$URL" ] ; then
     tih.py -url $URL >> ../results/$URL.txt;
-    fi
+fi
 
-    if [ ! -z "$IPADDRESS" ] ; then
+if [ ! -z "$IPADDRESS" ] ; then
     tih.py -ip $IPADDRESS >> ../results/$IPADDRESS.txt;
-    fi
+fi
 
 
 
