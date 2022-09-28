@@ -46,7 +46,7 @@ else
     echo "pip already installed"
 fi
 
-pipinstall -r requirements.txt
+pip install -r requirements.txt
 chmod +x tih.py
 
 ## Examples
