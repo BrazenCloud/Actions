@@ -59,15 +59,15 @@ URL=$(jq -r '."URL"' ../settings.json)
 IPADDRESS=$(jq -r '."IPADDRESS"' ../settings.json)
 
 if [ ! -z "$Hash" ]; then
-    tih.py -md5 $Hash >> ../results/hash.txt;
+ python tih.py -md5 $Hash >> ../results/hash.txt;
 fi
 
 if [ ! -z "$URL" ] ; then
-    tih.py -url $URL >> ../results/url.txt;
+python tih.py -url $URL >> ../results/url.txt;
 fi
 
 if [ ! -z "$IPADDRESS" ] ; then
-    tih.py -ip $IPADDRESS >> ../results/ipaddress.txt;
+python tih.py -ip $IPADDRESS >> ../results/ipaddress.txt;
 fi
 
 
