@@ -1,0 +1,8 @@
+{
+    "Description": "Enable S3 Bucket encryption",
+    "Language": "PowerShell",
+    "Tags": [
+        "AWS",
+        "S3"
+    ]
+}

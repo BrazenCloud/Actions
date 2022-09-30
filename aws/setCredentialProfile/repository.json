@@ -1,0 +1,8 @@
+{
+    "Description": "Sets an AWS credential profile",
+    "Language": "PowerShell",
+    "Tags": [
+        "AWS",
+        "Credentials"
+    ]
+}

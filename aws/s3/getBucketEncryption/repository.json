@@ -1,0 +1,8 @@
+{
+    "Description": "Gets S3 Bucket encryption status",
+    "Language": "PowerShell",
+    "Tags": [
+        "AWS",
+        "S3"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "Description": "Gets S3 Buckets",
+    "Language": "PowerShell",
+    "Tags": [
+        "AWS",
+        "S3"
+    ]
+}
