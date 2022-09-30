@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Modules",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "Comma separated list of modules to install.",
+        "IsOptional": false
+    }
+]

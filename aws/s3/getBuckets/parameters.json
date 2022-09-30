@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Access Key",
+        "Type": 3,
+        "IsOptional": false,
+        "Description": "The AWS API Access Key"
+    },
+    {
+        "Name": "Secret Key",
+        "Type": 3,
+        "IsOptional": false,
+        "Description": "The AWS API Secret Key"
+    }
+]

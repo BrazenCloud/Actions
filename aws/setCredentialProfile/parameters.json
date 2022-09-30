@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Access Key",
+        "Type": 3,
+        "IsOptional": false,
+        "Description": "The AWS API Access Key"
+    },
+    {
+        "Name": "Secret Key",
+        "Type": 3,
+        "IsOptional": false,
+        "Description": "The AWS API Secret Key"
+    },
+    {
+        "Name": "Credential Profile Name",
+        "Type": 0,
+        "IsOptional": false,
+        "Description": "The name of the AWS credential profile to assign"
+    }
+]

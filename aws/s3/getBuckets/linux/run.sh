@@ -1,0 +1,1 @@
+pwsh -ExecutionPolicy bypass -file script.ps1
