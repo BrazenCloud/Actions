@@ -2,7 +2,7 @@ $settings = Get-Content .\settings.json | ConvertFrom-Json
 $settings
 
 if ($settings.'Output Type'.ToLower() -match 'tcp|pipe|file') {
-    $rw = '.\windows\runway.exe'
+    $rw = '..\..\..\runway.exe'
     $commandString = "-N -S $($settings.host) stream --listen $($settings.'Stream Name') --output $($settings.'Output Type')://$($settings.Address) --persistent"
     if ($settings.TimeOut) {
         $commandString += " --timeout $($settings.TimeOut)"
