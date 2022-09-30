@@ -1,25 +1,30 @@
 <!-- region Generated -->
-# template:bash
+# secops:debsums
 
-Nikto can scan webservers for common vulnerabilties and directories.
+Validate Linux Packages with Debsums
 
 ## Metadata
 
 - Tags:
-  - Web Security
-  - Portscan
   - Inventory
-  - Network
-  - Nikto
+  - Packages
+  - Validation
+  - debsums
   - Linux
-- Language: via cmdline
+- Language: Generated Bash
 - Supported Operating Systems:
   - Linux
 
 ## Parameters
 
-- hosttoscan1
+- Silent
+  - Description: Silences OK packages.
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: 
+- Custom Parameters
+  - Description: Parameters typed here are passed directly to the command.
   - Type: String
   - IsOptional: True
-  - DefaultValue: www.example.com
+  - DefaultValue: 
 <!-- endregion -->

@@ -1,12 +1,12 @@
 {
-  "Description": "Nikto can scan webservers for common vulnerabilties and directories.",
-  "Language": "via cmdline",
+  "Description": "Validate Linux Packages with Debsums",
+  "Language": "Generated Bash",
   "Tags": [
-    "Web Security",
-    "Portscan",
     "Inventory",
-    "Network",
-    "Nikto",
+    "Packages",
+    "Validation",
+    "debsums",
     "Linux"
-  ]
+  ],
+  "Glyph": null
 }

@@ -1,10 +1,16 @@
 [
-	
-	{ 
-		"Name":"hosttoscan1",
-		"Type": 0,
-		"DefaultValue":"www.example.com",
-		"IsOptional":true
-	}
-	
+  {
+    "Name": "Silent",
+    "Type": 2,
+    "DefaultValue": null,
+    "Description": "Silences OK packages.",
+    "IsOptional": true
+  },
+  {
+    "Name": "Custom Parameters",
+    "Type": 0,
+    "DefaultValue": "",
+    "Description": "Parameters typed here are passed directly to the command.",
+    "IsOptional": true
+  }
 ]
