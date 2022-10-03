@@ -6,11 +6,15 @@ Function Remove-BcDatastoreQuery2 {
         [string]$GroupId = (Get-BcAuthenticationCurrentUser).HomeContainerId,
         #example:  @{query=@{match=@{type='agentInstall'}}}
         [Parameter(Mandatory)]
-        [hashtable]$Query
+        [hashtable]$Query,
+        [string]$Server = $($env:BrazenCloudDomain),
+        [string]$SessionToken = $($env:BrazenCloudSessionToken)
     )
+    # Remove https:// or http:// and any additional forward slashes
+    $Server = ($Server -replace 'https?:\/\/', '').Trim('/')
     $splat = @{
         Method  = 'Delete'
-        Uri     = "https://$($env:BrazenCloudDomain)/api/v2/datastore/$IndexName/delete"
+        Uri     = "https://$Server/api/v2/datastore/$IndexName/delete"
         Body    = @{
             deleteQuery = $Query
             groupId     = $GroupId
@@ -18,7 +22,7 @@ Function Remove-BcDatastoreQuery2 {
         Headers = @{
             Accept         = 'application/json'
             'Content-Type' = 'application/json'
-            Authorization  = "Session $($env:BrazenCloudSessionToken)"
+            Authorization  = "Session $SessionToken"
         }
     }
     Invoke-RestMethod @splat
@@ -64,20 +68,18 @@ $zips | ForEach-Object {
 $auth = Get-BrazenCloudDaemonToken -aToken $settings.atoken -Domain $settings.host
 
 $headers = @{
-    Authorization  = $auth
+    Authorization  = "Session $auth"
     Accept         = 'application/json'
     'Content-Type' = 'application/json'
 }
 
 # Get parent group id
-$group = Invoke-RestMethod -Uri "$($settings.host)/api/v2/jobs/parent-group/$($settings.job_id)" -Headers @{
-    Authorization = "Session $auth"
-}
+$group = Invoke-RestMethod -Uri "$($settings.host)/api/v2/jobs/parent-group/$($settings.job_id)" -Headers $headers
 
 Write-Host "Group: $group"
 
 if ($settings.'Clear Index'.ToString() -eq 'true') {
-    Remove-BcDatastoreQuery2 -GroupId $group -IndexName $settings.'Index Name' -Query @{query = @{match_all = @{} } } -ErrorAction SilentlyContinue | Out-Null
+    Remove-BcDatastoreQuery2 -GroupId $group -IndexName $settings.'Index Name' -Query @{query = @{match_all = @{} } } -ErrorAction SilentlyContinue -SessionToken $auth -Server $settings.host | Out-Null
 }
 
 # Upload results
