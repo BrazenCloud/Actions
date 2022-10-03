@@ -17,6 +17,10 @@ Download results into a BrazenCloud index.
 
 - Index Name
   - Type: String
-  - IsOptional: False
+  - IsOptional: True
   - DefaultValue: {jobId}
+- Clear Index
+  - Type: Boolean
+  - IsOptional: True
+  - DefaultValue: false
 <!-- endregion -->

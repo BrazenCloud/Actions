@@ -1,0 +1,12 @@
+{
+  "Description": "Threat Intelligence Hunter (TIH) can lookup threat indicators with URLVoid and Virustotal and load indicators via files.",
+  "Language": "via cmdline",
+  "Tags": [
+    "IOC",
+    "API",
+    "Threat",
+    "Feeds",
+    "ioc-lookup",
+    "Linux"
+  ]
+}

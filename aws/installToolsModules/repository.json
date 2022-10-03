@@ -1,0 +1,8 @@
+{
+    "Description": "Installs AWS tools modules",
+    "Language": "PowerShell",
+    "Tags": [
+        "AWS",
+        "Tools"
+    ]
+}

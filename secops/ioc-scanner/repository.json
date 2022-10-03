@@ -1,0 +1,12 @@
+{
+  "Description": "Ioc-scanner can scan for an md5 hash across Linux filesystems.",
+  "Language": "via cmdline",
+  "Tags": [
+    "IOC",
+    "Filescan",
+    "Inventory",
+    "Network",
+    "ioc-scanner",
+    "Linux"
+  ]
+}

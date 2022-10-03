@@ -1,0 +1,25 @@
+[
+	
+	{ 
+		"Name":"Hash",
+		"Type": 0,
+		"DefaultValue":"",
+		"Description":"MD5HASH",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"URL",
+		"Type": 0,
+		"DefaultValue":"",
+		"Description": "URL",
+		"IsOptional":true
+	},
+	{ 
+		"Name":"IPADDRESS",
+		"Type": 0,
+		"DefaultValue":"",
+		"Description":"IPADDRESS",
+		"IsOptional":true
+	}
+	
+]

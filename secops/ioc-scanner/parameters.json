@@ -1,0 +1,10 @@
+[
+	
+	{ 
+		"Name":"Hash",
+		"Type": 0,
+		"DefaultValue":"MD5HASH",
+		"IsOptional":true
+	}
+	
+]

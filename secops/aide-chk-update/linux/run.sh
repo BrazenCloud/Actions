@@ -6,5 +6,5 @@ cd "${0%/*}"
 #maxratepps1=$(jq -r '."Network Subnet"' ../settings.json)
 
 # write nscd cache stats to dns_cache
-aide -u >> ../results/aide-update.txt
+aide -c /etc/aide/aide.conf -u >> ../results/aide-update.txt
 
