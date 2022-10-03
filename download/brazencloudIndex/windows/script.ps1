@@ -71,7 +71,7 @@ $headers = @{
 
 # Get parent group id
 $group = Invoke-RestMethod -Uri "$($settings.host)/api/v2/jobs/parent-group/$($settings.job_id)" -Headers @{
-    Authorization = $auth
+    Authorization = "Session $auth"
 }
 
 Write-Host "Group: $group"
