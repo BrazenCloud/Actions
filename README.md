@@ -39,6 +39,12 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [ad:users:getFilter](ad/users/getFilter)
   - [ad:users:new](ad/users/new)
   - [ad:users:remove](ad/users/remove)
+- aws
+  - [aws:installToolsModules](aws/installToolsModules)
+  - [aws:s3:getBucketEncryption](aws/s3/getBucketEncryption)
+  - [aws:s3:getBuckets](aws/s3/getBuckets)
+  - [aws:s3:setBucketEncryption](aws/s3/setBucketEncryption)
+  - [aws:setCredentialProfile](aws/setCredentialProfile)
 - demo
   - [demo:sql:ExportDB](demo/sql/ExportDB)
   - [demo:sql:ImportDB](demo/sql/ImportDB)
@@ -106,6 +112,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:CyLR](secops/CyLR)
   - [secops:debsums](secops/debsums)
   - [secops:fierce](secops/fierce)
+  - [secops:ioc-scanner](secops/ioc-scanner)
   - [secops:lastActivityView](secops/lastActivityView)
   - [secops:loki_memory](secops/loki_memory)
   - [secops:lynis](secops/lynis)
@@ -114,6 +121,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:raccoon](secops/raccoon)
   - [secops:radare2](secops/radare2)
   - [secops:rkhunter](secops/rkhunter)
+  - [secops:tih](secops/tih)
   - [secops:turboscanner](secops/turboscanner)
   - [secops:winpmem](secops/winpmem)
   - [secops:yara_ransomware](secops/yara_ransomware)
