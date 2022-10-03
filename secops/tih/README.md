@@ -1,25 +1,37 @@
 <!-- region Generated -->
-# template:bash
+# secops:tih
 
-Nikto can scan webservers for common vulnerabilties and directories.
+Threat Intelligence Hunter (TIH) can lookup threat indicators with URLVoid and Virustotal and load indicators via files.
 
 ## Metadata
 
 - Tags:
-  - Web Security
-  - Portscan
-  - Inventory
-  - Network
-  - Nikto
+  - IOC
+  - API
+  - Threat
+  - Feeds
+  - ioc-lookup
   - Linux
 - Language: via cmdline
 - Supported Operating Systems:
   - Linux
+  - Windows
 
 ## Parameters
 
-- hosttoscan1
+- Hash
+  - Description: MD5HASH
   - Type: String
   - IsOptional: True
-  - DefaultValue: www.example.com
+  - DefaultValue: 
+- URL
+  - Description: URL
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
+- IPADDRESS
+  - Description: IPADDRESS
+  - Type: String
+  - IsOptional: True
+  - DefaultValue: 
 <!-- endregion -->

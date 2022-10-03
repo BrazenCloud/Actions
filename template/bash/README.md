@@ -1,5 +1,5 @@
 <!-- region Generated -->
-# secops:debsums
+# template:bash
 
 Validate Linux Packages with Debsums
 

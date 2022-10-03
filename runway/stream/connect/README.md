@@ -13,6 +13,7 @@ Connects to a Runway Stream
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
+  - Linux
 
 ## Parameters
 

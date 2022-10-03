@@ -1,25 +1,26 @@
 <!-- region Generated -->
-# template:bash
+# secops:ioc-scanner
 
-Nikto can scan webservers for common vulnerabilties and directories.
+Ioc-scanner can scan for an md5 hash across Linux filesystems.
 
 ## Metadata
 
 - Tags:
-  - Web Security
-  - Portscan
+  - IOC
+  - Filescan
   - Inventory
   - Network
-  - Nikto
+  - ioc-scanner
   - Linux
 - Language: via cmdline
 - Supported Operating Systems:
   - Linux
+  - Windows
 
 ## Parameters
 
-- hosttoscan1
+- Hash
   - Type: String
   - IsOptional: True
-  - DefaultValue: www.example.com
+  - DefaultValue: MD5HASH
 <!-- endregion -->
