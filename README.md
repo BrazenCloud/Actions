@@ -8,6 +8,8 @@ If you are interested in getting a BrazenCloud demo account, please reach out: [
 
 To understand how an Action in BrazenCloud works, please refer to our [Action Developer Guide](https://docs.runway.host/runway-documentation/action-developer-guides/overview).
 
+You'll also notice several `*.ActionBuilder.json` files within the repository. Those are configurations for our [Action Builder](https://github.com/BrazenCloud/ActionBuilder). This allows us to generate simple actions with a straightforward configuration file.
+
 ## Deploying an Action to Runway
 
 To understand how to deploy Actions from a Git repository into BrazenCloud, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd) or, if you are feeling adventurous, feel free to look at our [GitHub workflow definitions here on Github](.github/workflows/).
