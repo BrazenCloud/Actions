@@ -1,8 +1,8 @@
 # BrazenCloud Actions
 
-This repository is host to all of the Actions for Runway. These are all open source, so feel free to import them into your BrazenCloud tenant for your use.
+This repository is host to all of the Actions for BrazenCloud. These are all open source, so feel free to import them into your BrazenCloud tenant for your use.
 
-You can sign up for a free BrazenCloud account here: [BrazenCloud Portal](https://portal.runway.host/)
+If you are interested in getting a BrazenCloud demo account, please reach out: [info@brazencloud.com](mailto:info@brazencloud.com)
 
 ## Action Development
 
@@ -10,7 +10,7 @@ To understand how an Action in BrazenCloud works, please refer to our [Action De
 
 ## Deploying an Action to Runway
 
-To understand how to deploy Actions from a Git repository into BrazenCloud, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd)
+To understand how to deploy Actions from a Git repository into BrazenCloud, see our [CI/CD Guide](https://docs.runway.host/runway-documentation/action-developer-guides/cicd) or, if you are feeling adventurous, feel free to look at our [GitHub workflow definitions here on Github](.github/workflows/).
 
 ## Action Table of Contents
 <!-- region Generated -->
