@@ -1,0 +1,9 @@
+{
+    "Description": "Installs Falco on Debian and Ubuntu systems",
+    "Language": "Shell",
+    "Tags": [
+        "Falco",
+        "Debian",
+        "Ubuntu"
+    ]
+}
