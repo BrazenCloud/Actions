@@ -11,3 +11,10 @@ yum -y install kernel-devel-$(uname -r)
 
 # Install Falco:
 yum -y install falco
+
+# install driver
+falco-driver-loader
+
+# start service
+systemctl enable falco
+systemctl start falco

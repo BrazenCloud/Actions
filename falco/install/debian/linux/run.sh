@@ -9,3 +9,10 @@ apt-get -y install linux-headers-$(uname -r)
 
 # Install Falco:
 apt-get install -y falco
+
+# install driver
+falco-driver-loader
+
+# start service
+systemctl enable falco
+systemctl start falco
