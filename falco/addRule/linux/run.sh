@@ -36,6 +36,7 @@ rulePath=$(jq -r '."Rule path"' ./settings.json)
 replace=$(jq -r '."Replace"' ./settings.json)
 loadFirst=$(jq -r '."Load first"' ./settings.json)
 restartService=$(jq -r '."Restart Service"' ./settings.json)
+listAdd=$(jq -r '."Do not add to rules list"' ./settings.json)
 
 echo "rulePath: $rulePath"
 echo "replace: $replace"
@@ -56,27 +57,29 @@ fi
 
 falcoPath='/etc/falco/falco.yaml'
 
-if [ "$loadFirst" == 'true' ]; then
-    sed "/rules_file:/a\  - $rulePath" $falcoPath --in-place
-else
-    # this could probably be done with a smart awk or sed command
-    # but doing it this way allows for a load order param that
-    # accepts an integer and placess the rule in that specific
-    # order.
+if [ "$listAdd" != 'true' ]; then
+    if [ "$loadFirst" == 'true' ]; then
+        sed "/rules_file:/a\  - $rulePath" $falcoPath --in-place
+    else
+        # this could probably be done with a smart awk or sed command
+        # but doing it this way allows for a load order param that
+        # accepts an integer and placess the rule in that specific
+        # order.
 
-    # get the line number for 'rules_file:'
-    lineNum=$(grep -n 'rules_file:' $falcoPath | cut -d ':' -f 1)
-    ((lineNum=lineNum+1))
-    # get the line after 'rules_file:'
-    line=$(sed -n "$lineNum"p $falcoPath)
-    # while that line starts with '  - ', indicating another rule
-    # check the next line until a line is found that doesn't
-    while [[ $line =~ ^\ \ -\  ]]; do
+        # get the line number for 'rules_file:'
+        lineNum=$(grep -n 'rules_file:' $falcoPath | cut -d ':' -f 1)
         ((lineNum=lineNum+1))
+        # get the line after 'rules_file:'
         line=$(sed -n "$lineNum"p $falcoPath)
-    done
-    # append the rule path to the bottom of the list
-    sed "${lineNum}i \ \ - $rulePath" $falcoPath --in-place
+        # while that line starts with '  - ', indicating another rule
+        # check the next line until a line is found that doesn't
+        while [[ $line =~ ^\ \ -\  ]]; do
+            ((lineNum=lineNum+1))
+            line=$(sed -n "$lineNum"p $falcoPath)
+        done
+        # append the rule path to the bottom of the list
+        sed "${lineNum}i \ \ - $rulePath" $falcoPath --in-place
+    fi
 fi
 
 if [ "$restartService" == 'true' ]; then
