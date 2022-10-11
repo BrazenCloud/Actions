@@ -42,7 +42,8 @@ echo "loadFirst: $loadFirst"
 
 if [ -f $rulePath ]; then
     echo "rulePath already exists."
-    if [ $replace == 'true' ]; then
+    if [ "$replace" == 'true' ]; then
+        echo "replacing..."
         echo "$rules" > $rulePath
     else
         echo 'Rule file already exists, cannot continue unless Replace is selected.'
@@ -54,7 +55,7 @@ fi
 
 falcoPath='/etc/falco/falco.yaml'
 
-if [ $loadFirst == 'true' ]; then
+if [ "$loadFirst" == 'true' ]; then
     sed "/rules_file:/a\  - $rulePath" $falcoPath --in-place
 else
     # this could probably be done with a smart awk or sed command
@@ -70,7 +71,6 @@ else
     # while that line starts with '  - ', indicating another rule
     # check the next line until a line is found that doesn't
     while [[ $line =~ ^\ \ -\  ]]; do
-        echo $lineNum
         ((lineNum=lineNum+1))
         line=$(sed -n "$lineNum"p $falcoPath)
     done

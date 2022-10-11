@@ -20,7 +20,6 @@ done
 # check if jq is installed
 if ! [ -x "$(command -v jq)" ]; then
     echo "Installing jq"
-
     # check for sudo, install
     if [ -x "$(command -v sudo)" ]; then
         sudo $pman install jq -y
