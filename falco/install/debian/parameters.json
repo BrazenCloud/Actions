@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Install Service",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If checked, will start the service.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Start Service",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If checked, will start the service.",
+        "IsOptional": false
+    }
+]
