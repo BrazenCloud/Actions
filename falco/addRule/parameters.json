@@ -14,10 +14,17 @@
         "IsOptional": true
     },
     {
-        "Name": "Replace",
+        "Name": "Replace rules file",
         "Type": 2,
         "DefaultValue": null,
         "Description": "If checked, will replace the rule file if exists.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Do not add to rules list",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If checked, the file will not be added to the rules list.",
         "IsOptional": true
     },
     {

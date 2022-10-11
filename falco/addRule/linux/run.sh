@@ -33,7 +33,7 @@ fi
 
 rules=$(jq -r '."Rules"' ./settings.json)
 rulePath=$(jq -r '."Rule path"' ./settings.json)
-replace=$(jq -r '."Replace"' ./settings.json)
+replace=$(jq -r '."Replace rules file"' ./settings.json)
 loadFirst=$(jq -r '."Load first"' ./settings.json)
 restartService=$(jq -r '."Restart Service"' ./settings.json)
 listAdd=$(jq -r '."Do not add to rules list"' ./settings.json)
