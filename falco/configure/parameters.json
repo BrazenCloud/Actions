@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Configuration",
+        "Type": 0,
+        "DefaultValue": null,
+        "Description": "Configuration in YAML format. Will replace falco.yaml",
+        "IsOptional": false
+    }
+]

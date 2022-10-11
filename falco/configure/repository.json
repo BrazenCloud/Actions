@@ -1,0 +1,7 @@
+{
+    "Description": "Applies a new yaml config to Falco.",
+    "Language": "Bash",
+    "Tags": [
+        "Falco"
+    ]
+}
