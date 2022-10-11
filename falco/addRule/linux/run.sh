@@ -42,8 +42,8 @@ echo "loadFirst: $loadFirst"
 
 if [ -f $rulePath ]; then
     echo "rulePath already exists."
-    if $replace == 'true'; then
-        "$rules" > $rulePath
+    if [ $replace == 'true' ]; then
+        echo "$rules" > $rulePath
     else
         echo 'Rule file already exists, cannot continue unless Replace is selected.'
         return 1
