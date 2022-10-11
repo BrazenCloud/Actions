@@ -43,18 +43,18 @@ echo "loadFirst: $loadFirst"
 if [ -f $rulePath ]; then
     echo "rulePath already exists."
     if $replace == 'true'; then
-        $rules > $rulePath
+        "$rules" > $rulePath
     else
         echo 'Rule file already exists, cannot continue unless Replace is selected.'
         return 1
     fi
 else
-    $rules > $rulePath
+    echo "$rules" > $rulePath
 fi
 
 falcoPath='/etc/falco/falco.yaml'
 
-if $loadFirst == 'true'; then
+if [ $loadFirst == 'true' ]; then
     sed "/rules_file:/a\  - $rulePath" $falcoPath --in-place
 else
     # this could probably be done with a smart awk or sed command

@@ -37,16 +37,16 @@ start=0
 # if falco is running, stop it
 if pgrep -x "falco" >/dev/null; then
     systemctl stop falco
-    start=1
+    start="1"
 fi
 
 if [ -f /etc/falco/falco.yaml ]; then
-    $config > /etc/falco/falco.yaml
+    echo "$config" > /etc/falco/falco.yaml
 else
     echo "Unable to update Falco config. Path does not exist: /etc/falco/falco.yaml"
 fi
 
 # if falco was stopped, start it back up
-if $start == 1; then
+if [ $start == 1 ]; then
     systemctl start falco
 fi
