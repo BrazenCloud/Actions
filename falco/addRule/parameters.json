@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "Rules",
+        "Type": 0,
+        "DefaultValue": null,
+        "Description": "Rule in YAML format.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Rule path",
+        "Type": 0,
+        "DefaultValue": null,
+        "Description": "If exists, will append",
+        "IsOptional": true
+    },
+    {
+        "Name": "Replace",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If checked, will replace the rule file if exists.",
+        "IsOptional": true
+    },
+    {
+        "Name": "Load first",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If checked, will put the new rule at the top of the rule list.",
+        "IsOptional": true
+    }
+]
