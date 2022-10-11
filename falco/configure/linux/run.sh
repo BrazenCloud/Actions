@@ -31,13 +31,7 @@ else
 fi
 
 config=$(jq -r '."Configuration"' ./settings.json)
-
-start=0
-# if falco is running, stop it
-if pgrep -x "falco" >/dev/null; then
-    systemctl stop falco
-    start="1"
-fi
+restartService=$(jq -r '."Restart Service"' ./settings.json)
 
 if [ -f /etc/falco/falco.yaml ]; then
     echo "$config" > /etc/falco/falco.yaml
@@ -45,7 +39,7 @@ else
     echo "Unable to update Falco config. Path does not exist: /etc/falco/falco.yaml"
 fi
 
-# if falco was stopped, start it back up
-if [ $start == 1 ]; then
-    systemctl start falco
+# restart if requested
+if [ "$restartService" == 'true' ]; then
+    systemctl restart falco
 fi

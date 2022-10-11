@@ -35,6 +35,7 @@ rules=$(jq -r '."Rules"' ./settings.json)
 rulePath=$(jq -r '."Rule path"' ./settings.json)
 replace=$(jq -r '."Replace"' ./settings.json)
 loadFirst=$(jq -r '."Load first"' ./settings.json)
+restartService=$(jq -r '."Restart Service"' ./settings.json)
 
 echo "rulePath: $rulePath"
 echo "replace: $replace"
@@ -76,4 +77,8 @@ else
     done
     # append the rule path to the bottom of the list
     sed "${lineNum}i \ \ - $rulePath" $falcoPath --in-place
+fi
+
+if [ "$restartService" == 'true' ]; then
+    systemctl restart falco
 fi

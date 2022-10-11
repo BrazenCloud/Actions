@@ -5,5 +5,12 @@
         "DefaultValue": null,
         "Description": "Configuration in YAML format. Will replace falco.yaml",
         "IsOptional": false
+    },
+    {
+        "Name": "Restart Service",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "If checked, will restart the Falco service.",
+        "IsOptional": false
     }
 ]

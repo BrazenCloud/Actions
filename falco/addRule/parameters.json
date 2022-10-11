@@ -26,5 +26,12 @@
         "DefaultValue": null,
         "Description": "If checked, will put the new rule at the top of the rule list.",
         "IsOptional": true
+    },
+    {
+        "Name": "Restart Service",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "If checked, will restart the Falco service.",
+        "IsOptional": false
     }
 ]
