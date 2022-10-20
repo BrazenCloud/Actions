@@ -103,13 +103,10 @@ for file in *; do
         continue
     fi
     echo "uploading file: $file"
-    value=$(<$file)
+    # load file
     value=$(sudo sed -e 's/\}$/\},/' $file)
-    data="{\"groupId\":\"$group\",\"data\":[${value%?}]}"
-    echo "data:"
-    echo "$data"
     curl -X POST -H "Authorization:Session $auth" \
         -H "accept:application/json" -H "content-type:application/json" \
-        -d "{\"groupId\":\"$group\",\"data\":[${value%?}]}" \
-        "$host/api/v2/datastore/$indexName/bulk"
+        -d "[${value%?}]" \
+        "$host/api/v2/datastore/$indexName/$group/bulk"
 done
