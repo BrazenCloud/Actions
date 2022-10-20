@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Computer Name",
+        "Description": "To retrieve services from remote devices.",
+        "Type": 0,
+        "IsOptional": true,
+        "DefaultValue": ""
+    },
+    {
+        "Name": "Output Type",
+        "Description": "csv or json.",
+        "Type": 0,
+        "IsOptional": true,
+        "DefaultValue": "csv"
+    }
+]
