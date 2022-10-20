@@ -26,12 +26,16 @@ foreach ($cn in ($computerNames | Select-Object -Unique)) {
             Write-Error -Message "Unable to contact $cn. Please verify its network connectivity and try again." -Category ObjectNotFound -TargetObject $cn
             Break
         }
-        Get-Service
+        Get-Service -ComputerName $cn
+    }
+
+    if ($settings.'Add computer name to output'.ToString() -eq 'true') {
+        $services = $services | Select-Object *, @{Name = 'ComputerName'; Expression = { $cn } }
     }
 
     # Output to .\results
     switch ($outputType) {
-        'csv' { $services | Export-Csv ".\results\$cn-services.csv" -Encoding UTF8 }
+        'csv' { $services | Export-Csv ".\results\$cn-services.csv" -NoTypeInformation -Encoding UTF8 }
         'json' { $services | ConvertTo-Json -Depth 5 | Out-File ".\results\$cn-services.json" -Encoding UTF8 }
     }
 }

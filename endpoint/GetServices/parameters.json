@@ -12,5 +12,12 @@
         "Type": 0,
         "IsOptional": true,
         "DefaultValue": "csv"
+    },
+    {
+        "Name": "Add computer name to output",
+        "Description": "If checked, adds the computer name to each output object.",
+        "Type": 2,
+        "IsOptional": true,
+        "DefaultValue": "false"
     }
 ]
