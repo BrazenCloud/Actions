@@ -1,9 +1,16 @@
 [
     {
-        "Name":"Output Type",
+        "Name": "Computer Name",
+        "Description": "To retrieve installed software from remote devices.",
+        "Type": 0,
+        "IsOptional": true,
+        "DefaultValue": ""
+    },
+    {
+        "Name": "Output Type",
         "Description": "csv or json.",
         "Type": 0,
-        "IsOptional":true,
+        "IsOptional": true,
         "DefaultValue": "csv"
     }
 ]
