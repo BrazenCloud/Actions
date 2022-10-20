@@ -177,11 +177,11 @@ $actions = & {
     }
 
     @{
-        RepositoryActionId = (Get-BcRepository 'download:combine').Id
+        RepositoryActionId = (Get-BcRepository -Name 'download:combine').Id
     }
 
     @{
-        RepositoryActionId = (Get-BcRepository 'download:brazencloudIndex').Id
+        RepositoryActionId = (Get-BcRepository -Name 'download:brazencloudIndex').Id
         Settings           = @{
             'Index Name' = $settings.'Index Name'
         }
