@@ -17,7 +17,7 @@ $computerNames = & {
 $cuHive = [Microsoft.Win32.RegistryHive]::CurrentUser
 $lmHive = [Microsoft.Win32.RegistryHive]::LocalMachine
 
-foreach ($cn in $computerNames) {
+foreach ($cn in ($computerNames | Select-Object -Unique)) {
     # Script
     $searchKeys = "Software\Microsoft\Windows\CurrentVersion\Uninstall", "SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
     $hives = @{}

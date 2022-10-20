@@ -15,7 +15,7 @@ $computerNames = & {
     $env:COMPUTERNAME
 }
 
-foreach ($cn in $computerNames) {
+foreach ($cn in ($computerNames | Select-Object -Unique)) {
     # Script
     $searchKeys = "Software\Microsoft\Windows\CurrentVersion\Uninstall", "SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
     $hives = @{}
