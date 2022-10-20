@@ -47,7 +47,6 @@ foreach ($cn in ($computerNames | Select-Object -Unique)) {
                                 "UninstallCommand" = $sub.GetValue("UninstallString")
                                 "InstallDate"      = $sub.GetValue("InstallDate")
                                 "RegPath"          = $sub.ToString()
-                                "ComputerName"     = $env:computername
                             }
                         }
                     }
@@ -56,12 +55,16 @@ foreach ($cn in ($computerNames | Select-Object -Unique)) {
         }
     }
     $woFilter = { $null -ne $_.name -AND $_.SystemComponent -ne "1" -AND $null -eq $_.ParentKeyName }
-    $props = 'Name', 'Version', 'ComputerName', 'Installdate', 'UninstallCommand', 'RegPath'
+    $props = 'Name', 'Version', 'Installdate', 'UninstallCommand', 'RegPath'
     $masterKeys = ($masterKeys | Where-Object $woFilter | Select-Object $props | Sort-Object Name)
+
+    if ($settings.'Add computer name to output'.ToString() -eq 'true') {
+        $masterKeys = $masterKeys | Select-Object *, @{Name = 'ComputerName'; Expression = { $cn } }
+    }
 
     # Output to .\results
     switch ($outputType) {
-        'csv' { $masterKeys | Export-Csv ".\results\$cn-installedsw.csv" -Encoding UTF8 }
+        'csv' { $masterKeys | Export-Csv ".\results\$cn-installedsw.csv" -NoTypeInformation -Encoding UTF8 }
         'json' { $masterKeys | ConvertTo-Json -Depth 3 | Out-File ".\results\$cn-installedsw.json" -Encoding UTF8 }
     }
 }
