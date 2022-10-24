@@ -151,13 +151,24 @@ $ea = Get-BcEndpointAssetHelper -All -GroupId $group | Where-Object { $_.Endpoin
 #Remove-BcDatastoreQuery2 -GroupId $group -IndexName $settings.'Index Name' -Query @{query = @{match_all = @{} } }
 
 Write-Host 'Building job...'
+$conSplat = @{
+    Name     = 'TMP DAI Connector'
+    ActionId = (Get-BcRepository -Name 'download:brazencloudIndex').Id
+    GroupId  = $group
+    RunnerId = $settings.identity
+    IsHidden = $false
+    Settings = @{
+        'Index Name' = $settings.'Index Name'
+    }
+}
+$connector = New-BcConnection @conSplat
 $actions = & {
     # create installed software action
     if ($settings.'Inventory Software'.ToString() -eq 'true') {
         @{
             RepositoryActionId = (Get-BcRepository -Name 'endpoint:getInstalledSoftware').Id
             Settings           = @{
-                'Computer Name'               = ($ea.Name -join ',')
+                'Computer Name'               = (($ea.Name | Select-Object -First 2) -join ',')
                 'Output Type'                 = 'json'
                 'Add computer name to output' = 'true'
             }
@@ -169,7 +180,7 @@ $actions = & {
         @{
             RepositoryActionId = (Get-BcRepository -Name 'endpoint:getServices').Id
             Settings           = @{
-                'Computer Name'               = ($ea.Name -join ',')
+                'Computer Name'               = (($ea.Name | Select-Object -First 2) -join ',')
                 'Output Type'                 = 'json'
                 'Add computer name to output' = 'true'
             }
@@ -182,6 +193,7 @@ $actions = & {
 
     @{
         RepositoryActionId = (Get-BcRepository -Name 'download:brazencloudIndex').Id
+        ConnectionId       = $connector
         Settings           = @{
             'Index Name' = $settings.'Index Name'
         }
