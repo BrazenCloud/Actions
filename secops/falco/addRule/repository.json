@@ -1,0 +1,7 @@
+{
+    "Description": "Adds a new rule to Falco.",
+    "Language": "Bash",
+    "Tags": [
+        "Falco"
+    ]
+}

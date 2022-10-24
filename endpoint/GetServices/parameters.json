@@ -1,7 +1,7 @@
 [
     {
         "Name": "Computer Name",
-        "Description": "To retrieve installed software from remote devices.",
+        "Description": "To retrieve services from remote devices.",
         "Type": 0,
         "IsOptional": true,
         "DefaultValue": ""

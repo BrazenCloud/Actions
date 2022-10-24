@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "JSON Only",
+        "Type": 2,
+        "DefaultValue": false,
+        "Description": "Only collect the file if it is in JSON format",
+        "IsOptional": true
+    },
+    {
+        "Name": "Delete file",
+        "Type": 2,
+        "DefaultValue": true,
+        "Description": "If selected, will delete the file after retrieving it.",
+        "IsOptional": true
+    }
+]

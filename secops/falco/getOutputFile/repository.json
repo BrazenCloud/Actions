@@ -1,0 +1,7 @@
+{
+    "Description": "Retrieves the output file from Falco based on the config.",
+    "Language": "Bash",
+    "Tags": [
+        "Falco"
+    ]
+}

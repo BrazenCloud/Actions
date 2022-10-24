@@ -1,0 +1,11 @@
+{
+    "Description": "Install Falco on RHEL / CentOS / Fedora / Amazon Linux",
+    "Language": "Shell",
+    "Tags": [
+        "Falco",
+        "RHEL",
+        "CentOS",
+        "Fedora",
+        "Amazon Linux"
+    ]
+}
