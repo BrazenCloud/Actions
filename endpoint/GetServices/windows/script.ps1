@@ -36,6 +36,6 @@ foreach ($cn in ($computerNames | Select-Object -Unique)) {
     # Output to .\results
     switch ($outputType) {
         'csv' { $services | Export-Csv ".\results\$cn-services.csv" -NoTypeInformation -Encoding UTF8 }
-        'json' { $services | ConvertTo-Json -Depth 5 | Out-File ".\results\$cn-services.json" -Encoding UTF8 }
+        'json' { $services | ConvertTo-Json -Depth 3 | Out-File ".\results\$cn-services.json" -Encoding UTF8 }
     }
 }
