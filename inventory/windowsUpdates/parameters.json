@@ -1,5 +1,12 @@
 [
     {
+        "Name": "Available Updates",
+        "Description": "Only show available updates.",
+        "Type": 2,
+        "IsOptional": true,
+        "DefaultValue": "false"
+    },
+    {
         "Name": "History in days",
         "Description": "Number of days in the past to search the Windows update history.",
         "Type": 1,
