@@ -1,12 +1,17 @@
 [
-	{
-		"Name":"Patch ID (KB)",
-		"Type": 0,
-		"IsOptional":true
-	},
-	{
-		"Name":"Reboot",
-		"Type": 2,
-		"IsOptional":true
-	}
+    {
+        "Name": "All",
+        "Type": 2,
+        "IsOptional": true
+    },
+    {
+        "Name": "KB",
+        "Type": 0,
+        "IsOptional": true
+    },
+    {
+        "Name": "Reboot",
+        "Type": 2,
+        "IsOptional": true
+    }
 ]
