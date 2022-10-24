@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "History in days",
+        "Description": "Number of days in the past to search the Windows update history.",
+        "Type": 1,
+        "IsOptional": true,
+        "DefaultValue": "365"
+    }
+]

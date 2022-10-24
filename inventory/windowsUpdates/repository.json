@@ -1,0 +1,8 @@
+{
+    "Description": "Lists out Windows Updates.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Windows",
+        "Updates"
+    ]
+}
