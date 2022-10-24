@@ -1,0 +1,9 @@
+{
+    "Description": "Run a network sniffer using TShark.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Network",
+        "Sniffer",
+        "PCAP"
+    ]
+}

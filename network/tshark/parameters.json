@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "Interface Index",
+        "Type": 1,
+        "DefaultValue": "4",
+        "Description": "Index of the interface to sniff",
+        "IsOptional": false
+    },
+    {
+        "Name": "Output File",
+        "Type": 0,
+        "DefaultValue": "output.pcap",
+        "Description": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Auto Stop Condition",
+        "Type": 0,
+        "DefaultValue": "duration:10",
+        "Description": "Stop when duration:SEC, filesize:KB, files:COUNT, or packets:NUM",
+        "IsOptional": false
+    },
+    {
+        "Name": "Buffer",
+        "Type": 0,
+        "DefaultValue": "duration:5",
+        "Description": "Switch to next file when duration:SEC, filesize:KB, files:COUNT, packets:COUNT, interval:SEC",
+        "IsOptional": false
+    }
+]
