@@ -1,0 +1,9 @@
+{
+    "Description": "Inventory discovered assets on a Windows network.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Inventory",
+        "Assets",
+        "Windows"
+    ]
+}
