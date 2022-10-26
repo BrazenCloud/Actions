@@ -1,0 +1,10 @@
+{
+    "Description": "Collects a file",
+    "Language": "PowerShell",
+    "Tags": [
+      "Connector",
+      "File",
+      "Windows"
+    ],
+    "Glyph": "cloud-upload"
+  }
