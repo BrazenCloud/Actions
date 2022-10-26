@@ -44,6 +44,7 @@ else
 fi
 
 filePath=$(jq -r '."File Path"' ./settings.json)
+host=$(jq -r '."host"' ./settings.json)
 
 # download the results file
 mkdir ./out

@@ -1,8 +1,9 @@
 {
     "Description": "Deploys a file from a previous action.",
-    "Language": "PowerShell",
+    "Language": "PowerShell/Bash",
     "Tags": [
-      "File",
-      "Windows"
+        "File",
+        "Windows",
+        "Linux"
     ]
-  }
+}

@@ -1,10 +1,11 @@
 {
-    "Description": "Collects a file",
-    "Language": "PowerShell",
+    "Description": "Uploads a file to BrazenCloud as results.",
+    "Language": "PowerShell/Bash",
     "Tags": [
-      "Connector",
-      "File",
-      "Windows"
+        "Connector",
+        "File",
+        "Windows",
+        "Linux"
     ],
     "Glyph": "cloud-upload"
-  }
+}
