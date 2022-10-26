@@ -1,7 +1,7 @@
 param (
     [string]$Email,
     [string]$Password,
-    [string]$Server = 'portal.runway.host',
+    [string]$Server = 'portal.brazencloud.com',
     [switch]$IncludeWindows
 )
 
