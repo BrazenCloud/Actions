@@ -1,16 +1,69 @@
-#!/bin/sh
+#!/bin/bash
 
-cd "${0%/*}"
+# check for current package manager
+declare -A osInfo;
+osInfo[/etc/redhat-release]=yum
+osInfo[/etc/arch-release]=pacman
+osInfo[/etc/gentoo-release]=emerge
+osInfo[/etc/SuSE-release]=zypp
+osInfo[/etc/debian_version]=apt-get
+osInfo[/etc/alpine-release]=apk
 
-pythonCMD="python"
+for f in ${!osInfo[@]}
+do
+    if [[ -f $f ]];then
+        #echo Package manager: ${osInfo[$f]}
+        pman=${osInfo[$f]}
+    fi
+done
 
-if ! [ -x "$(command -v python)" ]; then
-    # no python installed
-    pythonCMD="./python"
-    chmod +x $pythonCMD 
+# check if jq is installed
+if ! [ -x "$(command -v jq)" ]; then
+    echo "Installing jq"
+    # check for sudo, install
+    if [ -x "$(command -v sudo)" ]; then
+        sudo $pman install jq -y
+    else
+        $pman install jq -y
+    fi
+else
+    echo "jq already installed"
 fi
 
-chmod +x ./runway.bin
+# check if unzip is installed
+if ! [ -x "$(command -v unzip)" ]; then
+    echo "Installing unzip"
+    # check for sudo, install
+    if [ -x "$(command -v sudo)" ]; then
+        sudo $pman install unzip -y
+    else
+        $pman install unzip -y
+    fi
+else
+    echo "unzip already installed"
+fi
 
-$pythonCMD download_result.py 
+filePath=$(jq -r '."File Path"' ./settings.json)
+unzip=$(jq -r '."Unzip"' ./settings.json)
+host=$(jq -r '."host"' ./settings.json)
 
+# download the results file
+mkdir ./out
+../../../runway -N -S $host download --directory ./out
+cd ./out
+
+if [ $unzip == 'true' ]; then
+    # expand each of them
+    for zip in *.zip; do
+        unzip $zip
+    done
+
+    for file in *; do
+        echo "Copying $file to $filePath"
+        mv $file $filePath
+    done
+else
+    for zip in *.zip; do
+        mv $zip $filePath
+    done
+fi

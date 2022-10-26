@@ -1,13 +1,14 @@
 [
-	{
-		"Name":"Use Path",
-		"Type": 2,
-		"IsOptional":true
-	},
-	{ 
-		"Name":"Path",
-		"Type": 0,
-		"DefaultValue":"",
-		"IsOptional":true
-	}
+    {
+        "Name": "File Path",
+        "Type": 0,
+        "DefaultValue": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Unzip",
+        "Type": 2,
+        "DefaultValue": "true",
+        "IsOptional": true
+    }
 ]
