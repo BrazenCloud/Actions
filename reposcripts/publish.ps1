@@ -1,6 +1,6 @@
 param (
     [switch]$Test,
-    [string]$Server = 'portal.runway.host',
+    [string]$Server = 'portal.brazencloud.com',
     [string]$BasePublishPath = './',
     [string]$UtilityPath = './runway.bin',
     [switch]$Public,
