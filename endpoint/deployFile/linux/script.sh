@@ -44,7 +44,6 @@ else
 fi
 
 filePath=$(jq -r '."File Path"' ./settings.json)
-unzip=$(jq -r '."Unzip"' ./settings.json)
 host=$(jq -r '."host"' ./settings.json)
 
 # download the results file
@@ -52,18 +51,12 @@ mkdir ./out
 ../../../runway -N -S $host download --directory ./out
 cd ./out
 
-if [ $unzip == 'true' ]; then
-    # expand each of them
-    for zip in *.zip; do
-        unzip $zip
-    done
+# expand each of them
+for zip in *.zip; do
+    unzip $zip
+done
 
-    for file in *; do
-        echo "Copying $file to $filePath"
-        mv $file $filePath
-    done
-else
-    for zip in *.zip; do
-        mv $zip $filePath
-    done
-fi
+for file in *; do
+    echo "Copying $file to $filePath"
+    mv $file $filePath
+done

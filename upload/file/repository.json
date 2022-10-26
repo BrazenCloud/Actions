@@ -1,5 +1,5 @@
 {
-    "Description": "Download result information to a central location.",
+    "Description": "Uploads a file to BrazenCloud as results.",
     "Language": "PowerShell/Bash",
     "Tags": [
         "Connector",
@@ -7,5 +7,5 @@
         "Windows",
         "Linux"
     ],
-    "Glyph": "cloud-download"
+    "Glyph": "cloud-upload"
 }
