@@ -7,8 +7,8 @@
 # Match SHA1 signatures of binaries, DNS addresses, or IP addresses to known bad or suspicious threat information.
 # Correlate low frequency process commands to suspicious activities; and improper users by host to activities.
 
-Clear-Host
-$localpath = ".\results" # This is the location where the output files will drop at runtime
+#Clear-Host
+$localpath = "C:\secaudit" # This is the location where the output files will drop at runtime
 $outpath = "c:\windows\temp"
 
 $logtime = (Get-Date -UFormat %s)
@@ -17,20 +17,33 @@ $logtime = (Get-Date -UFormat %s)
 Invoke-Command { mkdir $localpath } -ErrorVariable errmsg 2>$null
 $ErrorActionPreference = 'SilentlyContinue'
 
+$auditDate = Get-Date -UFormat %s
+
+# build caches
+$procHt = @{}
+foreach ($proc in (Get-Process -IncludeUserName)) {
+    $procHt[$proc.Id] = $proc
+}
+$servHt = @{}
+foreach ($service in (Get-CimInstance -class win32_service)) {
+    $servHt[$service.ProcessId] = $service
+}
+
+
 # NetProcMon
 $WP = @{}
 Get-WmiObject Win32_Process | ForEach-Object { $WP[$_.ProcessID] = $_ }
 Get-NetTCPConnection |
     Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, State,
     @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } }, 
-    @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } }, 
+    @{Name = 'AuditDate'; Expression = { $auditDate } }, 
     @{Name = 'PID'; Expression = { $_.OwningProcess } },
-    @{Name = 'Process'; Expression = { (Get-Process -Id $_.OwningProcess).Name } },
-    @{Name = 'UserName'; Expression = { (Get-Process -IncludeUserName -Id $_.OwningProcess).UserName } },
-    @{Name = 'ServiceName'; Expression = { (Get-CimInstance -class win32_service | Where-Object ProcessId -EQ $_.OwningProcess).Name } },
-    @{Name = 'ServiceStartType'; Expression = { (Get-CimInstance -class win32_service | Where-Object ProcessId -EQ $_.OwningProcess).StartMode } },
-    @{Name = 'Path'; Expression = { (Get-Process -Id $_.OwningProcess).Path } }, 
-    @{Name = 'SHA1'; Expression = { (Get-FileHash (Get-Process -Id $_.OwningProcess).Path -Algorithm SHA1 | Select-Object -ExpandProperty Hash) } },
+    @{Name = 'Process'; Expression = { ($procHt[$_.OwningProcess]).Name } },
+    @{Name = 'UserName'; Expression = { ($procHt[$_.OwningProcess]).UserName } },
+    @{Name = 'ServiceName'; Expression = { ($servHt[$_.OwningProcess]).Name } },
+    @{Name = 'ServiceStartType'; Expression = { ($servHt[$_.OwningProcess]).StartMode } },
+    @{Name = 'Path'; Expression = { ($procHt[$_.OwningProcess]).Path } }, 
+    @{Name = 'SHA1'; Expression = { (Get-FileHash ($procHt[$_.OwningProcess]).Path -Algorithm SHA1 | Select-Object -ExpandProperty Hash) } },
     @{Name = 'CommandLine'; Expression = { $WP[[UInt32]$_.OwningProcess].CommandLine } }, 
     @{Name = 'Connected'; Expression = { (Get-Date -UFormat %s $_.CreationTime) } } |
         Select-Object Computername, AuditDate, UserName, PID, Process, ServiceName, Path, 
