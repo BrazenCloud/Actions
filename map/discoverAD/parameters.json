@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Search Base",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "A semicolon separated list of OU paths to search.",
+        "IsOptional": true
+    }
+]

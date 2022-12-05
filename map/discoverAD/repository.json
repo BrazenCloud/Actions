@@ -1,0 +1,9 @@
+{
+    "Description": "Scan AD for hosts to inventory.",
+    "Language": "PowerShell",
+    "Tags": [
+        "AssetDiscovery",
+        "ActiveDirectory",
+        "Windows"
+    ]
+}
