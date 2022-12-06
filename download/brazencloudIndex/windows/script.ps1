@@ -85,11 +85,8 @@ if ($settings.'Clear Index'.ToString() -eq 'true') {
 # Upload results
 Get-ChildItem $outFolder\* -Include *.json, *.ndjson | ForEach-Object {
     Write-Host "Uploading file: $($_.Name)"
-    Write-Host "URI: $($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group/bulk"
-    $body = (Get-Content $_.FullName | ConvertFrom-Json) | ConvertTo-Json -Compress -Depth 10
-    if ($body -notlike '`[*`]') {
-        $body = "[$body]"
-    }
+    Write-Host "URI: $($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group"
+    $body = ((Get-Content $_.FullName | ConvertFrom-Json) | ForEach-Object { ConvertTo-Json $_ -Compress -Depth 10 }) | ConvertTo-Json -Compress
     Write-Host "body: $body"
-    Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group/bulk" -Body $body -Headers $headers
+    Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group" -Body $body -Headers $headers
 }
