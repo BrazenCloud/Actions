@@ -29,6 +29,7 @@ $out = foreach ($service in (Get-CimInstance Win32_Service)) {
         StartName    = $service.StartName
         ServiceType  = $service.ServiceType
         Path         = $path
+        Executable   = $path.Split('\')[-1]
         Hash         = (Get-FileHash -Path $path -Algorithm SHA1).Hash
         ComputerName = $service.SystemName
         State        = $service.State
