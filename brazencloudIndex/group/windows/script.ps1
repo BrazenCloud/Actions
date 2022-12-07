@@ -114,9 +114,26 @@ if ((Get-BcDataStoreIndex -GroupId $targetGroup) -contains $settings.'Target Ind
     Remove-BcDataStoreIndex -IndexName $settings.'Target Index' -GroupId $targetGroup
 }
 
-$items = Invoke-BcQueryDataStoreHelper -IndexName $settings.'Source Index' -GroupId $sourceGroup -QueryString '{ "query": { "match_all": {} } }'
+$from = 0
+$take = 500
+$allItems = & {
+    $dsqSplat = @{
+        IndexName   = $settings.'Source Index'
+        GroupId     = $sourceGroup
+        QueryString = '{ "query": { "match_all": {} } }'
+        From        = 0
+        Take        = $take
+    }
+    $items = Invoke-BcQueryDataStoreHelper @dsqSplat
+    $items
+    while ($items.count -eq $take) {
+        $dsqSplat['From'] = $dsqSplat['From'] + $take
+        $items = Invoke-BcQueryDataStoreHelper @dsqSplat
+        $items
+    }
+}
 
-$grouped = $items | Group-Object -Property $settings.'Group Field'
+$grouped = $allItems | Group-Object -Property $settings.'Group Field'
 
 $out = $grouped | ForEach-Object {
     $item = [pscustomobject]@{
