@@ -1,3 +1,5 @@
+$settings = Get-Content .\settings.json | ConvertFrom-Json
+
 # https://github.com/forgepoint/Audit/blob/master/GBCRA_Win.ps1
 # Cyber Compromise Audit (CRA) FULL - Copyright @2017 All Rights Reserved
 # Updated by Shane Shook 
@@ -320,38 +322,40 @@ Get-ItemProperty -Path hklm:\system\currentcontrolset\enum\usbstor\*\* |
 ## FILES
 
 # 16) SELECT Binary Files
-$ErrorActionPreference = 'SilentlyContinue'
-$localdrives = ([System.IO.DriveInfo]::getdrives() | Where-Object { $_.DriveType -eq 'Fixed' } | Select-Object -ExpandProperty Name)
-foreach ($a in $localdrives) {
-    Get-ChildItem -Path $a'\*' -Force -Include *.dll, *.exe, *.sys -Recurse -ErrorAction "SilentlyContinue" |
-        Where-Object { $_.DirectoryName -notmatch 'common|\\IME\\|\.old\\|recycle|migration|install|setup|migwiz|driverstore|sxs|cache|kb|update|assembly|\.NET' } |
-            <#Where-Object { $_.DirectoryName -notlike '*common*' } |
-                Where-Object { $_.DirectoryName -notlike '*\IME\*' } |
-                    Where-Object { $_.DirectoryName -notlike '*.old\*' } |
-                        Where-Object { $_.DirectoryName -notlike '*recycle*' } |
-                            Where-Object { $_.DirectoryName -notlike '*migration*' } |
-                                Where-Object { $_.DirectoryName -notlike '*install*' } |
-                                    Where-Object { $_.DirectoryName -notlike '*setup*' } |
-                                        Where-Object { $_.DirectoryName -notlike '*migwiz*' } |
-                                            Where-Object { $_.DirectoryName -notlike '*driverstore*' } |
-                                                Where-Object { $_.DirectoryName -notlike '*sxs*' } |
-                                                    Where-Object { $_.DirectoryName -notlike '*cache*' } |
-                                                        Where-Object { $_.DirectoryName -notlike '*kb*' } |
-                                                            Where-Object { $_.DirectoryName -notlike '*update*' } |
-                                                                Where-Object { $_.DirectoryName -notlike '*assembly*' } |
-                                                                    Where-Object { $_.DirectoryName -notlike '*.NET*' } |#>
-            Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
-            @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
-            Name,
-            Length,
-            DirectoryName,
-            @{ Label = "CreationTime"; Expression = { $_.CreationTime | Get-Date -UFormat %s } },
-            @{ Label = "LastWriteTime"; Expression = { $_.LastWriteTime | Get-Date -UFormat %s } },
-            @{ Label = "ProductVersion"; Expression = { ("{0}.{1}.{2}.{3}" -f $_.VersionInfo.FileMajorPart, $_.VersionInfo.FileMinorPart, $_.VersionInfo.FileBuildPart, $_.VersionInfo.FilePrivatePart) } },
-            @{ Label = "FileVersion"; Expression = { $_.VersionInfo.FileVersion } },
-            @{ Label = "Description"; Expression = { $_.VersionInfo.FileDescription } } |
-                ConvertTo-Csv -NoTypeInformation |
-                    Out-File -Append $localpath\"$env:computername"-allfiles.csv -Encoding UTF8 
+if ($settings.'Skip Binary File Audit'.ToString() -ne 'true') {
+    $ErrorActionPreference = 'SilentlyContinue'
+    $localdrives = ([System.IO.DriveInfo]::getdrives() | Where-Object { $_.DriveType -eq 'Fixed' } | Select-Object -ExpandProperty Name)
+    foreach ($a in $localdrives) {
+        Get-ChildItem -Path $a'\*' -Force -Include *.dll, *.exe, *.sys -Recurse -ErrorAction "SilentlyContinue" |
+            Where-Object { $_.DirectoryName -notmatch 'common|\\IME\\|\.old\\|recycle|migration|install|setup|migwiz|driverstore|sxs|cache|kb|update|assembly|\.NET' } |
+                <#Where-Object { $_.DirectoryName -notlike '*common*' } |
+                    Where-Object { $_.DirectoryName -notlike '*\IME\*' } |
+                        Where-Object { $_.DirectoryName -notlike '*.old\*' } |
+                            Where-Object { $_.DirectoryName -notlike '*recycle*' } |
+                                Where-Object { $_.DirectoryName -notlike '*migration*' } |
+                                    Where-Object { $_.DirectoryName -notlike '*install*' } |
+                                        Where-Object { $_.DirectoryName -notlike '*setup*' } |
+                                            Where-Object { $_.DirectoryName -notlike '*migwiz*' } |
+                                                Where-Object { $_.DirectoryName -notlike '*driverstore*' } |
+                                                    Where-Object { $_.DirectoryName -notlike '*sxs*' } |
+                                                        Where-Object { $_.DirectoryName -notlike '*cache*' } |
+                                                            Where-Object { $_.DirectoryName -notlike '*kb*' } |
+                                                                Where-Object { $_.DirectoryName -notlike '*update*' } |
+                                                                    Where-Object { $_.DirectoryName -notlike '*assembly*' } |
+                                                                        Where-Object { $_.DirectoryName -notlike '*.NET*' } |#>
+                Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
+                @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
+                Name,
+                Length,
+                DirectoryName,
+                @{ Label = "CreationTime"; Expression = { $_.CreationTime | Get-Date -UFormat %s } },
+                @{ Label = "LastWriteTime"; Expression = { $_.LastWriteTime | Get-Date -UFormat %s } },
+                @{ Label = "ProductVersion"; Expression = { ("{0}.{1}.{2}.{3}" -f $_.VersionInfo.FileMajorPart, $_.VersionInfo.FileMinorPart, $_.VersionInfo.FileBuildPart, $_.VersionInfo.FilePrivatePart) } },
+                @{ Label = "FileVersion"; Expression = { $_.VersionInfo.FileVersion } },
+                @{ Label = "Description"; Expression = { $_.VersionInfo.FileDescription } } |
+                    ConvertTo-Csv -NoTypeInformation |
+                        Out-File -Append $localpath\"$env:computername"-allfiles.csv -Encoding UTF8 
+    }
 }
 
 # 17) PREFETCH FSDir
