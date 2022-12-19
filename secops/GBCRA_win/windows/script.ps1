@@ -3,17 +3,17 @@
 $version = "20200902" 
 # Runas:  PowerShell.exe -ExecutionPolicy bypass -WindowStyle hidden -File (path to script) 
 
-Clear-Host
+#Clear-Host
 # Variables declared here - adjust to suit the environment
-$localpath = "C:\secaudit" # This is the location where the output files will drop at runtime
+$localpath = ".\results" # This is the location where the output files will drop at runtime
 
 # This is the network share where the script will drop off the zip files
 #$networkshare = "\\ADDC\CRA\" 
 #$outputfile = "\\ADDC\CRA\$env:computername*.zip"
 
 # To use local storage on host just comment out the above two lines and uncomment the following two
-$networkshare = "c:\windows\temp"
-$outputfile = "c:\windows\temp\$env:computername*.zip"
+#$networkshare = ".\results"
+#$outputfile = ".\results\$env:computername*.zip"
 
 $logtime = (Get-Date -UFormat %s)
 #$logtime = (Get-Date)
@@ -22,7 +22,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 
 
 # Check if marker file exists, used to control script execution when linked to GPO/Login 
-If (-Not (Test-Path $outputfile.trim() )) {
+#If (-Not (Test-Path $outputfile.trim() )) {
 
     # PREPARATION
 
@@ -323,7 +323,8 @@ If (-Not (Test-Path $outputfile.trim() )) {
     $localdrives = ([System.IO.DriveInfo]::getdrives() | Where-Object { $_.DriveType -eq 'Fixed' } | Select-Object -ExpandProperty Name)
     foreach ($a in $localdrives) {
         Get-ChildItem -Path $a'\*' -Force -Include *.dll, *.exe, *.sys -Recurse -ErrorAction "SilentlyContinue" |
-            Where-Object { $_.DirectoryName -notlike '*common*' } |
+            Where-Object { $_.DirectoryName -notmatch 'common|\\IME\\|\.old\\|recycle|migration|install|setup|migwiz|driverstore|sxs|cache|kb|update|assembly|\.NET' } |
+                <#Where-Object { $_.DirectoryName -notlike '*common*' } |
                 Where-Object { $_.DirectoryName -notlike '*\IME\*' } |
                     Where-Object { $_.DirectoryName -notlike '*.old\*' } |
                         Where-Object { $_.DirectoryName -notlike '*recycle*' } |
@@ -337,19 +338,19 @@ If (-Not (Test-Path $outputfile.trim() )) {
                                                         Where-Object { $_.DirectoryName -notlike '*kb*' } |
                                                             Where-Object { $_.DirectoryName -notlike '*update*' } |
                                                                 Where-Object { $_.DirectoryName -notlike '*assembly*' } |
-                                                                    Where-Object { $_.DirectoryName -notlike '*.NET*' } |
-                                                                        Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
-                                                                        @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
-                                                                        Name,
-                                                                        Length,
-                                                                        DirectoryName,
-                                                                        @{ Label = "CreationTime"; Expression = { $_.CreationTime | Get-Date -UFormat %s } },
-                                                                        @{ Label = "LastWriteTime"; Expression = { $_.LastWriteTime | Get-Date -UFormat %s } },
-                                                                        @{ Label = "ProductVersion"; Expression = { ("{0}.{1}.{2}.{3}" -f $_.VersionInfo.FileMajorPart, $_.VersionInfo.FileMinorPart, $_.VersionInfo.FileBuildPart, $_.VersionInfo.FilePrivatePart) } },
-                                                                        @{ Label = "FileVersion"; Expression = { $_.VersionInfo.FileVersion } },
-                                                                        @{ Label = "Description"; Expression = { $_.VersionInfo.FileDescription } } |
-                                                                            ConvertTo-Csv -NoTypeInformation |
-                                                                                Out-File -Append $localpath\"$env:computername"-allfiles.csv -Encoding UTF8 
+                                                                    Where-Object { $_.DirectoryName -notlike '*.NET*' } |#>
+                Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
+                @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
+                Name,
+                Length,
+                DirectoryName,
+                @{ Label = "CreationTime"; Expression = { $_.CreationTime | Get-Date -UFormat %s } },
+                @{ Label = "LastWriteTime"; Expression = { $_.LastWriteTime | Get-Date -UFormat %s } },
+                @{ Label = "ProductVersion"; Expression = { ("{0}.{1}.{2}.{3}" -f $_.VersionInfo.FileMajorPart, $_.VersionInfo.FileMinorPart, $_.VersionInfo.FileBuildPart, $_.VersionInfo.FilePrivatePart) } },
+                @{ Label = "FileVersion"; Expression = { $_.VersionInfo.FileVersion } },
+                @{ Label = "Description"; Expression = { $_.VersionInfo.FileDescription } } |
+                    ConvertTo-Csv -NoTypeInformation |
+                        Out-File -Append $localpath\"$env:computername"-allfiles.csv -Encoding UTF8 
     }
 
     # 17) PREFETCH FSDir
@@ -665,7 +666,7 @@ If (-Not (Test-Path $outputfile.trim() )) {
         Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
         @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
         @{Name = 'EventID'; Expression = { $_.id } },
-        @{Name = 'EventTime'; Expression = { $_.timecreated | Get-Date -Uformat %s } },
+        @{Name = 'EventTime'; Expression = { $_.timecreated | Get-Date -UFormat %s } },
         @{Name = 'UserName'; Expression = { $_.targetusername } },
         @{Name = 'Domain'; Expression = { $_.targetdomainname } },
         @{Name = 'WorkstationName'; Expression = { $_.workstationname } },
@@ -694,7 +695,7 @@ If (-Not (Test-Path $outputfile.trim() )) {
         Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
         @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
         @{Name = 'EventID'; Expression = { $_.id } },
-        @{Name = 'TimeGenerated'; Expression = { $_.timecreated | Get-Date -Uformat %s } },
+        @{Name = 'TimeGenerated'; Expression = { $_.timecreated | Get-Date -UFormat %s } },
         @{Name = 'UserName'; Expression = { $_.subjectusername } },
         @{Name = 'UserDomain'; Expression = { $_.subjectdomainname } },
         @{Name = 'ServiceName'; Expression = { $_.servicename } },
@@ -716,7 +717,7 @@ If (-Not (Test-Path $outputfile.trim() )) {
         Select-Object @{Name = 'Computername'; Expression = { $env:COMPUTERNAME } },
         @{Name = 'AuditDate'; Expression = { Get-Date -UFormat %s } },
         @{Name = 'EventID'; Expression = { $_.id } },
-        @{Name = 'TimeGenerated'; Expression = { $_.timecreated | Get-Date -Uformat %s } },
+        @{Name = 'TimeGenerated'; Expression = { $_.timecreated | Get-Date -UFormat %s } },
         @{Name = 'UserName'; Expression = { $_.accountname } },
         @{Name = 'ServiceName'; Expression = { $_.servicename } },
         @{Name = 'Filename'; Expression = { $_.imagepath } },
@@ -741,7 +742,7 @@ If (-Not (Test-Path $outputfile.trim() )) {
 
     ## CLEANUP
 
-    # ZIP Results
+    <# ZIP Results
     $ErrorActionPreference = 'SilentlyContinue'
     $zip = $localpath + "\" + $env:Computername + "-" + $logtime + ".zip" 
     New-Item $zip -ItemType file
@@ -769,12 +770,12 @@ If (-Not (Test-Path $outputfile.trim() )) {
     # Write to success to logfile
     $ErrorActionPreference = 'SilentlyContinue'
     Add-Content $networkshare\CRA_Collection.log "$logtime - SUCCESS : $myFQDN has been audited. The collection archive was moved to $networkshare"
-    exit
-}
+    #exit#>
+<#}
 
 Else {
     # Write to failure to logfile
     $ErrorActionPreference = 'SilentlyContinue'
     Add-Content $networkshare\CRA_Collection.log "$logtime - FAILURE : A previous collection for $myFQDN was found at the networkshare. Script terminated on $myFQDN"
-    exit
-}
+    #exit
+}#>
