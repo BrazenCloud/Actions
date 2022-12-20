@@ -96,7 +96,17 @@ Get-ChildItem $outFolder\* -Include *.json, *.ndjson | ForEach-Object {
     }
     Write-Host "Uploading file: $($_.Name)"
     Write-Host "URI: $($settings.host)/api/v2/datastore/$index/$group"
-    $body = (Get-Content $_.FullName | ConvertFrom-Json) | ForEach-Object { ConvertTo-Json $_ -Compress -Depth 10 } | ConvertTo-Json
-    Write-Host "body: $body"
-    Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$index/$group" -Body $body -Headers $headers
+    #$body = (Get-Content $_.FullName | ConvertFrom-Json) | ForEach-Object { ConvertTo-Json $_ -Compress -Depth 10 } | ConvertTo-Json
+    $data = (Get-Content $_.FullName | ConvertFrom-Json) | ForEach-Object { ConvertTo-Json $_ -Compress -Depth 10 }
+    #Write-Host "body: $body"
+    if ($data.Count -gt 100) {
+        $x = 0
+        while ($x -lt $data.Count) {
+            $body = $data[$x..$($x + 100)] | ConvertTo-Json
+            Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$index/$group" -Body $body -Headers $headers
+            $x = $x + 100
+        }
+    } else {
+        Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$index/$group" -Body $body -Headers $headers
+    }
 }
