@@ -82,14 +82,21 @@ if ($settings.'Clear Index'.ToString() -eq 'true') {
     Remove-BcDatastoreQuery2 -GroupId $group -IndexName $settings.'Index Name' -Query @{query = @{match_all = @{} } } -ErrorAction SilentlyContinue -SessionToken $auth -Server $settings.host | Out-Null
 }
 
+# Convert any CSV files
+Get-ChildItem $outFolder\* -Include *.csv | ForEach-Object {
+    Import-Csv $_.FullName | ConvertTo-Json | Out-File "$($_.Directory.FullName)\$($_.BaseName).json"
+}
+
 # Upload results
 Get-ChildItem $outFolder\* -Include *.json, *.ndjson | ForEach-Object {
-    Write-Host "Uploading file: $($_.Name)"
-    Write-Host "URI: $($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group/bulk"
-    $body = (Get-Content $_.FullName | ConvertFrom-Json) | ConvertTo-Json -Compress -Depth 10
-    if ($body -notlike '`[*`]') {
-        $body = "[$body]"
+    if ($_.BaseName.Split('-').Count -eq 2) {
+        $index = "$($settings.'Index Name')-$($_.BaseName.Split('-')[1])"
+    } else {
+        $index = $settings.'Index Name'
     }
+    Write-Host "Uploading file: $($_.Name)"
+    Write-Host "URI: $($settings.host)/api/v2/datastore/$index/$group"
+    $body = (Get-Content $_.FullName | ConvertFrom-Json) | ForEach-Object { ConvertTo-Json $_ -Compress -Depth 10 } | ConvertTo-Json
     Write-Host "body: $body"
-    Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$($settings.'Index Name')/$group/bulk" -Body $body -Headers $headers
+    Invoke-RestMethod -Method Post -Uri "$($settings.host)/api/v2/datastore/$index/$group" -Body $body -Headers $headers
 }
