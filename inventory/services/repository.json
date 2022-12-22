@@ -1,0 +1,9 @@
+{
+    "Description": "Inventories the services on a Windows host.",
+    "Language": "PowerShell",
+    "Tags": [
+        "Windows",
+        "PowerShell",
+        "Services"
+    ]
+}
