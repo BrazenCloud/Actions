@@ -1,0 +1,41 @@
+[
+    {
+        "Name": "Source Index",
+        "Type": 0,
+        "DefaultValue": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Source Index Group Id",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "Defaults to the Runner's group.",
+        "IsOptional": false
+    },
+    {
+        "Name": "Group Field",
+        "Type": 0,
+        "DefaultValue": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Summarize Fields",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Target Index",
+        "Type": 0,
+        "DefaultValue": "",
+        "IsOptional": false
+    },
+    {
+        "Name": "Target Index Group Id",
+        "Type": 0,
+        "DefaultValue": "",
+        "Description": "Defaults to the Runner's group.",
+        "IsOptional": false
+    }
+]
