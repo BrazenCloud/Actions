@@ -1,13 +1,15 @@
 <!-- region Generated -->
 # inventory:services
 
-None specified.
+Inventories the services on a Windows host.
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Windows
+  - PowerShell
+  - Services
+- Language: PowerShell
 - Supported Operating Systems:
   - Windows
 

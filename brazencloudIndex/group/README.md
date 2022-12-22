@@ -1,13 +1,14 @@
 <!-- region Generated -->
 # brazencloudIndex:group
 
-None specified.
+Groups data in a BrazenCloud Index
 
 ## Metadata
 
 - Tags:
-  - None specified.
-- Language: None specified.
+  - Windows
+  - PowerShell
+- Language: PowerShell
 - Supported Operating Systems:
   - Windows
 
