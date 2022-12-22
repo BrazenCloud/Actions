@@ -6,12 +6,13 @@ Collects a file
 ## Metadata
 
 - Tags:
-  - Connector
   - File
   - Windows
-- Language: PowerShell
+  - Linux
+- Language: PowerShell/Bash
 - Supported Operating Systems:
   - Windows
+  - Linux
 
 ## Parameters
 

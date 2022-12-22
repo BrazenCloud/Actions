@@ -47,6 +47,8 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [aws:s3:getBuckets](aws/s3/getBuckets)
   - [aws:s3:setBucketEncryption](aws/s3/setBucketEncryption)
   - [aws:setCredentialProfile](aws/setCredentialProfile)
+- brazencloudIndex
+  - [brazencloudIndex:group](brazencloudIndex/group)
 - demo
   - [demo:sql:ExportDB](demo/sql/ExportDB)
   - [demo:sql:ImportDB](demo/sql/ImportDB)
@@ -74,6 +76,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [endpoint:GetOSVersion](endpoint/GetOSVersion)
   - [endpoint:GetProcessMemoryDump](endpoint/GetProcessMemoryDump)
   - [endpoint:GetRunningProcesses](endpoint/GetRunningProcesses)
+  - [endpoint:GetServices](endpoint/GetServices)
   - [endpoint:InstallMonitoringTools](endpoint/InstallMonitoringTools)
   - [endpoint:InstallPackage](endpoint/InstallPackage)
   - [endpoint:InstallWindowsPatch](endpoint/InstallWindowsPatch)
@@ -84,17 +87,21 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [endpoint:setServiceLogonAccount](endpoint/setServiceLogonAccount)
 - inventory
   - [inventory:accounts](inventory/accounts)
+  - [inventory:discoveredAssets](inventory/discoveredAssets)
   - [inventory:dnscache](inventory/dnscache)
   - [inventory:eventLogs](inventory/eventLogs)
   - [inventory:netstat](inventory/netstat)
   - [inventory:nmap](inventory/nmap)
   - [inventory:osquery](inventory/osquery)
+  - [inventory:services](inventory/services)
   - [inventory:tasklog](inventory/tasklog)
 - map
   - [map:arpcache](map/arpcache)
   - [map:discover](map/discover)
   - [map:systeminfo](map/systeminfo)
   - [map:users](map/users)
+- network
+  - [network:tshark](network/tshark)
 - powershell
   - [powershell:InstallModules](powershell/InstallModules)
   - [powershell:RunCommand](powershell/RunCommand)
@@ -113,7 +120,14 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:cobaltstrikescan](secops/cobaltstrikescan)
   - [secops:CyLR](secops/CyLR)
   - [secops:debsums](secops/debsums)
+  - [secops:falco:addRule](secops/falco/addRule)
+  - [secops:falco:configure](secops/falco/configure)
+  - [secops:falco:getOutputFile](secops/falco/getOutputFile)
+  - [secops:falco:install:debian](secops/falco/install/debian)
+  - [secops:falco:install:rhel](secops/falco/install/rhel)
   - [secops:fierce](secops/fierce)
+  - [secops:GBCBA_win](secops/GBCBA_win)
+  - [secops:GBCRA_win](secops/GBCRA_win)
   - [secops:ioc-scanner](secops/ioc-scanner)
   - [secops:lastActivityView](secops/lastActivityView)
   - [secops:loki_memory](secops/loki_memory)
@@ -126,6 +140,7 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [secops:tih](secops/tih)
   - [secops:turboscanner](secops/turboscanner)
   - [secops:winpmem](secops/winpmem)
+  - [secops:yara_general](secops/yara_general)
   - [secops:yara_ransomware](secops/yara_ransomware)
   - [secops:yum](secops/yum)
   - [secops:yum-verify](secops/yum-verify)
@@ -139,6 +154,8 @@ To understand how to deploy Actions from a Git repository into BrazenCloud, see 
   - [template:python27-32](template/python27-32)
   - [template:python37-32](template/python37-32)
   - [template:yara](template/yara)
+- upload
+  - [upload:file](upload/file)
 - windows
   - [windows:chkdsk](windows/chkdsk)
   - [windows:driverquery](windows/driverquery)

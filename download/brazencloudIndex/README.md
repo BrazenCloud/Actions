@@ -12,6 +12,7 @@ Download results into a BrazenCloud index.
 - Language: PowerShell
 - Supported Operating Systems:
   - Windows
+  - Linux
 
 ## Parameters
 

@@ -1,0 +1,9 @@
+{
+    "Description": "Cyber Breach Assessment tool, originally written by Shane Shook.",
+    "Language": "PowerShell",
+    "Tags": [
+        "IR",
+        "Windows"
+    ],
+    "Glyph": null
+}

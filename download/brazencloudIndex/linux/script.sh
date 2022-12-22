@@ -108,5 +108,5 @@ for file in *; do
     curl -X POST -H "Authorization:Session $auth" \
         -H "accept:application/json" -H "content-type:application/json" \
         -d "[${value%?}]" \
-        "$host/api/v2/datastore/$indexName/$group/bulk"
+        "$host/api/v2/datastore/$indexName/$group"
 done

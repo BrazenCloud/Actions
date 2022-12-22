@@ -50,8 +50,4 @@ Uses WinLogBeat to collect event logs.
   - Type: Password
   - IsOptional: True
   - DefaultValue: 
-- Index Name
-  - Type: String
-  - IsOptional: True
-  - DefaultValue: TestIndex
 <!-- endregion -->

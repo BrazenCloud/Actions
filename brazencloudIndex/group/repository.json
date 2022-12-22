@@ -1,0 +1,8 @@
+{
+    "Description": "Groups data in a BrazenCloud Index",
+    "Language": "PowerShell",
+    "Tags": [
+        "Windows",
+        "PowerShell"
+    ]
+}

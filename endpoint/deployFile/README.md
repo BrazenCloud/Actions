@@ -8,9 +8,11 @@ Deploys a file from a previous action.
 - Tags:
   - File
   - Windows
-- Language: PowerShell
+  - Linux
+- Language: PowerShell/Bash
 - Supported Operating Systems:
   - Windows
+  - Linux
 
 ## Parameters
 
