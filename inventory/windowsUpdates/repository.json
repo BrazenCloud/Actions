@@ -1,5 +1,5 @@
 {
-    "Description": "Installs a Windows patch by KB ID.",
+    "Description": "Lists out Windows Updates.",
     "Language": "PowerShell",
     "Tags": [
         "Windows",
