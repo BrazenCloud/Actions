@@ -1,0 +1,9 @@
+[
+    {
+        "Name": "Skip Binary File Audit",
+        "Type": 2,
+        "DefaultValue": null,
+        "Description": "If selected, this will skip the binary file scanning portion of this action.",
+        "IsOptional": true
+    }
+]
