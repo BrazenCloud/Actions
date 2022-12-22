@@ -10,18 +10,19 @@ Download result information to a central location.
   - File
   - Windows
   - Linux
-- Language: Python
+- Language: PowerShell/Bash
 - Supported Operating Systems:
   - Windows
   - Linux
 
 ## Parameters
 
-- Use Path
+- File Path
+  - Type: String
+  - IsOptional: False
+  - DefaultValue: 
+- Unzip
   - Type: Boolean
   - IsOptional: True
-- Path
-  - Type: String
-  - IsOptional: True
-  - DefaultValue: 
+  - DefaultValue: true
 <!-- endregion -->
