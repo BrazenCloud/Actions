@@ -55,9 +55,8 @@ contentType="application/x-compressed-tar"
 
 # download the results file
 mkdir ./out
-../../../runway -N -S $host download --directory ./out
 cd ./out
-
+../../../runway -N -S $host download
 ls -al
 
 # expand each of them
