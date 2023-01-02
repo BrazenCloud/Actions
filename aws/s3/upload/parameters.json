@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Bucket Name",
+        "Type": 0,
+        "IsOptional": false,
+        "Description": "The name of the bucket."
+    },
+    {
+        "Name": "Path",
+        "Type": 0,
+        "DefaultValue": "/",
+        "IsOptional": false,
+        "Description": "The path to upload the file to. Should start and end with '/'"
+    },
+    {
+        "Name": "Access Key",
+        "Type": 0,
+        "IsOptional": false,
+        "Description": "The AWS API Access Key"
+    },
+    {
+        "Name": "Secret Key",
+        "Type": 0,
+        "IsOptional": false,
+        "Description": "The AWS API Secret Key"
+    }
+]
