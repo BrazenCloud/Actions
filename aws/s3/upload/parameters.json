@@ -14,13 +14,13 @@
     },
     {
         "Name": "Access Key",
-        "Type": 0,
+        "Type": 3,
         "IsOptional": false,
         "Description": "The AWS API Access Key"
     },
     {
         "Name": "Secret Key",
-        "Type": 0,
+        "Type": 3,
         "IsOptional": false,
         "Description": "The AWS API Secret Key"
     }
