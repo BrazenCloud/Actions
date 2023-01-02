@@ -54,9 +54,8 @@ host=$(jq -r '."host"' ./settings.json)
 contentType="application/x-compressed-tar"
 
 # download the results file
-mkdir ./out
-cd ./out
-../../../../runway -N -S $host download
+../../../runway -N -S $host download
+cd ./download
 ls -al
 
 # expand each of them
