@@ -48,6 +48,7 @@ bucketName=$(jq -r '."Bucket Name"' ./settings.json)
 s3BasePath=$(jq -r '."Path"' ./settings.json)
 accessKey=$(jq -r '."Access Key"' ./settings.json)
 secretKey=$(jq -r '."Secret Key"' ./settings.json)
+host=$(jq -r '."host"' ./settings.json)
 
 # same for all
 contentType="application/x-compressed-tar"
@@ -56,6 +57,8 @@ contentType="application/x-compressed-tar"
 mkdir ./out
 ../../../runway -N -S $host download --directory ./out
 cd ./out
+
+ls -al
 
 # expand each of them
 for zip in *.zip; do
