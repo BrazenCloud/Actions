@@ -61,6 +61,7 @@ ls -al
 # expand each of them
 for zip in *.zip; do
     unzip $zip
+    rm $zip
 done
 
 for file in *; do
